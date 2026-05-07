@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="no">
 <head>
   <meta charset="UTF-8">
@@ -1579,27 +1579,42 @@
       const thanks = document.getElementById('thanks-msg');
 
       form.addEventListener('submit', function (e) {
-        e.preventDefault();
-
         const name  = document.getElementById('name').value.trim();
         const email = document.getElementById('email').value.trim();
         const tasks = document.getElementById('tasks').value.trim();
 
         if (!name || !email || !tasks) {
+          e.preventDefault();
           const first = form.querySelector(':invalid');
           if (first) first.focus();
           return;
         }
 
-        form.style.opacity = '0';
-        form.style.transition = 'opacity 0.4s';
-        setTimeout(() => {
-          form.style.display = 'none';
-          thanks.style.display = 'block';
-          thanks.style.opacity = '0';
-          thanks.style.transition = 'opacity 0.4s';
-          requestAnimationFrame(() => { thanks.style.opacity = '1'; });
-        }, 400);
+        // Let the form submit naturally to Netlify
+        // but show thank-you after a short delay
+        e.preventDefault();
+
+        const formData = new FormData(form);
+
+        fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: new URLSearchParams(formData).toString()
+        })
+        .then(() => {
+          form.style.opacity = '0';
+          form.style.transition = 'opacity 0.4s';
+          setTimeout(() => {
+            form.style.display = 'none';
+            thanks.style.display = 'block';
+            thanks.style.opacity = '0';
+            thanks.style.transition = 'opacity 0.4s';
+            requestAnimationFrame(() => { thanks.style.opacity = '1'; });
+          }, 400);
+        })
+        .catch(() => {
+          alert('Noe gikk galt. Prøv igjen.');
+        });
       });
     })();
   </script>
