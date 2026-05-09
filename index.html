@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="no">
 <head>
   <meta charset="UTF-8">
@@ -875,6 +875,71 @@
       margin-top: 1rem;
     }
 
+    /* Calendly CTA block */
+    .contact-cta-block { margin-bottom: 0; }
+    .contact-cta-heading {
+      font-family: var(--ff-display);
+      font-size: 1.55rem;
+      font-weight: 400;
+      color: var(--text-primary);
+      line-height: 1.25;
+      margin-bottom: 1.25rem;
+    }
+    .btn-calendly {
+      display: inline-block;
+      padding: 1rem 2.75rem;
+      font-family: var(--ff-body);
+      font-size: 0.76rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      background: transparent;
+      transition: background 0.22s, color 0.22s, transform 0.22s, border-color 0.22s;
+    }
+    .btn-calendly:hover {
+      background: var(--accent);
+      color: var(--ink-on-accent);
+      transform: translateY(-2px);
+    }
+
+    /* Divider */
+    .contact-divider {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin: 2.25rem 0;
+      color: var(--text-muted);
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      font-style: italic;
+    }
+    .contact-divider::before,
+    .contact-divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    /* Form section label */
+    .form-section-label { margin-bottom: 1.75rem; }
+    .form-section-heading {
+      font-family: var(--ff-display);
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: var(--text-secondary);
+      line-height: 1.3;
+      margin-bottom: 0.3rem;
+    }
+    .form-section-sub {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      font-style: italic;
+      letter-spacing: 0.04em;
+    }
+
     /* ================================================================
        FOOTER
     ================================================================ */
@@ -970,19 +1035,18 @@
       </div>
 
       <h1 class="reveal d1">
-        AI-assistenter og<br>
-        automatiseringer som<br>
-        <em>faktisk brukes.</em>
+        Hva hvis hverdagen din<br>
+        <em>styrte seg selv?</em>
       </h1>
 
       <p class="hero-sub reveal d2">
-        Jeg bygger n8n-arbeidsflyter som kombinerer automatisering med Claude API,
-        executive assistants og skreddersydde løsninger for selvstendige entreprenører
-        og småbedrifter — slik at du sparer 5–15 timer i uken på det administrative.
+        Møtebooking, oppfølging, rapportering, fakturering og admin —
+        jeg bygger AI-verktøy som tar seg av det repetitive, så du kan
+        fokusere på det som faktisk vokser virksomheten din.
       </p>
 
       <p class="hero-sub-sub reveal d3">
-        Bygget med Claude (Anthropic), n8n og GPT. Ferdig på 1–3 uker.
+        For deg som driver alene eller i et lite team. Ferdig på 1–3 uker. Fast pris.
       </p>
 
       <div class="hero-actions reveal d4">
@@ -1490,6 +1554,22 @@
 
       <!-- Right: form -->
       <div class="reveal d2">
+
+        <!-- Calendly CTA — shown first -->
+        <div class="contact-cta-block">
+          <p class="contact-cta-heading">Klar for en prat? Book gratis kartlegging direkte</p>
+          <a href="https://calendly.com/anders-parr02/30min" target="_blank" rel="noopener" class="btn-calendly">Book 30 min nå</a>
+        </div>
+
+        <!-- Divider -->
+        <div class="contact-divider"><span>— eller —</span></div>
+
+        <!-- Form section heading -->
+        <div class="form-section-label">
+          <p class="form-section-heading">Foretrekker du å skrive? Send meg en melding</p>
+          <p class="form-section-sub">Jeg svarer innen 24 timer</p>
+        </div>
+
         <form id="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
           <input type="hidden" name="form-name" value="contact">
           <p style="display:none"><input name="bot-field"></p>
