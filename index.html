@@ -4,20 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#1A1614">
-  <title>Anders Parr — AI-assistenter og automatiseringer som faktisk brukes</title>
-  <meta name="description" content="Telegram-bots, executive assistants og n8n-arbeidsflyter for selvstendige, helseaktører og småbedrifter. Spar 5–15 timer i uken. Bygget av Anders Parr, Bergen.">
+  <title>Anders Parr — Finn og fiks flaskehalsen som bremser veksten din</title>
+  <meta name="description" content="De 5 automatiseringene bedrifter faktisk betaler for. Speed to Lead, oppfølgingssekvenser, database reactivation, dokumentprosessering og intern rapportering. Fast pris, levert på 1–3 uker. Bergen.">
 
   <!-- Open Graph -->
   <meta property="og:type"        content="website">
   <meta property="og:url"         content="https://andersparr.no">
-  <meta property="og:title"       content="Anders Parr — AI-assistenter og automatiseringer som faktisk brukes">
-  <meta property="og:description" content="Telegram-bots, executive assistants og n8n-arbeidsflyter for selvstendige og småbedrifter. Ferdig på 1–3 uker.">
+  <meta property="og:title"       content="Anders Parr — Finn og fiks flaskehalsen som bremser veksten din">
+  <meta property="og:description" content="De 5 automatiseringene bedrifter faktisk betaler for. Fast pris, levert på 1–3 uker.">
   <meta property="og:image"       content="https://andersparr.no/og-image.jpg">
 
   <!-- Twitter Card -->
   <meta name="twitter:card"        content="summary_large_image">
-  <meta name="twitter:title"       content="Anders Parr — AI-assistenter og automatiseringer">
-  <meta name="twitter:description" content="Telegram-bots, executive assistants og n8n-arbeidsflyter. Spar 5–15 timer per uke.">
+  <meta name="twitter:title"       content="Anders Parr — Finn og fiks flaskehalsen som bremser veksten din">
+  <meta name="twitter:description" content="De 5 automatiseringene bedrifter faktisk betaler for. Speed to Lead, oppfølging, reactivation, dokumenter og rapporter. Fast pris, 1–3 uker.">
   <meta name="twitter:image"       content="https://andersparr.no/og-image.jpg">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -967,6 +967,43 @@
     .footer-link:hover { color: var(--text-primary); }
 
     /* ================================================================
+       DIAGNOSTIC
+    ================================================================ */
+    .diagnostic { padding: 5rem 0; background: var(--bg-tertiary); border-bottom: 1px solid var(--border-soft); }
+    .diagnostic-inner { max-width: 860px; }
+    .diagnostic-q {
+      font-family: var(--ff-display);
+      font-size: clamp(1.8rem, 3vw, 2.8rem);
+      font-weight: 300;
+      font-style: italic;
+      line-height: 1.35;
+      color: var(--text-primary);
+      margin: 1rem 0 2.5rem;
+    }
+    .diagnostic-q strong { font-style: normal; font-weight: 400; color: var(--accent-soft); }
+    .diag-note { font-size: 0.88rem; color: var(--text-muted); font-style: italic; line-height: 1.75; }
+    .diag-list { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 2.5rem; }
+    .diag-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.25rem;
+      padding: 1.1rem 1.5rem;
+      border: 1px solid var(--border);
+      background: var(--bg-secondary);
+      transition: border-color 0.2s;
+    }
+    .diag-item:hover { border-color: rgba(217, 122, 61, 0.4); }
+    .diag-arrow { color: var(--accent); font-family: var(--ff-display); font-size: 1.2rem; flex-shrink: 0; line-height: 1.5; }
+    .diag-label { font-family: var(--ff-display); font-size: 1.12rem; font-weight: 400; color: var(--text-primary); line-height: 1.25; }
+    .diag-sub { font-size: 0.8rem; color: var(--text-muted); line-height: 1.6; margin-top: 0.2rem; font-style: italic; }
+
+    /* Service card additions */
+    .svc-desc { margin-top: 0; }
+    .svc-stat { font-family: var(--ff-display); font-size: 1.9rem; font-weight: 300; color: var(--accent); line-height: 1; }
+    .svc-industry { font-size: 0.74rem; color: var(--text-muted); font-style: italic; line-height: 1.65; margin-top: auto; padding-top: 0.75rem; border-top: 1px solid var(--border-soft); }
+    .svc-roi { font-family: var(--ff-display); font-size: 0.92rem; color: var(--accent-soft); font-style: italic; line-height: 1.5; margin-top: 0.35rem; }
+
+    /* ================================================================
        RESPONSIVE
     ================================================================ */
     @media (max-width: 1024px) {
@@ -1032,22 +1069,22 @@
   <header class="hero">
     <div class="hero-left">
       <div class="hero-eyebrow reveal">
-        <span class="label">AI-assistenter &amp; automatisering — Anders Parr</span>
+        <span class="label">Automatisering som betaler seg — Anders Parr</span>
       </div>
 
       <h1 class="reveal d1">
-        Hva hvis hverdagen din<br>
-        <em>styrte seg selv?</em>
+        Bedriften din lekker penger.<br>
+        <em>Vet du hvor?</em>
       </h1>
 
       <p class="hero-sub reveal d2">
-        Møtebooking, oppfølging, rapportering, fakturering og admin —
-        jeg bygger AI-verktøy som tar seg av det repetitive, så du kan
-        fokusere på det som faktisk vokser virksomheten din.
+        Gjennomsnittsbedrift bruker 47 timer på å svare en lead — og mister den til en konkurrent.
+        80% av salg krever 5+ oppfølginger, men de fleste stopper etter én.
+        Jeg finner korken og fikser den. Fast pris, levert på 1–3 uker.
       </p>
 
       <p class="hero-sub-sub reveal d3">
-        For deg som driver alene eller i et lite team. Ferdig på 1–3 uker. Fast pris.
+        Tannleger, advokater, coaches, regnskapsbyråer og eiendom — de 5 løsningene går igjen på tvers av alle bransjer.
       </p>
 
       <div class="hero-actions reveal d4">
@@ -1062,8 +1099,8 @@
         <div class="hero-box-accent reveal d3"></div>
         <div class="hero-box-earth reveal d4"></div>
         <div class="hero-stat reveal d5">
-          <div class="hero-stat-num">5–15</div>
-          <div class="hero-stat-label">timer spart per uke</div>
+          <div class="hero-stat-num">×3</div>
+          <div class="hero-stat-label">flere bookede møter, samme antall leads</div>
         </div>
       </div>
     </div>
@@ -1072,18 +1109,18 @@
   <!-- TICKER -->
   <div class="ticker-bar" aria-hidden="true">
     <div class="ticker-track">
-      <span class="ticker-item">Telegram-bots <span class="ticker-dot"></span></span>
+      <span class="ticker-item">Speed to Lead <span class="ticker-dot"></span></span>
+      <span class="ticker-item">Automatisk oppfølging <span class="ticker-dot"></span></span>
+      <span class="ticker-item">Database Reactivation <span class="ticker-dot"></span></span>
+      <span class="ticker-item">Dokumentprosessering <span class="ticker-dot"></span></span>
+      <span class="ticker-item">Intern rapportering <span class="ticker-dot"></span></span>
       <span class="ticker-item">Executive assistants <span class="ticker-dot"></span></span>
-      <span class="ticker-item">n8n-arbeidsflyter <span class="ticker-dot"></span></span>
-      <span class="ticker-item">Claude API <span class="ticker-dot"></span></span>
-      <span class="ticker-item">Leads &amp; outreach <span class="ticker-dot"></span></span>
-      <span class="ticker-item">Onboarding-sekvenser <span class="ticker-dot"></span></span>
-      <span class="ticker-item">Telegram-bots <span class="ticker-dot"></span></span>
+      <span class="ticker-item">Speed to Lead <span class="ticker-dot"></span></span>
+      <span class="ticker-item">Automatisk oppfølging <span class="ticker-dot"></span></span>
+      <span class="ticker-item">Database Reactivation <span class="ticker-dot"></span></span>
+      <span class="ticker-item">Dokumentprosessering <span class="ticker-dot"></span></span>
+      <span class="ticker-item">Intern rapportering <span class="ticker-dot"></span></span>
       <span class="ticker-item">Executive assistants <span class="ticker-dot"></span></span>
-      <span class="ticker-item">n8n-arbeidsflyter <span class="ticker-dot"></span></span>
-      <span class="ticker-item">Claude API <span class="ticker-dot"></span></span>
-      <span class="ticker-item">Leads &amp; outreach <span class="ticker-dot"></span></span>
-      <span class="ticker-item">Onboarding-sekvenser <span class="ticker-dot"></span></span>
     </div>
   </div>
 
@@ -1120,23 +1157,76 @@
 
       <div class="pain-grid">
         <div class="pain-card reveal d1">
-          <div class="pain-num">01</div>
-          <h3 class="pain-title">Timer forsvinner i det repetitive</h3>
-          <p class="pain-desc">Presentasjoner, rapporter, oppfølginger — oppgaver
-          som tar tid men ikke krever deg personlig.</p>
+          <div class="pain-num">47t</div>
+          <h3 class="pain-title">Gjennomsnittlig responstid på en lead</h3>
+          <p class="pain-desc">Innen da har prospektet snakket med tre konkurrenter.
+          Respons innen 5 minutter gir 10× høyere konvertering.</p>
         </div>
         <div class="pain-card reveal d2">
-          <div class="pain-num">02</div>
-          <h3 class="pain-title">Kommunikasjon er reaktiv</h3>
-          <p class="pain-desc">Du svarer når du rekker det. Leads kjølner.
-          Kunder venter. Mulighetene passerer.</p>
+          <div class="pain-num">80%</div>
+          <h3 class="pain-title">Av salg krever 5+ oppfølginger</h3>
+          <p class="pain-desc">De fleste selgere stopper etter 1–2.
+          Pipeline lekker ikke fordi produktet er dårlig — men fordi ingen følger opp lenge nok.</p>
         </div>
         <div class="pain-card reveal d3">
-          <div class="pain-num">03</div>
-          <h3 class="pain-title">Systemet sitter i hodet ditt</h3>
-          <p class="pain-desc">Uten et verktøy som jobber for deg, er du
-          flaskehalsen. Det begrenser hva du kan skalere.</p>
+          <div class="pain-num">780k</div>
+          <h3 class="pain-title">Kr/år i manuelt dataarbeid</h3>
+          <p class="pain-desc">Et lite regnskapsfirma bruker 50 timer per uke på å flytte
+          data mellom systemer. Det er penger som forsvinner i operasjonell friksjon.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       DIAGNOSTIC — finn din flaskehals
+  ================================================================ -->
+  <section class="diagnostic" aria-labelledby="diag-title">
+    <div class="wrap">
+      <div class="diagnostic-inner">
+        <span class="label reveal">— Finn din flaskehals</span>
+        <p class="diagnostic-q reveal d1">
+          "Hva ville knekket hos deg hvis <strong>500 nye kunder</strong> dukket opp i morgen?"
+        </p>
+        <p class="diag-note reveal d1" style="margin-bottom:1.75rem">Der det knekker — der er startpunktet. Disse fem korkene går igjen på tvers av alle bransjer:</p>
+        <ul class="diag-list reveal d2">
+          <li class="diag-item">
+            <span class="diag-arrow">→</span>
+            <div>
+              <div class="diag-label">Svar for sent på nye leads</div>
+              <div class="diag-sub">Responstid over 5 min = 80% sjanse for å tape til konkurrenten. Gjennomsnittsbedrift bruker 47 timer.</div>
+            </div>
+          </li>
+          <li class="diag-item">
+            <span class="diag-arrow">→</span>
+            <div>
+              <div class="diag-label">Oppfølgingen stopper etter 1–2 forsøk</div>
+              <div class="diag-sub">80% av salg krever 5+ kontaktpunkter — de fleste selgere gir opp altfor tidlig</div>
+            </div>
+          </li>
+          <li class="diag-item">
+            <span class="diag-arrow">→</span>
+            <div>
+              <div class="diag-label">Gamle kontakter ligger ubrukt i systemet</div>
+              <div class="diag-sub">Gjennomsnittlig ROI på reaktivering: 1 200% innen 60 dager — pengene er allerede der</div>
+            </div>
+          </li>
+          <li class="diag-item">
+            <span class="diag-arrow">→</span>
+            <div>
+              <div class="diag-label">Manuell dataflytting spiser kapasitet</div>
+              <div class="diag-sub">50 timer/uke på å flytte data = 780 000 kr/år i bortkastet arbeid</div>
+            </div>
+          </li>
+          <li class="diag-item">
+            <span class="diag-arrow">→</span>
+            <div>
+              <div class="diag-label">Ingen oversikt uten å sjekke manuelt</div>
+              <div class="diag-sub">Tid brukt på å kompilere rapporter = tid stjålet fra det som faktisk vokser virksomheten</div>
+            </div>
+          </li>
+        </ul>
+        <a href="#kontakt" class="btn btn-fill reveal d3">Book gratis kartlegging — finn din kork</a>
       </div>
     </div>
   </section>
@@ -1148,11 +1238,12 @@
     <div class="wrap">
       <div class="services-top">
         <h2 id="services-title" class="services-headline reveal">
-          Hva vi<br>automatiserer
+          De 5 løsningene<br>bedrifter betaler for
         </h2>
         <p class="services-intro reveal d2">
-          Tilpassede AI-løsninger som passer inn i måten du allerede jobber —
-          ikke systemer du må endre deg for å bruke.
+          Samme fem automatiseringstyper går igjen på tvers av alle bransjer.
+          Enkle løsninger som sparer tid, fjerner feil og øker inntekten —
+          det er disse bedrifter faktisk betaler for.
         </p>
       </div>
 
@@ -1193,61 +1284,76 @@
       <div class="services-grid" style="margin-top:3.5rem">
         <article class="svc reveal d1">
           <div class="svc-num">01</div>
-          <h3 class="svc-title">AI-assistent</h3>
-          <p class="svc-desc">En dedikert assistent som kjenner virksomheten din
-          og er tilgjengelig 24/7. Ikke et generisk verktøy — men ett
-          bygget rundt deg.</p>
+          <h3 class="svc-title">Speed to Lead</h3>
+          <div class="svc-stat">47t → 5min</div>
+          <p class="svc-desc">Gjennomsnittsbedrift bruker 47 timer på å svare en lead — da er prospektet hos en konkurrent.
+          Automatisk kvalifisering, ruting og personlig svar i løpet av sekunder.</p>
+          <p class="svc-industry">Ideelt for: Tannklinikk · Advokat · VVS · Eiendom · Markedsføringsbyrå</p>
+          <div class="svc-roi">Fra 12% → 25% konvertering på samme annonsekostnad</div>
           <div class="stack-pills">
+            <span class="pill">n8n</span>
             <span class="pill">Claude API</span>
-            <span class="pill">Custom kode</span>
+            <span class="pill">Gmail</span>
           </div>
         </article>
 
         <article class="svc reveal d2">
           <div class="svc-num">02</div>
-          <h3 class="svc-title">Kommunikasjon &amp; oppfølging</h3>
-          <p class="svc-desc">Svar, utkast og meldinger klare til sending — på sekunder.
-          Innboks, chat, e-post. Aldri mer tomme hender foran en blank skjerm.</p>
+          <h3 class="svc-title">Automatisk oppfølging</h3>
+          <div class="svc-stat">1 → 5+ oppfølginger</div>
+          <p class="svc-desc">80% av salg krever minst 5 kontaktpunkter. De fleste selgere stopper etter 1–2.
+          Automatiserte sekvenser som fortsetter til noen svarer — og stopper når de gjør det.</p>
+          <p class="svc-industry">Ideelt for: Coaches · Konsulenter · Byråer med ok lead-volum men dårlig konvertering</p>
+          <div class="svc-roi">Fra 6 → 18 bookede møter per webinar (samme antall deltakere)</div>
           <div class="stack-pills">
             <span class="pill">n8n</span>
-            <span class="pill">Gmail API</span>
             <span class="pill">Claude</span>
+            <span class="pill">CRM</span>
           </div>
         </article>
 
         <article class="svc reveal d1">
           <div class="svc-num">03</div>
-          <h3 class="svc-title">Presentasjoner &amp; innhold</h3>
-          <p class="svc-desc">Profesjonelt materiell på minutter. Fra brief til ferdig
-          presentasjon — uten timer brukt i PowerPoint.</p>
+          <h3 class="svc-title">Database Reactivation</h3>
+          <div class="svc-stat">+1 200% ROI</div>
+          <p class="svc-desc">Kontaktene som allerede er i systemet ditt — kunder som sluttet, leads som kjølnet, trial-brukere som forsvant.
+          2–3% tilbake av 4 000 kontakter = 320 000–520 000 kr i gjenopprettet omsetning.</p>
+          <p class="svc-industry">Ideelt for: Treningssenter · Klinikk · SaaS · E-handel · Coaching</p>
+          <div class="svc-roi">Gjennomsnittlig ROI 1 200% innen 60 dager</div>
           <div class="stack-pills">
-            <span class="pill">Gamma</span>
+            <span class="pill">n8n</span>
             <span class="pill">Claude</span>
-            <span class="pill">Custom skills</span>
+            <span class="pill">CRM-integrasjon</span>
           </div>
         </article>
 
         <article class="svc reveal d2">
           <div class="svc-num">04</div>
-          <h3 class="svc-title">Leads &amp; outreach</h3>
-          <p class="svc-desc">Målrettede lister og personlige utkast klare til sending —
-          slik at du kan nå ut til flere uten å bruke mer tid.</p>
+          <h3 class="svc-title">Dokumentprosessering</h3>
+          <div class="svc-stat">15min → 2min</div>
+          <p class="svc-desc">Fakturaer, skjemaer, PDF-er — automatisk ekstraksjon, sjekk mot kontoplan og ruting dit dataen hører.
+          Fra 5–15% feilrate til nær null. Fra 50 timer i uken til 10.</p>
+          <p class="svc-industry">Ideelt for: Regnskap · Logistikk · Bygg/anlegg · Forsikring · Advokat</p>
+          <div class="svc-roi">780 000 kr/år i bortkastet dataarbeid eliminert</div>
           <div class="stack-pills">
-            <span class="pill">LinkedIn</span>
+            <span class="pill">Claude API</span>
             <span class="pill">n8n</span>
-            <span class="pill">CRM</span>
+            <span class="pill">Custom kode</span>
           </div>
         </article>
 
         <article class="svc reveal d3">
           <div class="svc-num">05</div>
-          <h3 class="svc-title">Daglig struktur</h3>
-          <p class="svc-desc">Start dagen med en automatisert oversikt over hva
-          som haster, hva som venter og hva du bør prioritere.</p>
+          <h3 class="svc-title">Intern rapportering</h3>
+          <div class="svc-stat">Timer → Sekunder</div>
+          <p class="svc-desc">Automatisk innhenting, analyse og distribusjon av KPI-er til der teamet allerede ser — Slack, e-post, SMS.
+          Aldri mer mandagsmorgen brukt på å hente tall fra tre ulike systemer.</p>
+          <p class="svc-industry">Ideelt for: Alle med 5+ ansatte og 2+ systemer som kompilerer rapporter manuelt</p>
+          <div class="svc-roi">45 min/dag spart — og ingen planleggingsfeil på grunn av utdaterte data</div>
           <div class="stack-pills">
-            <span class="pill">Telegram</span>
-            <span class="pill">Claude</span>
             <span class="pill">n8n</span>
+            <span class="pill">Claude</span>
+            <span class="pill">Slack / E-post</span>
           </div>
         </article>
       </div>
@@ -1286,7 +1392,7 @@
               <span class="pill">n8n</span>
               <span class="pill">Gmail</span>
             </div>
-            <div class="case-result">Resultat: ~10 timer spart per uke</div>
+            <div class="case-result">Resultat: ~10 timer/uke frigjort — tilsvarer 500 000 kr/år i kapasitet</div>
           </div>
         </article>
 
@@ -1307,7 +1413,7 @@
               <span class="pill">Claude</span>
               <span class="pill">n8n</span>
             </div>
-            <div class="case-result">Resultat: Responstid fra timer til sekunder</div>
+            <div class="case-result">Resultat: Konverteringsrate doblet — på nøyaktig samme annonsekostnad</div>
           </div>
         </article>
 
@@ -1326,7 +1432,7 @@
               <span class="pill">Gamma</span>
               <span class="pill">Claude skills</span>
             </div>
-            <div class="case-result">Resultat: 3-timers oppgave på 15 minutter</div>
+            <div class="case-result">Resultat: Fra 3 timer til 15 minutter — 85% tidsbesparelse per presentasjon</div>
           </div>
         </article>
 
@@ -1346,7 +1452,7 @@
               <span class="pill">JSON</span>
               <span class="pill">Claude Code</span>
             </div>
-            <div class="case-result">Resultat: 200+ leads strukturert og fulgt opp</div>
+            <div class="case-result">Resultat: 200+ leads fulgt opp — ingen forespørsel falt mellom stolene</div>
           </div>
         </article>
       </div>
