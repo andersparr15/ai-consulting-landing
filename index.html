@@ -1004,6 +1004,54 @@
     .svc-roi { font-family: var(--ff-display); font-size: 0.92rem; color: var(--accent-soft); font-style: italic; line-height: 1.5; margin-top: 0.35rem; }
 
     /* ================================================================
+       LEAD MAGNET BAR
+    ================================================================ */
+    .lead-magnet-bar {
+      background: var(--bg-primary);
+      border-top: 1px solid var(--border-soft);
+      border-bottom: 1px solid var(--border-soft);
+      padding: 3.5rem 0;
+    }
+    .lm-inner {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+    }
+    .lm-left { flex: 1; min-width: 240px; }
+    .lm-eyebrow {
+      font-size: 0.62rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      display: block;
+      margin-bottom: 0.55rem;
+    }
+    .lm-title {
+      font-family: var(--ff-display);
+      font-size: clamp(1.5rem, 2.5vw, 2.1rem);
+      font-weight: 300;
+      color: var(--text-primary);
+      line-height: 1.25;
+    }
+    .lm-sub { font-size: 0.88rem; color: var(--text-muted); line-height: 1.7; margin-top: 0.6rem; max-width: 44ch; }
+    .btn-lm {
+      display: inline-block;
+      padding: 1rem 2.5rem;
+      font-family: var(--ff-body);
+      font-size: 0.74rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      background: transparent;
+      white-space: nowrap;
+      transition: background 0.22s, color 0.22s, transform 0.22s;
+    }
+    .btn-lm:hover { background: var(--accent); color: var(--ink-on-accent); transform: translateY(-2px); }
+
+    /* ================================================================
        RESPONSIVE
     ================================================================ */
     @media (max-width: 1024px) {
@@ -1089,7 +1137,7 @@
 
       <div class="hero-actions reveal d4">
         <a href="#kontakt" class="btn btn-fill">Book gratis kartlegging</a>
-        <a href="#cases" class="btn btn-ghost">Se eksempler</a>
+        <a href="/audit" class="btn btn-ghost">Gratis AI-audit →</a>
       </div>
     </div>
 
@@ -1227,6 +1275,20 @@
           </li>
         </ul>
         <a href="#kontakt" class="btn btn-fill reveal d3">Book gratis kartlegging — finn din kork</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEAD MAGNET BAR -->
+  <section class="lead-magnet-bar">
+    <div class="wrap">
+      <div class="lm-inner reveal">
+        <div class="lm-left">
+          <span class="lm-eyebrow">— Gratis · Ingen forpliktelse</span>
+          <h2 class="lm-title">Ikke klar for å booke møte?<br>Få rapporten din på e-post.</h2>
+          <p class="lm-sub">Svar på 5 spørsmål om virksomheten din — AI lager en personlig analyse av de 2–3 automatiseringsmulighetene som vil spare deg mest tid. Levert på e-post innen 30 sekunder.</p>
+        </div>
+        <a href="/audit" class="btn-lm reveal d2">Ta den gratis AI-auditen →</a>
       </div>
     </div>
   </section>
@@ -1380,7 +1442,7 @@
           <div class="case-image">
             <img src="images/case-01-assistant.png" alt="Executive Assistant — skjermbilde av dashboard"
                  onerror="this.parentElement.classList.add('no-image');">
-            <span class="case-image-fallback">[Skjermbilde kommer]</span>
+            <span class="case-image-fallback">Prosjekt under leveranse</span>
           </div>
           <div class="case-card-body">
             <div class="case-num">01</div>
@@ -1400,7 +1462,7 @@
           <div class="case-image">
             <img src="images/case-02-telegram.png" alt="Telegram-bot — skjermbilde av chat-grensesnitt"
                  onerror="this.parentElement.classList.add('no-image');">
-            <span class="case-image-fallback">[Skjermbilde kommer]</span>
+            <span class="case-image-fallback">Prosjekt under leveranse</span>
           </div>
           <div class="case-card-body">
             <div class="case-num">02</div>
@@ -1421,7 +1483,7 @@
           <div class="case-image">
             <img src="images/case-03-presentation.png" alt="Presentasjonsverktøy — eksempel på generert slide-deck"
                  onerror="this.parentElement.classList.add('no-image');">
-            <span class="case-image-fallback">[Skjermbilde kommer]</span>
+            <span class="case-image-fallback">Prosjekt under leveranse</span>
           </div>
           <div class="case-card-body">
             <div class="case-num">03</div>
@@ -1440,7 +1502,7 @@
           <div class="case-image">
             <img src="images/case-04-crm.png" alt="CRM-dashboard — skjermbilde av prospect-tracker"
                  onerror="this.parentElement.classList.add('no-image');">
-            <span class="case-image-fallback">[Skjermbilde kommer]</span>
+            <span class="case-image-fallback">Prosjekt under leveranse</span>
           </div>
           <div class="case-card-body">
             <div class="case-num">04</div>
@@ -1564,7 +1626,7 @@
           </h2>
           <div class="about-text reveal d2">
             <p>
-              Jeg er ingeniørstudent og AI-spesialist basert i Bergen. Bakgrunn
+              Jeg er AI-konsulent og spesialist basert i Bergen. Bakgrunn
               fra SINTEF (sommerinternship) og sertifisert gjennom Anthropic Academy.
               Jeg bygger daglig løsninger for både egen virksomhet og klienter —
               fra Telegram-bots til komplette executive assistants.
@@ -1583,7 +1645,7 @@
           <div class="about-badges reveal d3">
             <span class="badge">🏛 SINTEF-bakgrunn</span>
             <span class="badge">📍 Bergen</span>
-            <span class="badge">💼 Ingeniør, HVL</span>
+            <span class="badge">💼 AI-konsulent</span>
           </div>
 
           <div class="cert-block reveal d4">
