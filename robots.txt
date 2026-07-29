@@ -1,0 +1,49 @@
+# robots.txt — anderspconsulting.no
+
+# Vanlige søkemotorer
+User-agent: *
+Allow: /
+
+# ---------------------------------------------------------------
+# AI-crawlere som både leser og siterer.
+# Disse SKAL være tillatt — blokkerer du dem, kan de aldri
+# vise til deg i svarene sine.
+# ---------------------------------------------------------------
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# ---------------------------------------------------------------
+# Crawlere som kun samler treningsdata uten å sitere tilbake.
+# Ingen synlighetsgevinst — blokkeres.
+# ---------------------------------------------------------------
+User-agent: CCBot
+Disallow: /
+
+Sitemap: https://anderspconsulting.no/sitemap.xml
