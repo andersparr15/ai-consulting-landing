@@ -63,7 +63,7 @@ Konklusjonen er ikke å droppe AI-posisjoneringen. Konklusjonen er at **AI er l�
 |---|---|---|
 | Hvem | Snekker, elektriker, rørlegger, småbedrift uten nettside | Tannlege, klinikk, treningssenter, regnskapsbyrå, eiendom, coach |
 | Smerte | «Folk finner meg ikke» | «Jeg drukner i manuelle oppgaver» |
-| Produkt | Nettside + lokal synlighet, 15 000 kr | Assistent/automatisering, 8 000–35 000 kr |
+| Produkt | Nettside + lokal synlighet, fra 19 000 kr | Automatisering fra 35 000 kr, assistent fra 75 000 kr (se avsnitt 11) |
 | Har søkevolum? | **Ja** — dette er der Google Ads og SEO faktisk fungerer | **Nei/lite** — må drives av outbound, LinkedIn, AEO og henvisninger |
 | Bevis du har | 3 demo-nettsider (Frantzvåg, Container Kuldeservice, Rune Flem) | Executive assistant 24/7, Asgeir-bot, CRM-dashboard |
 | Rolle | Kundefabrikk og døråpner | Der pengene og marginen er |
@@ -254,18 +254,24 @@ Du har mer bevis enn siden viser. I dag er alt komprimert til fire småkort i et
 
 Fortjener egen side, `/kunder/executive-assistant`. Struktur:
 
-1. **Overskrift med utfall, ikke teknologi** — «En assistent som jobber 24/7 — 8 timer spart i uka»
-2. **Utgangspunktet** — hva som tok tid før (presentasjoner 30–60 min per prospekt, sporadisk oppfølging, manuell kostnadsføring)
+1. **Overskrift med utfall, ikke teknologi** — «En assistent som jobber 24/7 — 8 timer spart i uken»
+2. **Utgangspunktet** — hva som tok tid før (presentasjoner 30–60 min per kunde, sporadisk oppfølging, manuell regnskapsføring)
 3. **Hva som ble bygget** — kort, i klientens språk
 4. **Tallene i tabell** — før/etter. Du har dem allerede i `case-study-zinzino-leder.md`
 5. **Skjermbilder** — 3–4 stk, ekte grensesnitt
 6. **60–90 sekunders skjermopptak** ← det som virkelig selger. Du snakker over mens systemet kjører
-7. **Sitat fra klient med navn og bilde**
+7. **Sitat fra klienten**
 8. **CTA:** «Vil du se hva dette kan bety for din bedrift?»
 
-**To ting må avklares før publisering:**
-- Case-studien er markert utkast, og sitatet står som parafrasert. Hent eksakt, godkjent sitat før det legges ut.
-- Avklar om klienten navngis eller anonymiseres («en Zinzino-leder i Norge»). Navngitt case er kraftig mye sterkere — spør.
+**Klienten omtales som «en toppleder i helsebransjen» — overalt.**
+Ikke «Zinzino-leder», ikke navn, ikke bransjespesifikke detaljer som identifiserer selskapet.
+Dette gjelder forsiden, casesiden, LinkedIn-innlegg, tilbudsmaler og annonsetekster.
+Fordelene: casen blir relevant for alle helseaktører (klinikk, tannlege, treningssenter),
+den røper ikke en kunderelasjon som ikke er klarert for publisering, og den fjerner
+koblingen til nettverksmarkedsføring som kan svekke troverdigheten i et B2B-salg.
+
+**Én ting må avklares før publisering:** case-studien er markert utkast og sitatet står som
+parafrasert. Hent eksakt, godkjent sitat før det legges ut — selv anonymisert.
 
 ### De andre bevisene
 
@@ -430,7 +436,106 @@ Bruk `?utm_source=outbound&utm_campaign=alesund-ring` på lenkene du sender, så
 - Nettsidetjenesten (15 000 kr) skal markedsføres offentlig på samme domene, ikke holdes adskilt
 
 **Må avklares:**
-1. Kan mor navngis i case-studien, og har du et eksakt godkjent sitat?
+1. Har du et eksakt, godkjent sitat fra klienten — også når casen er anonymisert?
 2. Finnes det Google Business Profile allerede?
-3. Skal prisene på siden være «fra»-priser eller faste pakkepriser?
+3. Er du komfortabel med prisnivået i avsnitt 11, eller vil du starte lavere og trappe opp?
 4. Er Asgeir-kontrakten signert — kan casen publiseres?
+
+---
+
+## 11. Prissetting — revidert
+
+### Hvorfor den gamle prisen var feil
+
+Gammel prisliste: workshop 3 000 kr, enkeltprosjekt 8 000–15 000 kr, komplett system
+15 000–35 000 kr, retainer 2 500 kr/mnd.
+
+Målt mot det norske markedet i 2026 er dette ikke «rimelig» — det er under kostpris for
+arbeidet, og det signaliserer feil kvalitetsnivå til en B2B-kjøper.
+
+| Referansepunkt (norsk marked, 2026) | Nivå |
+|---|---|
+| Timepris, erfaren AI-konsulent | 1 400–1 800 kr |
+| Timepris, senior / spesialist | 1 900–2 400 kr |
+| Timepris, Oslo-byrå | 2 500–4 000 kr |
+| Dagspris, erfaren konsulent på heltid | 12 000–20 000 kr |
+| Enkel chatbot fra mal | 30 000–60 000 kr |
+| Tilpasset automatiseringsflyt med integrasjoner | 50 000–120 000 kr |
+| Full AI-strategi og implementering | 150 000–500 000 kr |
+| Månedlig retainer | 15 000–50 000 kr |
+| Billigste SMB-pakke i markedet (AIKI «AI Kickstart») | 12 500 kr |
+
+En full AI-assistent til 8 000 kr tilsvarer omtrent fem timers arbeid til markedspris.
+Du la ned nærmere to uker. Det er en implisitt timepris under det en rørlegger tar — for
+et arbeid som krever langt mer spesialisert kompetanse. I tillegg tolker
+bedriftskjøpere lav pris som lav kvalitet: en tannlegeklinikk som får tilbud om et
+komplett system til 15 000 kr antar at det er et hobbyprosjekt.
+
+### Ny prisliste
+
+| Pakke | Pris (eks. mva) | Begrunnelse |
+|---|---|---|
+| Gratis kartlegging, 30 min | 0 kr | Toppen av trakten. Uendret — dette er CTA-en overalt |
+| **Kartlegging** (halv dag + veikart) | **12 000 kr** | Markedet tar 18 000–35 000 for workshop. Du ligger under, med lav overhead som reell begrunnelse. Trekkes fra ved bestilling innen 30 dager |
+| **Én automatisering** | **fra 35 000 kr** | Markedet: 30 000–60 000 for en malbasert chatbot. Du leverer mer enn en mal |
+| **AI-assistent** | **fra 75 000 kr** | Markedet: 50 000–120 000 for tilpasset flyt med integrasjoner. Flaggskipet ditt ligger midt i intervallet |
+| **Komplett system** | **fra 150 000 kr** | Markedet: 150 000–500 000. Du starter i nedre kant |
+| **Drift og videreutvikling** | **fra 6 500 kr/mnd** | Markedet: 15 000–50 000. Bevisst lavt for SMB, og det gir deg forutsigbar inntekt |
+| **Nettside og lokal synlighet** | **fra 19 000 kr** | Eget produkt, egen kjøper. Opp fra 15 000 — pakken inkluderer nå oppsett av Google-oppføring |
+
+### Argumentet som forsvarer prisen
+
+Legg dette synlig på prissiden:
+
+> Åtte timer i uken er 35 timer i måneden. Sett inn din egen timekostnad — de fleste som
+> driver selv lander på 500–800 kr. Da er en assistent til 75 000 kr nedbetalt i løpet av
+> et halvår, og jobber gratis for deg etter det.
+
+Det er verdibasert prising: du selger tilbakebetalt tid, ikke timer med arbeid.
+
+### Den reelle risikoen
+
+Du har **én ferdig referansecase** og én kontrakt som ikke er signert ennå. Premiumpriser
+krever bevis, og du har foreløpig tynt med det. To måter å håndtere det på:
+
+1. **Anbefalt:** hold prisene over, men gi de 2–3 neste kundene en uttalt referanserabatt
+   («30 % avslag mot at jeg kan bruke dere som case med navn»). Da får du både prisankeret
+   og bevisene, uten å bygge et lavprisrykte du må rive ned senere.
+2. **Forsiktig:** start assistenten på 55 000 kr og løft til 75 000 etter tre leverte
+   prosjekter. Tregere, men lavere risiko for at du mister de første samtalene på pris.
+
+Det som **ikke** fungerer, er å beholde 8 000 kr. Da bruker du to uker på en kunde som
+uansett ikke har budsjett til fase to.
+
+### Konsekvens for de to sporene
+
+Prisøkningen gjør skillet mellom sporene enda viktigere. En snekker i Ålesund kjøper
+ikke en assistent til 75 000 kr — han kjøper nettside til 19 000 kr. Klinikken,
+treningssenteret og regnskapsbyrået kjøper assistenten. Nettsidesporet er derfor ikke
+lenger bare en døråpner, det er det som holder volum i pipelinen mens
+automatiseringssporet leverer marginen.
+
+---
+
+## 12. Vestlandet som posisjonering
+
+Du konkurrerer ikke mot Oslo-byråene på kompetanse alene — de tar 2 500–4 000 kr timen og
+sender ofte en junior inn på et Teams-møte. Det du har som de ikke har, er nærhet.
+
+**Det som skal fram på siden:**
+
+- **Vestlandet bygger i klynger.** Maritim industri i Ålesund, hav- og subsea-miljøet i
+  Bergen, energi i Stavanger. Bedrifter som ble sterke fordi de løftet hverandre. Den
+  kulturen er et ekte salgsargument når du selger til lokale bedrifter.
+- **Du kommer innom.** «Jeg kjører til deg» slår enhver Teams-lenke i dette segmentet.
+- **Gjenbruk som prismekanikk.** Bygger du innkallingssystemet for én klinikk, er det
+  halve jobben for den neste — og det merkes på pris og leveringstid. Dette er både ærlig,
+  konkret og det gir «bedrifter som utvikler hverandre»-fortellingen et faktisk innhold
+  i stedet for tomme ord.
+- **Prioritert rekkefølge:** Ålesund (flest leads og demo-sider) → Bergen (du bor der,
+  Google Business Profile) → Stavanger (nyest, tettere oppfølging til de første kundene).
+
+**Viktig grense:** ikke antyd medlemskap i eller samarbeid med GCE Blue Maritime, ÅKP,
+GCE Ocean Technology eller andre klynger. Referer til klyngekulturen som kontekst for
+hvordan du jobber, ikke som en tilknytning du har. Å bli tatt i en slik overdrivelse i
+et lite marked er dyrere enn alt du kan vinne på den.
