@@ -113,7 +113,7 @@ Hjem (/)
 └── Gratis AI-audit (/audit)                            ← fiks 404
 ```
 
-**Maskinlesbare filer i rot:** `/robots.txt`, `/sitemap.xml`, `/llms.txt`, `/priser.md`
+**Maskinlesbare filer i rot:** `/robots.txt`, `/sitemap.xml`, `/llms.txt`, `/tjenester.md`
 
 ### URL- og navigasjonsregler
 
@@ -308,9 +308,15 @@ parafrasert. Hent eksakt, godkjent sitat før det legges ut — selv anonymisert
 For søk som «AI-konsulent Bergen» eller «webdesigner Bergen» vises kartpakken over de organiske treffene. Uten GBP finnes du ikke der.
 
 - Opprett profil for Bergen, kategori «Databehandlingstjeneste» / «Nettdesigner»
-- Sett opp som **tjenesteområdebedrift** hvis du ikke vil publisere hjemmeadresse — dekningsområde Bergen, Ålesund, Stavanger
-- Legg inn tjenester med priser, 10+ bilder, ukentlige innlegg de første to månedene
-- **Be hver eneste kunde om Google-anmeldelse.** Fem anmeldelser flytter deg forbi de fleste konkurrentene i disse nisjene
+- Sett opp som **tjenesteområdebedrift** og skjul adressen
+- **Tjenesteområde: kun Bergen og omland.** Google setter grensen ved ca. to timers kjøring fra
+  der bedriften holder til, og egne profiler i andre byer krever egne beliggenheter med egne
+  ansatte. Ålesund og Stavanger kan altså ikke dekkes av Maps — de må vinnes med organisk søk,
+  annonser og outbound. Full begrunnelse i `TRAFIKK-OG-OMTALER.md` avsnitt 0 og 1
+- Verifisering skjer med videoopptak — start prosessen tidlig, den tar noen dager
+- Legg inn tjenester, 10+ bilder, ukentlige innlegg de første to månedene
+- **Be hver eneste kunde om Google-anmeldelse.** Fem anmeldelser flytter deg forbi de fleste
+  konkurrentene i disse nisjene. Aldri mot rabatt eller motytelse — se `TRAFIKK-OG-OMTALER.md` avsnitt 3
 - Konsistent NAP på proff.no, 1881, gulesider — samme skrivemåte overalt
 
 ### 7.3 Organisk søk
@@ -345,7 +351,7 @@ Dette er undervurdert i Norge akkurat nå. Når noen spør ChatGPT «hvem kan hj
 | Tiltak | Hva |
 |---|---|
 | `/llms.txt` | Kort oversikt over hvem du er, hva du leverer, til hvem, med lenker til nøkkelsider |
-| `/priser.md` | Maskinlesbar prisliste. AI-agenter som sammenligner leverandører filtrerer bort de som ikke har lesbare priser |
+| `/tjenester.md` | Maskinlesbar oversikt over leveransene. Erstatter den opprinnelig planlagte `/priser.md` etter at prisene ble tatt av nettsiden. Hva det koster i AI-synlighet: `TRAFIKK-OG-OMTALER.md` avsnitt 4.2 |
 | Svarblokker på 40–60 ord | Hver seksjon starter med et direkte svar som fungerer løsrevet fra siden rundt |
 | FAQ med naturlige spørsmål + `FAQPage`-schema | «Hva koster en AI-assistent?» ikke «Priser» |
 | Tall med kilde og dato | Statistikk med kilde øker sitering markant. Bruk dine egne tall: 8 t/uke, 213 leads, 30→5 min |
@@ -408,7 +414,7 @@ Bruk `?utm_source=outbound&utm_campaign=alesund-ring` på lenkene du sender, så
 | Uke | Fokus | Leveranser |
 |---|---|---|
 | **1** | Fundament + måling | Domene/OG fikset, og-image laget, `/audit` deployet, GA4 + Search Console + konverteringssporing live, robots.txt, sitemap, canonical, schema |
-| **2** | Redesign + pris | Nytt designsystem implementert på forsiden (lys, Inter, svart CTA, korn og serif fjernet), `/priser` publisert, `/priser.md` og `/llms.txt` lagt ut |
+| **2** | Redesign | Nytt designsystem implementert på forsiden (lys flate, Geist, svart CTA, korn og serif fjernet), `/tjenester.md` og `/llms.txt` lagt ut. Google-bedriftsprofil opprettet og videoverifisering startet |
 | **3** | Bevis | `/kunder/executive-assistant` med skjermbilder, tall, godkjent sitat og skjermopptak. `/kunder`-hub. Google Business Profile opprettet og fylt ut |
 | **4** | Spor + trafikk | `/ai-automatisering` og `/nettside` publisert, `/alesund` publisert, Google Ads-konto satt opp med 2 kampanjer og negativliste, første 3 500 kr i gang |
 | **5–8** | Skalering | Resterende løsningssider, `/bergen`, bransjesider, 3 guider, Meta-retargeting, første AI-synlighetsmåling |
