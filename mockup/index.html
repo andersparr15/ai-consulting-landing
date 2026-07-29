@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#FFFFFF">
-<title>Anders Parr — Mindre admin. Flere kunder.</title>
-<meta name="description" content="AI-assistenter, automatisering og nettsider for bedrifter på Vestlandet. Bergen, Ålesund og Stavanger. Fast pris, levert på 1–3 uker.">
+<title>Anders Parr Consulting — Mindre admin. Flere kunder.</title>
+<meta name="description" content="AI-assistenter, automatisering og nettsider for bedrifter på Vestlandet. Prosjekter levert i Bergen, Ålesund og Stavanger.">
 <meta name="robots" content="noindex, nofollow">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -132,9 +132,7 @@ section{padding-block:clamp(72px,11vw,152px)}
 .track ul{list-style:none;margin-top:var(--s4);display:grid;gap:.625rem}
 .track li{font-size:.9375rem;color:var(--ink-body);display:flex;gap:.75rem;align-items:flex-start}
 .track li::before{content:'';flex:none;width:5px;height:5px;border-radius:50%;background:var(--ink);margin-top:.6em}
-.track-foot{margin-top:auto;padding-top:var(--s5);display:flex;align-items:center;justify-content:space-between;gap:var(--s2);flex-wrap:wrap}
-.track-price{font-size:.875rem;color:var(--ink-muted)}
-.track-price b{color:var(--ink);font-weight:600}
+.track-foot{margin-top:auto;padding-top:var(--s5)}
 
 /* ============================================================
    CASE (mørk)
@@ -166,7 +164,23 @@ section{padding-block:clamp(72px,11vw,152px)}
 .quote{margin-top:var(--s5);padding-left:var(--s3);border-left:2px solid var(--dark-line)}
 .quote p{font-size:1.0625rem;color:var(--dark-ink);line-height:1.55}
 .quote cite{display:block;margin-top:var(--s2);font-style:normal;font-size:.8125rem;color:#52525B}
-.case-cta{margin-top:var(--s6);display:flex;gap:var(--s3);flex-wrap:wrap;align-items:center}
+
+/* ============================================================
+   ARBEID
+   ============================================================ */
+.work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s3);margin-top:var(--s6)}
+@media(max-width:920px){.work-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.work-grid{grid-template-columns:1fr}}
+.work{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--bg);
+  display:flex;flex-direction:column;transition:transform .25s var(--ease),box-shadow .25s var(--ease),border-color .25s var(--ease)}
+.work:hover{transform:translateY(-4px);border-color:var(--line-strong);box-shadow:0 22px 50px -30px rgba(9,9,11,.28)}
+.work-img{aspect-ratio:16/10;overflow:hidden;background:var(--bg-sunken);border-bottom:1px solid var(--line);display:grid;place-items:center}
+.work-img img{width:100%;height:100%;object-fit:cover;object-position:top left;display:block}
+.work-img .ph{font-size:.75rem;color:var(--ink-muted)}
+.work-body{padding:clamp(20px,2.4vw,28px);display:flex;flex-direction:column;flex:1}
+.work-body h3{font-size:1.0625rem}
+.work-body p{margin-top:.5rem;font-size:.9375rem;color:var(--ink-muted);line-height:1.55;flex:1}
+.work-meta{margin-top:var(--s3);padding-top:var(--s2);border-top:1px solid var(--line);font-size:.75rem;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-muted)}
 
 /* ============================================================
    LØSNINGER
@@ -184,64 +198,16 @@ section{padding-block:clamp(72px,11vw,152px)}
 /* ============================================================
    VESTLANDET
    ============================================================ */
-.vest-intro{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,80px);align-items:end}
-@media(max-width:880px){.vest-intro{grid-template-columns:1fr;gap:var(--s4)}}
-.vest-intro .lede{max-width:52ch}
-
-.cities{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s3);margin-top:var(--s7)}
-@media(max-width:880px){.cities{grid-template-columns:1fr}}
-.city{border-radius:14px;overflow:hidden;background:var(--bg-sunken);border:1px solid var(--line);
-  transition:transform .25s var(--ease),box-shadow .25s var(--ease)}
-.city:hover{transform:translateY(-4px);box-shadow:0 22px 50px -28px rgba(9,9,11,.3)}
-.city-img{aspect-ratio:4/3;overflow:hidden;background:var(--bg-sunken)}
-.city-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s var(--ease)}
-.city:hover .city-img img{transform:scale(1.035)}
-.city-body{padding:clamp(20px,2.4vw,28px)}
-.city-body h3{font-size:1.1875rem}
-.city-body p{margin-top:.5rem;font-size:.9375rem;color:var(--ink-muted);line-height:1.55}
-.city-meta{margin-top:var(--s3);padding-top:var(--s2);border-top:1px solid var(--line);font-size:.8125rem;color:var(--ink-muted)}
-
-.together{margin-top:var(--s7);border:1px solid var(--line);border-radius:14px;background:var(--bg);
-  padding:clamp(28px,4vw,56px);display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,64px);align-items:center}
-@media(max-width:880px){.together{grid-template-columns:1fr;gap:var(--s4)}}
-.together h3{font-size:clamp(1.5rem,2.4vw,2rem);letter-spacing:-.025em;line-height:1.15}
-.together p{margin-top:var(--s3);font-size:.9375rem;color:var(--ink-body)}
-.tsteps{list-style:none;display:grid;gap:var(--s3)}
-.tstep{display:flex;gap:var(--s3);align-items:flex-start}
-.tstep-n{flex:none;width:26px;height:26px;border-radius:50%;border:1px solid var(--line-strong);
-  display:grid;place-items:center;font-size:.6875rem;font-weight:600;color:var(--ink);font-variant-numeric:tabular-nums}
-.tstep p{margin:0;font-size:.9375rem;color:var(--ink-body)}
-.tstep b{color:var(--ink);font-weight:600}
-
-/* ============================================================
-   PRISER
-   ============================================================ */
-.price-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--s2);margin-top:var(--s6)}
-@media(max-width:1020px){.price-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:560px){.price-grid{grid-template-columns:1fr}}
-.price{border:1px solid var(--line);border-radius:14px;padding:clamp(24px,2.6vw,32px);background:var(--bg);display:flex;flex-direction:column;position:relative}
-.price.featured{border-color:var(--ink);box-shadow:0 18px 44px -30px rgba(9,9,11,.4)}
-.price-badge{position:absolute;top:-1px;right:20px;transform:translateY(-50%);background:var(--ink);color:#fff;font-size:.6875rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;padding:.3rem .625rem;border-radius:5px}
-.price h3{font-size:1.0625rem}
-.price-amt{margin-top:var(--s3);font-size:1.75rem;font-weight:600;letter-spacing:-.035em;color:var(--ink);line-height:1}
-.price-amt small{font-size:.75rem;font-weight:400;color:var(--ink-muted);letter-spacing:0;display:block;margin-bottom:.375rem}
-.price-amt .per{font-size:.5em;font-weight:400;color:var(--ink-muted);letter-spacing:0}
-.price > p{margin-top:var(--s3);font-size:.875rem;color:var(--ink-muted);line-height:1.55}
-.price ul{list-style:none;margin-top:var(--s3);display:grid;gap:.5rem;flex:1}
-.price li{font-size:.8125rem;color:var(--ink-muted);display:flex;gap:.5rem;align-items:flex-start;line-height:1.45}
-.price li::before{content:'—';color:var(--line-strong);flex:none}
-.price .btn{margin-top:var(--s4);width:100%}
-
-.payback{margin-top:var(--s5);border:1px solid var(--line);border-radius:14px;background:var(--bg);
-  padding:clamp(24px,3vw,40px);display:grid;grid-template-columns:1fr auto;gap:var(--s5);align-items:center}
-@media(max-width:780px){.payback{grid-template-columns:1fr;gap:var(--s3)}}
-.payback h3{font-size:1.1875rem}
-.payback p{margin-top:.625rem;font-size:.9375rem;color:var(--ink-muted);max-width:62ch}
-.payback-num{text-align:right}
-@media(max-width:780px){.payback-num{text-align:left}}
-.payback-num .n{font-size:clamp(2.25rem,4.5vw,3.25rem);font-weight:600;letter-spacing:-.04em;color:var(--ink);line-height:1}
-.payback-num .l{font-size:.8125rem;color:var(--ink-muted);margin-top:.5rem}
-.price-note{margin-top:var(--s4);font-size:.8125rem;color:var(--ink-muted);text-align:center}
+.vest{position:relative;background:#0A0A0A;color:#fff;overflow:hidden;isolation:isolate;text-align:center}
+.vest-bg{position:absolute;inset:0;z-index:-2}
+.vest-bg img{width:100%;height:100%;object-fit:cover;display:block;opacity:.4}
+.vest::after{content:'';position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(180deg,rgba(10,10,10,.78) 0%,rgba(10,10,10,.5) 50%,rgba(10,10,10,.86) 100%)}
+.vest .eyebrow{color:rgba(255,255,255,.62)}
+.vest h2{color:#fff;max-width:18ch;margin-inline:auto}
+.vest p{margin:var(--s3) auto 0;color:rgba(255,255,255,.8);max-width:56ch;font-size:clamp(1rem,1.4vw,1.125rem)}
+.vest-cities{margin-top:var(--s6);display:flex;justify-content:center;gap:clamp(24px,6vw,72px);flex-wrap:wrap}
+.vest-city{font-size:clamp(1.25rem,2.6vw,2rem);font-weight:600;letter-spacing:-.03em;color:#fff}
 
 /* ============================================================
    PROSESS
@@ -252,6 +218,8 @@ section{padding-block:clamp(72px,11vw,152px)}
 .step-n{font-size:.75rem;font-weight:500;color:var(--ink-muted);font-variant-numeric:tabular-nums;letter-spacing:.06em}
 .step h3{margin-top:var(--s2);font-size:1.1875rem}
 .step p{margin-top:.625rem;font-size:.9375rem;color:var(--ink-muted)}
+.terms{margin-top:var(--s6);display:flex;gap:var(--s3);flex-wrap:wrap;justify-content:center}
+.term{font-size:.875rem;color:var(--ink-body);border:1px solid var(--line);border-radius:999px;padding:.5rem 1.125rem;background:var(--bg)}
 
 /* ============================================================
    FAQ
@@ -266,17 +234,13 @@ section{padding-block:clamp(72px,11vw,152px)}
 .faq details p{padding-bottom:var(--s3);font-size:.9375rem;color:var(--ink-muted);max-width:64ch}
 
 /* ============================================================
-   SLUTT-CTA med foto
+   SLUTT-CTA
    ============================================================ */
-.final{position:relative;background:#0A0A0A;color:#fff;text-align:center;overflow:hidden;isolation:isolate}
-.final-bg{position:absolute;inset:0;z-index:-2}
-.final-bg img{width:100%;height:100%;object-fit:cover;display:block;opacity:.42}
-.final::after{content:'';position:absolute;inset:0;z-index:-1;
-  background:linear-gradient(180deg,rgba(10,10,10,.72) 0%,rgba(10,10,10,.55) 45%,rgba(10,10,10,.88) 100%)}
-.final h2{color:#fff;max-width:19ch;margin-inline:auto}
-.final .lede{margin:var(--s3) auto 0;color:rgba(255,255,255,.82);text-align:center;max-width:56ch}
+.final{background:var(--bg-subtle);text-align:center;border-top:1px solid var(--line)}
+.final h2{max-width:19ch;margin-inline:auto}
+.final .lede{margin:var(--s3) auto 0;text-align:center;max-width:54ch}
 .final-actions{margin-top:var(--s5);display:flex;gap:var(--s3);justify-content:center;flex-wrap:wrap}
-.final-note{margin-top:var(--s3);font-size:.8125rem;color:rgba(255,255,255,.6)}
+.final-note{margin-top:var(--s3);font-size:.8125rem;color:var(--ink-muted)}
 
 /* ============================================================
    FOOTER
@@ -288,7 +252,6 @@ section{padding-block:clamp(72px,11vw,152px)}
 .credits{margin-top:var(--s4);padding-top:var(--s3);border-top:1px solid var(--line);font-size:.6875rem;color:var(--ink-muted);line-height:1.6}
 .credits a{text-decoration:underline;text-underline-offset:2px}
 
-/* ---- Klebrig mobil-CTA ---- */
 .sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:99;display:none;
   padding:12px 16px calc(12px + env(safe-area-inset-bottom));
   background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-top:1px solid var(--line);
@@ -309,10 +272,9 @@ section{padding-block:clamp(72px,11vw,152px)}
   <div class="nav-in">
     <a href="#" class="brand">Anders Parr <span>Consulting</span></a>
     <div class="nav-links">
+      <a href="#arbeid">Arbeid</a>
       <a href="#losninger">Løsninger</a>
-      <a href="#case">Kunder</a>
       <a href="#vestlandet">Vestlandet</a>
-      <a href="#priser">Priser</a>
       <a href="#faq">Spørsmål</a>
     </div>
     <a href="#kontakt" class="btn btn-primary btn-sm">Book gratis kartlegging</a>
@@ -325,14 +287,14 @@ section{padding-block:clamp(72px,11vw,152px)}
     <span class="eyebrow rv">Bergen · Ålesund · Stavanger</span>
     <h1 class="rv d1">Mindre admin.<br>Flere kunder.</h1>
     <p class="lede rv d2">
-      Jeg bygger AI-assistenter, automatiseringer og nettsider for bedrifter på Vestlandet —
-      slik at oppgavene som spiser opp uken gjør seg selv. Fast pris, avtalt før vi starter.
+      Vi bygger AI-assistenter, automatiseringer og nettsider for bedrifter på Vestlandet —
+      slik at oppgavene som spiser opp uken gjør seg selv.
     </p>
     <div class="hero-actions rv d3">
       <a href="#kontakt" class="btn btn-primary">Book gratis kartlegging</a>
-      <a href="#case" class="textlink">Se hva jeg har bygget →</a>
+      <a href="#arbeid" class="textlink">Se arbeidet →</a>
     </div>
-    <p class="hero-reassure rv d3">30 minutter. Gratis. Du får konkrete forslag uansett om vi jobber sammen videre.</p>
+    <p class="hero-reassure rv d3">30 minutter, uforpliktende. Du får konkrete forslag uansett hva du velger etterpå.</p>
   </div>
 </header>
 
@@ -342,15 +304,15 @@ section{padding-block:clamp(72px,11vw,152px)}
     <div class="proof-grid">
       <div class="rv">
         <div class="stat-num">8<span class="u"> t/uke</span></div>
-        <p class="stat-lbl">frigjort for første klient — presentasjoner, oppfølging og regnskapsføring</p>
+        <p class="stat-lbl">frigjort for én klient — presentasjoner, oppfølging og regnskapsføring</p>
       </div>
       <div class="rv d1">
         <div class="stat-num">24/7</div>
-        <p class="stat-lbl">assistenten står på hele døgnet, også når du har fri</p>
+        <p class="stat-lbl">assistentene står på hele døgnet, også utenfor arbeidstid</p>
       </div>
       <div class="rv d2">
         <div class="stat-num">1–3<span class="u"> uker</span></div>
-        <p class="stat-lbl">fra første samtale til noe du faktisk tar i bruk</p>
+        <p class="stat-lbl">fra første samtale til noe som faktisk er i bruk</p>
       </div>
     </div>
   </div>
@@ -370,62 +332,16 @@ section{padding-block:clamp(72px,11vw,152px)}
   </div>
 </div>
 
-<!-- ================= TO SPOR ================= -->
-<section class="subtle" id="losninger">
-  <div class="wrap">
-    <span class="eyebrow rv">To måter jeg hjelper</span>
-    <h2 class="rv d1">Hva står i veien akkurat nå?</h2>
-    <p class="lede rv d2" style="margin-top:var(--s3)">
-      De fleste bedriftene jeg møter har ett av to problemer: kundene finner dem ikke,
-      eller de bruker halve uken på oppgaver som ikke skaper omsetning.
-    </p>
-
-    <div class="split">
-      <article class="track rv d1">
-        <div class="track-tag">Spor 1 — Synlighet</div>
-        <h3>«Kundene finner meg ikke»</h3>
-        <p>Du gjør en god jobb, men konkurrenten dukker opp på Google og du gjør det ikke. Jobbene kommer gjennom bekjente — og der stopper det.</p>
-        <ul>
-          <li>Nettside som faktisk konverterer, ikke bare eksisterer</li>
-          <li>Google-oppføring og lokal synlighet satt opp riktig</li>
-          <li>Skjema og booking som sender henvendelsen rett til deg</li>
-          <li>Ferdig på under to uker</li>
-        </ul>
-        <div class="track-foot">
-          <span class="track-price">Fra <b>19 000 kr</b></span>
-          <a href="#priser" class="textlink">Se hva som inngår →</a>
-        </div>
-      </article>
-
-      <article class="track rv d2">
-        <div class="track-tag">Spor 2 — Automatisering</div>
-        <h3>«Jeg drukner i manuelle oppgaver»</h3>
-        <p>Henvendelser blir liggende, oppfølgingen glipper, rapportene tar en hel formiddag. Ikke fordi du er treg — men fordi ingenting jobber for deg.</p>
-        <ul>
-          <li>En assistent som svarer, følger opp og minner deg på ting</li>
-          <li>Booking og resepsjon uten manuell fram og tilbake</li>
-          <li>Dokumenter og fakturaer som leser seg selv inn</li>
-          <li>Rapporter som er ferdige før du rekker å spørre</li>
-        </ul>
-        <div class="track-foot">
-          <span class="track-price">Fra <b>35 000 kr</b></span>
-          <a href="#losninger-liste" class="textlink">Se løsningene →</a>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
 <!-- ================= CASE (mørk) ================= -->
 <section class="case" id="case">
   <div class="wrap">
     <div class="case-head">
-      <span class="eyebrow rv">Kundecase</span>
+      <span class="eyebrow rv">Utvalgt prosjekt</span>
       <h2 class="rv d1">En assistent som<br>aldri tar helg</h2>
       <p class="rv d2">
         En toppleder i helsebransjen brukte opptil en time på å lage én presentasjon til én kunde.
         Oppfølgingen ble gjort når det passet, og regnskapet ble ført i bulk på slutten av måneden.
-        Vi bygde en assistent som håndterer alle tre — hele døgnet, hver dag.
+        Assistenten vi bygde håndterer alle tre — hele døgnet, hver dag.
       </p>
     </div>
 
@@ -461,10 +377,89 @@ section{padding-block:clamp(72px,11vw,152px)}
         </blockquote>
       </div>
     </div>
+  </div>
+</section>
 
-    <div class="case-cta rv">
-      <a href="#kontakt" class="btn btn-onDark">Book gratis kartlegging</a>
-      <a href="#" class="textlink" style="color:#A1A1AA">Les hele casen →</a>
+<!-- ================= ARBEID ================= -->
+<section id="arbeid">
+  <div class="wrap">
+    <span class="eyebrow rv">Arbeid</span>
+    <h2 class="rv d1">Ting som er bygget<br>og i bruk</h2>
+
+    <div class="work-grid">
+      <article class="work rv">
+        <div class="work-img">
+          <img loading="lazy" src="../images/case-02-telegram.png" alt="Chatbot for eiendomsforvaltning"
+               onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'ph',textContent:'Skjermbilde'}))">
+        </div>
+        <div class="work-body">
+          <h3>Chatbot for eiendomsforvaltning</h3>
+          <p>Leietakere melder inn saker direkte i Telegram. Systemet kategoriserer, svarer på det enkle og varsler forvalteren om resten.</p>
+          <div class="work-meta">Eiendom</div>
+        </div>
+      </article>
+
+      <article class="work rv d1">
+        <div class="work-img">
+          <img loading="lazy" src="../images/case-03-presentation.png" alt="Automatisk presentasjonsgenerator"
+               onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'ph',textContent:'Skjermbilde'}))">
+        </div>
+        <div class="work-body">
+          <h3>Presentasjoner på minutter</h3>
+          <p>Ferdige presentasjonsfiler genereres tilpasset mottakeren, på flere språk. Fra en time med manuelt arbeid til under ti minutter.</p>
+          <div class="work-meta">Helse</div>
+        </div>
+      </article>
+
+      <article class="work rv d2">
+        <div class="work-img">
+          <img loading="lazy" src="../images/case-04-crm.png" alt="Oppfølgingssystem for henvendelser"
+               onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'ph',textContent:'Skjermbilde'}))">
+        </div>
+        <div class="work-body">
+          <h3>Oppfølging som ikke glipper</h3>
+          <p>Alle henvendelser samlet ett sted, med automatisk kategorisering og påminnelser. Over 200 kontakter fulgt opp uten at noe falt mellom stolene.</p>
+          <div class="work-meta">Salg og rådgivning</div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TO SPOR ================= -->
+<section class="subtle" id="losninger">
+  <div class="wrap">
+    <span class="eyebrow rv">To måter vi hjelper</span>
+    <h2 class="rv d1">Hva står i veien akkurat nå?</h2>
+
+    <div class="split">
+      <article class="track rv d1">
+        <div class="track-tag">Synlighet</div>
+        <h3>«Kundene finner oss ikke»</h3>
+        <p>Dere gjør en god jobb, men konkurrenten dukker opp på Google og dere gjør det ikke. Jobbene kommer gjennom bekjente — og der stopper det.</p>
+        <ul>
+          <li>Nettside som konverterer, ikke bare eksisterer</li>
+          <li>Google-oppføring og lokal synlighet satt opp riktig</li>
+          <li>Skjema og booking som sender henvendelsen rett inn</li>
+        </ul>
+        <div class="track-foot">
+          <a href="#kontakt" class="textlink">Book kartlegging →</a>
+        </div>
+      </article>
+
+      <article class="track rv d2">
+        <div class="track-tag">Automatisering</div>
+        <h3>«Vi drukner i manuelle oppgaver»</h3>
+        <p>Henvendelser blir liggende, oppfølgingen glipper, rapportene tar en hel formiddag. Ikke fordi noen er trege — men fordi ingenting jobber for dere.</p>
+        <ul>
+          <li>En assistent som svarer, følger opp og minner om ting</li>
+          <li>Booking og dokumenter uten manuell fram og tilbake</li>
+          <li>Rapporter som er ferdige før noen rekker å spørre</li>
+        </ul>
+        <div class="track-foot">
+          <a href="#losninger-liste" class="textlink">Se løsningene →</a>
+        </div>
+      </article>
     </div>
   </div>
 </section>
@@ -474,9 +469,6 @@ section{padding-block:clamp(72px,11vw,152px)}
   <div class="wrap">
     <span class="eyebrow rv">Løsninger</span>
     <h2 class="rv d1">Fem ting bedrifter<br>faktisk betaler for</h2>
-    <p class="lede rv d2" style="margin-top:var(--s3)">
-      De samme fem går igjen på tvers av bransje. Vi starter med den som koster deg mest akkurat nå.
-    </p>
 
     <div class="sol-grid">
       <article class="sol rv">
@@ -488,8 +480,8 @@ section{padding-block:clamp(72px,11vw,152px)}
       <article class="sol rv d1">
         <div class="sol-n">02</div>
         <h3>Oppfølging som ikke glipper</h3>
-        <p>De fleste salg krever fem kontaktpunkter. De fleste gir seg etter ett. Sekvensen kjører av seg selv, med et språk som høres ut som deg.</p>
-        <div class="sol-for">Coach · rådgiver · treningssenter</div>
+        <p>De fleste salg krever fem kontaktpunkter. De fleste gir seg etter ett. Sekvensen kjører av seg selv, i deres eget språk.</p>
+        <div class="sol-for">Rådgivning · coach · treningssenter</div>
       </article>
       <article class="sol rv d2">
         <div class="sol-n">03</div>
@@ -500,19 +492,19 @@ section{padding-block:clamp(72px,11vw,152px)}
       <article class="sol rv">
         <div class="sol-n">04</div>
         <h3>Vekk gamle kunder</h3>
-        <p>Omsetningen ligger allerede i kunderegisteret ditt. Vi finner dem som var aktive før, og gir dem en grunn til å komme tilbake.</p>
+        <p>Omsetningen ligger allerede i kunderegisteret. Vi finner dem som var aktive før, og gir dem en grunn til å komme tilbake.</p>
         <div class="sol-for">Treningssenter · klinikk · nettbutikk</div>
       </article>
       <article class="sol rv d1">
         <div class="sol-n">05</div>
         <h3>Tall uten timer i Excel</h3>
-        <p>Ukesrapporten er ferdig mandag morgen, hentet fra systemene du allerede bruker. Ingen som sitter og limer inn tall.</p>
+        <p>Ukesrapporten er ferdig mandag morgen, hentet fra systemene dere allerede bruker. Ingen som sitter og limer inn tall.</p>
         <div class="sol-for">Alle med to eller flere systemer</div>
       </article>
       <article class="sol rv d2" style="background:var(--bg-sunken)">
         <div class="sol-n">—</div>
-        <h3>Vet du ikke hvilken?</h3>
-        <p>Det er det vanligste svaret. Vi tar 30 minutter, går gjennom uken din, og finner ut hvor det lekker mest.</p>
+        <h3>Vet dere ikke hvilken?</h3>
+        <p>Det er det vanligste svaret. Vi tar 30 minutter, går gjennom uken deres, og finner ut hvor det lekker mest.</p>
         <div class="sol-for"><a href="#kontakt" class="textlink">Book kartlegging →</a></div>
       </article>
     </div>
@@ -520,177 +512,28 @@ section{padding-block:clamp(72px,11vw,152px)}
 </section>
 
 <!-- ================= VESTLANDET ================= -->
-<section class="subtle" id="vestlandet">
-  <div class="wrap">
-    <div class="vest-intro">
-      <div class="rv">
-        <span class="eyebrow">På Vestlandet</span>
-        <h2>Bygget her.<br>For bedrifter her.</h2>
-      </div>
-      <p class="lede rv d1">
-        Vestlandet har alltid bygd næringsliv i klynger — maritimt i Ålesund, hav og subsea i Bergen,
-        energi i Stavanger. Bedrifter som ble store fordi de løftet hverandre, ikke fordi noen kom
-        utenfra med en ferdig plan. Jeg jobber på samme måte.
-      </p>
-    </div>
-
-    <div class="cities">
-      <article class="city rv">
-        <div class="city-img">
-          <img loading="lazy" alt="Utsikt over Bergen fra Fløyen"
-               src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Vista_de_Bergen_desde_la_monta%C3%B1a_Fl%C3%B8yen%2C_Noruega%2C_2019-09-08%2C_DD_34.jpg/1920px-Vista_de_Bergen_desde_la_monta%C3%B1a_Fl%C3%B8yen%2C_Noruega%2C_2019-09-08%2C_DD_34.jpg"
-               onerror="this.closest('.city-img').style.display='none'">
-        </div>
-        <div class="city-body">
-          <h3>Bergen</h3>
-          <p>Her holder jeg til. Kaffe på kort varsel, og jeg kommer gjerne innom kontoret ditt før vi bestemmer noe som helst.</p>
-          <div class="city-meta">Klinikk · rådgivning · eiendom · handel</div>
-        </div>
-      </article>
-
-      <article class="city rv d1">
-        <div class="city-img">
-          <img loading="lazy" alt="Panorama over Ålesund"
-               src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/%C3%85lesundPanorama_01.jpg/1920px-%C3%85lesundPanorama_01.jpg"
-               onerror="this.closest('.city-img').style.display='none'">
-        </div>
-        <div class="city-body">
-          <h3>Ålesund</h3>
-          <p>Her har jeg flest kunder og reiser jevnlig. Mange små bedrifter med solid håndverk og altfor lite synlighet på nett.</p>
-          <div class="city-meta">Håndverk · maritim · service · helse</div>
-        </div>
-      </article>
-
-      <article class="city rv d2">
-        <div class="city-img">
-          <img loading="lazy" alt="Havnen i Stavanger"
-               src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Stavanger_harbour_01.jpg/1920px-Stavanger_harbour_01.jpg"
-               onerror="this.closest('.city-img').style.display='none'">
-        </div>
-        <div class="city-body">
-          <h3>Stavanger</h3>
-          <p>Nyeste området mitt. Jeg tar prosjekter her nå, og de første kundene får tettere oppfølging enn de strengt tatt betaler for.</p>
-          <div class="city-meta">Energi · klinikk · rådgivning</div>
-        </div>
-      </article>
-    </div>
-
-    <div class="together rv">
-      <div>
-        <h3>Én bedrift betaler for å finne veien.<br>De neste slipper.</h3>
-        <p>
-          Jeg gjenbruker det som allerede fungerer. Har jeg bygd innkallingssystemet for én klinikk,
-          er det halve jobben for den neste — og det merkes på både pris og leveringstid.
-          Det er slik en klynge fungerer: den som går først, gjør veien kortere for dem som kommer etter.
-        </p>
-      </div>
-      <ul class="tsteps">
-        <li class="tstep">
-          <span class="tstep-n">1</span>
-          <p><b>Første i bransjen</b> får løsningen bygd fra bunnen, og en lavere pris mot å bli referanse.</p>
-        </li>
-        <li class="tstep">
-          <span class="tstep-n">2</span>
-          <p><b>De neste</b> får samme løsning tilpasset seg, raskere og rimeligere.</p>
-        </li>
-        <li class="tstep">
-          <span class="tstep-n">3</span>
-          <p><b>Alle</b> får forbedringene som kommer ut av de andres prosjekter, uten å betale for dem på nytt.</p>
-        </li>
-      </ul>
-    </div>
+<section class="vest" id="vestlandet">
+  <div class="vest-bg" aria-hidden="true">
+    <img loading="lazy" alt=""
+         src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/%C3%85lesundPanorama_01.jpg/1920px-%C3%85lesundPanorama_01.jpg">
   </div>
-</section>
-
-<!-- ================= PRISER ================= -->
-<section id="priser">
   <div class="wrap">
-    <span class="eyebrow rv">Priser</span>
-    <h2 class="rv d1">Du vet hva det koster<br>før vi starter</h2>
-    <p class="lede rv d2" style="margin-top:var(--s3)">
-      Fast pris per prosjekt, avtalt på forhånd. Ingen timeprisfeller og ingen overraskelser til slutt.
-      Alle priser er eksklusiv mva.
+    <span class="eyebrow rv">På Vestlandet</span>
+    <h2 class="rv d1">Bygget her.<br>For bedrifter her.</h2>
+    <p class="rv d2">
+      Prosjekter levert i Bergen, Ålesund og Stavanger. Vi kommer innom kontoret,
+      og løsningene vi bygger for én bedrift gjør veien kortere for den neste i samme bransje.
     </p>
-
-    <div class="price-grid">
-      <div class="price rv">
-        <h3>Kartlegging</h3>
-        <div class="price-amt"><small>fastpris</small>12 000 kr</div>
-        <p>En halv dag sammen, og et veikart du kan bruke — med eller uten meg videre.</p>
-        <ul>
-          <li>Gjennomgang av arbeidsuken din</li>
-          <li>Prioritert liste over hva som bør automatiseres</li>
-          <li>Estimat på tid og penger spart</li>
-          <li>Trekkes fra hvis du bestiller innen 30 dager</li>
-        </ul>
-        <a href="#kontakt" class="btn btn-secondary">Book</a>
-      </div>
-
-      <div class="price rv d1">
-        <h3>Én automatisering</h3>
-        <div class="price-amt"><small>fra</small>35 000 kr</div>
-        <p>Én avgrenset arbeidsflyt satt i drift. Den vanligste starten.</p>
-        <ul>
-          <li>For eksempel svar på henvendelser, oppfølging eller rapportering</li>
-          <li>Koblet mot systemene du allerede bruker</li>
-          <li>Opplæring og dokumentasjon</li>
-          <li>Typisk ferdig på halvannen uke</li>
-        </ul>
-        <a href="#kontakt" class="btn btn-secondary">Book</a>
-      </div>
-
-      <div class="price featured rv d2">
-        <span class="price-badge">Mest valgt</span>
-        <h3>AI-assistent</h3>
-        <div class="price-amt"><small>fra</small>75 000 kr</div>
-        <p>Den digitale medarbeideren. Håndterer flere oppgaver, hele døgnet.</p>
-        <ul>
-          <li>Flere arbeidsflyter som spiller sammen</li>
-          <li>Lært opp på din bedrift, dine kunder og ditt språk</li>
-          <li>Tilgjengelig der du er — chat, e-post eller mobil</li>
-          <li>Én måneds justering etter levering inkludert</li>
-        </ul>
-        <a href="#kontakt" class="btn btn-primary">Book</a>
-      </div>
-
-      <div class="price rv d3">
-        <h3>Komplett system</h3>
-        <div class="price-amt"><small>fra</small>150 000 kr</div>
-        <p>Flere assistenter og automatiseringer på tvers av hele driften.</p>
-        <ul>
-          <li>Kartlegging, bygging og innføring i hele bedriften</li>
-          <li>Nettside og synlighet kan inngå</li>
-          <li>Opplæring av de ansatte</li>
-          <li>Leveres i etapper, ikke som ett stort smell</li>
-        </ul>
-        <a href="#kontakt" class="btn btn-secondary">Snakk med meg</a>
-      </div>
+    <div class="vest-cities rv d3">
+      <span class="vest-city">Bergen</span>
+      <span class="vest-city">Ålesund</span>
+      <span class="vest-city">Stavanger</span>
     </div>
-
-    <div class="payback rv">
-      <div>
-        <h3>Regnestykket bak prisen</h3>
-        <p>
-          Åtte timer i uken er 35 timer i måneden. Sett inn din egen timekostnad — de fleste
-          som driver selv lander på 500–800 kr. Da er en assistent til 75 000 kr betalt tilbake
-          i løpet av et halvår, og jobber gratis for deg etter det.
-        </p>
-      </div>
-      <div class="payback-num">
-        <div class="n">4–6 mnd</div>
-        <div class="l">typisk nedbetalingstid</div>
-      </div>
-    </div>
-
-    <p class="price-note rv">
-      Nettside og lokal synlighet fra <b>19 000 kr</b> · Drift og videreutvikling fra <b>6 500 kr/mnd</b>, helt valgfritt.<br>
-      Alt bygges på dine egne kontoer. Ingen lock-in — du kan drifte det selv når som helst.
-    </p>
   </div>
 </section>
 
 <!-- ================= PROSESS ================= -->
-<section class="subtle">
+<section>
   <div class="wrap">
     <span class="eyebrow rv">Slik jobber vi</span>
     <h2 class="rv d1">Tre steg, og ingen prosjektmøter<br>som aldri tar slutt</h2>
@@ -699,24 +542,30 @@ section{padding-block:clamp(72px,11vw,152px)}
       <div class="step rv">
         <div class="step-n">01</div>
         <h3>Kartlegg</h3>
-        <p>Vi tar 30 minutter på telefon, eller jeg kommer innom. Hva tar mest tid? Hva skulle du ønske skjedde av seg selv? Du får forslagene uansett.</p>
+        <p>30 minutter på telefon, eller vi kommer innom. Hva tar mest tid? Hva burde skjedd av seg selv? Dere får forslagene uansett.</p>
       </div>
       <div class="step rv d1">
         <div class="step-n">02</div>
         <h3>Bygg</h3>
-        <p>Jeg bygger, og du ser det underveis. Fast pris avtalt på forhånd, og ingen løsning som er mer komplisert enn den trenger å være.</p>
+        <p>Vi bygger, og dere ser det underveis. Ingen løsning blir mer komplisert enn den trenger å være.</p>
       </div>
       <div class="step rv d2">
         <div class="step-n">03</div>
         <h3>Ta i bruk</h3>
-        <p>Du får noe som virker fra dag én — chat, knapper og e-post. Ingen manual på 40 sider, og ingen koding.</p>
+        <p>Dere får noe som virker fra dag én — chat, knapper og e-post. Ingen manual på 40 sider, og ingen koding.</p>
       </div>
+    </div>
+
+    <div class="terms rv d2">
+      <span class="term">Fast pris, avtalt før vi starter</span>
+      <span class="term">Bygget på deres egne kontoer</span>
+      <span class="term">Ingen lock-in eller bindingstid</span>
     </div>
   </div>
 </section>
 
 <!-- ================= FAQ ================= -->
-<section id="faq">
+<section class="subtle" id="faq">
   <div class="wrap">
     <div class="faq-wrap">
       <div class="rv">
@@ -725,32 +574,24 @@ section{padding-block:clamp(72px,11vw,152px)}
       </div>
       <div class="faq rv d1">
         <details open>
-          <summary>Hvorfor koster det så mye mer enn et abonnement?</summary>
-          <p>Fordi du ikke kjøper et verktøy, men et system som er bygd rundt din bedrift. En AI-konsulent i Norge tar typisk mellom 1 400 og 2 400 kroner timen, og Oslo-byråene ligger enda høyere. En assistent til 75 000 kroner er rundt to ukers arbeid — og den erstatter en oppgavemengde du ellers måtte ansatt noen for.</p>
-        </details>
-        <details>
           <summary>Hvor lang tid tar det?</summary>
-          <p>En enkelt automatisering er ferdig på halvannen til to uker. En full assistent tar to til tre uker. Du får en konkret tidslinje etter kartleggingen, før du bestemmer deg.</p>
+          <p>En enkelt automatisering er ferdig på halvannen til to uker. En full assistent tar to til tre uker. Dere får en konkret tidslinje etter kartleggingen, før noe bestemmes.</p>
         </details>
         <details>
-          <summary>Må jeg kunne noe om AI?</summary>
-          <p>Nei. Du bruker det som et helt vanlig verktøy — chat, knapper og e-post. Ingen koding og ingen teknisk forståelse er nødvendig.</p>
+          <summary>Må vi kunne noe om AI?</summary>
+          <p>Nei. Løsningene brukes som et helt vanlig verktøy — chat, knapper og e-post. Ingen koding og ingen teknisk forståelse er nødvendig.</p>
         </details>
         <details>
-          <summary>Hva skjer hvis jeg vil endre noe senere?</summary>
-          <p>Alt bygges på dine egne kontoer. Du kan endre det selv, leie meg inn igjen eller bruke noen andre. Ingen lock-in, og ingen bindingstid på drift.</p>
+          <summary>Hva skjer hvis vi vil endre noe senere?</summary>
+          <p>Alt bygges på deres egne kontoer. Dere kan endre det selv, hente oss inn igjen eller bruke noen andre. Ingen lock-in og ingen bindingstid.</p>
         </details>
         <details>
           <summary>Er dette bare for teknologibedrifter?</summary>
-          <p>Tvert imot. De fleste jeg jobber med driver helt vanlige virksomheter — klinikk, håndverk, eiendom og rådgivning — og vil bare bruke mindre tid på administrasjon.</p>
+          <p>Tvert imot. De fleste kundene driver helt vanlige virksomheter — klinikk, håndverk, eiendom og rådgivning — og vil bare bruke mindre tid på administrasjon.</p>
         </details>
         <details>
-          <summary>Jobber du bare på Vestlandet?</summary>
-          <p>Jeg holder til i Bergen, reiser jevnlig til Ålesund og tar prosjekter i Stavanger. Selve arbeidet gjøres digitalt, så jeg leverer også utenfor landsdelen — men det er her jeg kan møte deg ansikt til ansikt.</p>
-        </details>
-        <details>
-          <summary>Hva om løsningen slutter å virke?</summary>
-          <p>Én måneds justering er inkludert etter levering. Etter det kan du velge løpende drift fra 6 500 kroner i måneden, eller ta det selv. Du eier både koden og kontoene uansett hva du velger.</p>
+          <summary>Hvor jobber dere?</summary>
+          <p>Vi holder til i Bergen og har levert prosjekter i Ålesund og Stavanger. Selve arbeidet gjøres digitalt, så vi leverer også utenfor landsdelen — men det er her vi kan møtes ansikt til ansikt.</p>
         </details>
       </div>
     </div>
@@ -759,21 +600,17 @@ section{padding-block:clamp(72px,11vw,152px)}
 
 <!-- ================= SLUTT-CTA ================= -->
 <section class="final" id="kontakt">
-  <div class="final-bg" aria-hidden="true">
-    <img loading="lazy" alt=""
-         src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Bryggen%2C_Bergen%2C_Noruega%2C_2019-09-08%2C_DD_118-121_PAN.jpg/1920px-Bryggen%2C_Bergen%2C_Noruega%2C_2019-09-08%2C_DD_118-121_PAN.jpg">
-  </div>
   <div class="wrap">
-    <h2 class="rv">Hva ville du gjort med<br>åtte timer ekstra i uken?</h2>
+    <h2 class="rv">Hva ville dere gjort med<br>åtte timer ekstra i uken?</h2>
     <p class="lede rv d1">
-      Book en gratis kartlegging på 30 minutter. Vi går gjennom hvor tiden din forsvinner,
-      og du får konkrete forslag — uansett om vi jobber sammen videre.
+      Book en gratis kartlegging på 30 minutter. Vi går gjennom hvor tiden forsvinner,
+      og dere får konkrete forslag — uansett hva dere velger etterpå.
     </p>
     <div class="final-actions rv d2">
-      <a href="https://calendly.com/anders-parr02/30min" class="btn btn-onDark">Book gratis kartlegging</a>
-      <a href="#" class="btn btn-ghostDark">Send en melding i stedet</a>
+      <a href="https://calendly.com/anders-parr02/30min" class="btn btn-primary">Book gratis kartlegging</a>
+      <a href="#" class="btn btn-secondary">Send en melding i stedet</a>
     </div>
-    <p class="final-note rv d2">Svarer innen 24 timer på hverdager · Bergen · Ålesund · Stavanger</p>
+    <p class="final-note rv d2">Svar innen 24 timer på hverdager · Bergen · Ålesund · Stavanger</p>
   </div>
 </section>
 
@@ -783,19 +620,16 @@ section{padding-block:clamp(72px,11vw,152px)}
     <div class="foot-in">
       <span>Anders Parr Consulting · Bergen</span>
       <div class="foot-links">
+        <a href="#arbeid">Arbeid</a>
         <a href="#losninger">Løsninger</a>
         <a href="#vestlandet">Vestlandet</a>
-        <a href="#priser">Priser</a>
-        <a href="#case">Kunder</a>
         <a href="#">LinkedIn</a>
       </div>
       <span>© 2026</span>
     </div>
     <p class="credits">
-      Foto: Bergen fra Fløyen og Bryggen av Diego Delso, <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="noopener">CC BY-SA 4.0</a> ·
-      Ålesund panorama av Frode Inge Helland, <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="noopener">CC BY-SA 3.0</a> ·
-      Stavanger havn av Guillaume Baviere, <a href="https://creativecommons.org/licenses/by/2.0/" rel="noopener">CC BY 2.0</a> ·
-      alle via Wikimedia Commons.
+      Foto: Ålesund panorama av Frode Inge Helland,
+      <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="noopener">CC BY-SA 3.0</a>, via Wikimedia Commons.
     </p>
   </div>
 </footer>
