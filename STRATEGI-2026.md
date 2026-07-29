@@ -270,8 +270,13 @@ Fordelene: casen blir relevant for alle helseaktører (klinikk, tannlege, trenin
 den røper ikke en kunderelasjon som ikke er klarert for publisering, og den fjerner
 koblingen til nettverksmarkedsføring som kan svekke troverdigheten i et B2B-salg.
 
-**Én ting må avklares før publisering:** case-studien er markert utkast og sitatet står som
-parafrasert. Hent eksakt, godkjent sitat før det legges ut — selv anonymisert.
+**Sitat godkjent (2026-07-29):**
+
+> «Jeg er så glad jeg skaffet en assistent, jeg sparer så mye tid og har det mye gøyere med arbeidet mitt.»
+> — Toppleder i helsebransjen
+
+Klar til bruk på casesiden, forsiden og i annonsetekst. Kildecasen er oppdatert i
+`projects/ai-consulting/case-study-zinzino-leder.md`.
 
 ### De andre bevisene
 
@@ -441,11 +446,14 @@ Bruk `?utm_source=outbound&utm_campaign=alesund-ring` på lenkene du sender, så
 - Du kan møte kunder fysisk i Bergen og Ålesund, men ikke Stavanger
 - Nettsidetjenesten (15 000 kr) skal markedsføres offentlig på samme domene, ikke holdes adskilt
 
-**Må avklares:**
-1. Har du et eksakt, godkjent sitat fra klienten — også når casen er anonymisert?
-2. Finnes det Google Business Profile allerede?
-3. Er du komfortabel med prisnivået i avsnitt 11, eller vil du starte lavere og trappe opp?
-4. Er Asgeir-kontrakten signert — kan casen publiseres?
+**Avklart (2026-07-29):**
+1. ✅ Sitat godkjent — se avsnitt 6 over.
+2. ✅ Ingen Google Business Profile finnes fra før → opprettes fra bunnen, som beskrevet i
+   `TRAFIKK-OG-OMTALER.md` avsnitt 1. Ingen risiko for å overskrive en eksisterende profil.
+3. ✅ Prisnivået i avsnitt 11 er bekreftet riktig — bruk det som det står, ingen nedtrapping.
+4. ❌ Asgeir er ikke publisert ennå. Casen holdes ute av alt offentlig materiale
+   (nettside, LinkedIn, tilbud) til kontrakt er signert og publisering er avklart med Asgeir.
+   `leads.json` fortsatt på stage `tilbud_sendt` — ingen endring i status.
 
 ---
 
