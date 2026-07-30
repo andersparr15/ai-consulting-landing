@@ -309,23 +309,23 @@ nav.mainnav.scrolled{border-bottom-color:var(--line)}
 .case-cta{margin-top:var(--s6);display:flex;gap:var(--s3);flex-wrap:wrap;align-items:center}
 
 /* ============================================================
-   ARBEID
+   ARBEID — kompakt liste, ikke gi bort alt med en gang
    ============================================================ */
-.work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s3);margin-top:var(--s6)}
-@media(max-width:920px){.work-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:640px){.work-grid{grid-template-columns:1fr}}
-.work{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--bg);
-  display:flex;flex-direction:column;transition:transform .25s var(--ease),box-shadow .25s var(--ease),border-color .25s var(--ease)}
-.work:hover{transform:translateY(-4px);border-color:var(--line-strong);box-shadow:0 22px 50px -30px rgba(9,9,11,.28)}
-.work-img{aspect-ratio:16/10;overflow:hidden;background:var(--bg-sunken);border-bottom:1px solid var(--line);display:grid;place-items:center;position:relative}
-.work-img img{width:100%;height:100%;object-fit:cover;object-position:top left;display:block}
-.work-img.no-image img{display:none}
-.work-img .ph{display:none;font-size:.75rem;color:var(--ink-muted)}
-.work-img.no-image .ph{display:block}
-.work-body{padding:clamp(20px,2.4vw,28px);display:flex;flex-direction:column;flex:1}
-.work-body h3{font-size:1.0625rem}
-.work-body p{margin-top:.5rem;font-size:.9375rem;color:var(--ink-muted);line-height:1.55;flex:1}
-.work-meta{margin-top:var(--s3);padding-top:var(--s2);border-top:1px solid var(--line);font-size:.75rem;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-muted)}
+.work-list{margin-top:var(--s6);display:flex;flex-direction:column}
+.work-row{display:flex;gap:var(--s3);padding-block:var(--s4);border-bottom:1px solid var(--line);align-items:flex-start}
+.work-row:first-child{border-top:1px solid var(--line)}
+.work-thumb{width:60px;height:60px;border-radius:8px;object-fit:cover;flex:none;border:1px solid var(--line);background:var(--bg-sunken)}
+.work-row-body{flex:1;min-width:0}
+.work-row-head{display:flex;align-items:baseline;justify-content:space-between;gap:var(--s3);flex-wrap:wrap}
+.work-row-head h3{font-size:1.0625rem}
+.work-tag{font-size:.75rem;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-muted);white-space:nowrap}
+.work-teaser{margin-top:.3rem;font-size:.9375rem;color:var(--ink-muted)}
+.work-more{margin-top:.5rem}
+.work-more summary{list-style:none;cursor:pointer;font-size:.875rem;font-weight:500;color:var(--accent);display:inline-flex;align-items:center;gap:.3rem}
+.work-more summary::-webkit-details-marker{display:none}
+.work-more summary::after{content:'→';transition:transform .18s var(--ease)}
+.work-more[open] summary::after{content:'→';transform:rotate(90deg)}
+.work-more p{margin-top:.6rem;font-size:.9375rem;color:var(--ink-body);line-height:1.6;max-width:64ch}
 
 /* ============================================================
    DIAGNOSTIKK
@@ -358,6 +358,10 @@ nav.mainnav.scrolled{border-bottom-color:var(--line)}
 .track li{font-size:.9375rem;color:var(--ink-body);display:flex;gap:.75rem;align-items:flex-start}
 .track li::before{content:'';flex:none;width:5px;height:5px;border-radius:50%;background:var(--ink);margin-top:.6em}
 .track-foot{margin-top:auto;padding-top:var(--s5)}
+.track-proof{margin-top:var(--s4);padding-top:var(--s4);border-top:1px solid var(--line)}
+.track-proof-label{font-size:.6875rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-muted);display:block;margin-bottom:.3rem}
+.track-proof p{margin:0;font-size:.875rem;color:var(--ink-body)}
+.track-proof strong{color:var(--ink);font-weight:600}
 
 /* ============================================================
    LØSNINGER
@@ -376,6 +380,14 @@ nav.mainnav.scrolled{border-bottom-color:var(--line)}
 .arch{margin-top:var(--s6);border:1px solid var(--line);border-radius:14px;padding:clamp(24px,3vw,36px);background:var(--bg-subtle)}
 .arch-cap{font-size:.75rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:var(--s3);display:block}
 .arch-svg{width:100%;height:auto;display:block;overflow:visible}
+
+/* ============================================================
+   BILDEPAUSE
+   ============================================================ */
+.photobreak{position:relative;height:clamp(200px,26vw,280px);overflow:hidden}
+.photobreak img{width:100%;height:100%;object-fit:cover;display:block}
+.photobreak-cap{position:absolute;left:clamp(20px,5vw,40px);bottom:16px;font-size:.75rem;color:rgba(255,255,255,.85);
+  background:rgba(10,10,10,.35);padding:.3rem .7rem;border-radius:999px;backdrop-filter:blur(6px)}
 
 /* ============================================================
    VESTLANDET
@@ -404,24 +416,11 @@ nav.mainnav.scrolled{border-bottom-color:var(--line)}
 .term{font-size:.875rem;color:var(--ink-body);border:1px solid var(--line);border-radius:999px;padding:.5rem 1.125rem;background:var(--bg)}
 
 /* ============================================================
-   OM
+   SERTIFISERING (footer-badge)
    ============================================================ */
-.about-grid{display:grid;grid-template-columns:180px 1fr;gap:clamp(28px,4vw,56px);align-items:start;margin-top:var(--s6)}
-@media(max-width:700px){.about-grid{grid-template-columns:1fr;text-align:left}}
-.profile-photo{width:150px;height:150px;border-radius:12px;overflow:hidden;border:1px solid var(--line);background:var(--bg-sunken);
-  display:flex;align-items:center;justify-content:center;position:relative}
-.profile-photo img{width:100%;height:100%;object-fit:cover;object-position:center top;position:absolute;inset:0}
-.profile-photo.fallback img{display:none}
-.fallback-text{font-size:2.5rem;font-weight:600;color:var(--ink-muted);letter-spacing:-.02em}
-.profile-caption{display:block;margin-top:var(--s2);font-size:.8125rem;color:var(--ink-muted);text-align:center}
-.about-text p{font-size:.9375rem;color:var(--ink-body);line-height:1.7;max-width:58ch}
-.about-text p + p{margin-top:1rem}
-.about-text strong{color:var(--ink);font-weight:600}
-.about-badges{margin-top:var(--s3);display:flex;flex-wrap:wrap;gap:.5rem}
-.badge{font-size:.8125rem;color:var(--ink-muted);background:var(--bg-sunken);border:1px solid var(--line);padding:.3rem .75rem;border-radius:999px}
-.cert-block{margin-top:var(--s4);display:flex;align-items:center;gap:var(--s2)}
+.cert-block{display:flex;align-items:center;gap:var(--s2)}
 .cert-label{font-size:.75rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-muted)}
-.cert-logo{height:28px;width:auto;opacity:.85}
+.cert-logo{height:24px;width:auto;opacity:.85}
 
 /* ============================================================
    FAQ
@@ -451,6 +450,10 @@ nav.mainnav.scrolled{border-bottom-color:var(--line)}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,88px);align-items:start}
 @media(max-width:880px){.contact-grid{grid-template-columns:1fr;gap:var(--s5)}}
 .contact-sub{margin-top:var(--s3);font-size:.9375rem;color:var(--ink-muted);max-width:44ch}
+.contact-photo{margin-top:var(--s6);border-radius:12px;overflow:hidden;max-width:320px;border:1px solid var(--line)}
+.contact-photo img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.contact-photo-cap{display:block;margin-top:var(--s2);font-size:.75rem;color:var(--ink-muted)}
+@media(max-width:880px){.contact-photo{display:none}}
 
 .cta-block{border:1px solid var(--line);border-radius:14px;padding:clamp(24px,3vw,32px);background:var(--bg-subtle)}
 .cta-heading{font-size:1.0625rem;font-weight:600;color:var(--ink);margin-bottom:var(--s3)}
@@ -482,6 +485,7 @@ nav.mainnav.scrolled{border-bottom-color:var(--line)}
    FOOTER
    ============================================================ */
 .foot{border-top:1px solid var(--line);padding-block:var(--s5)}
+.foot .cert-block{margin-bottom:var(--s4)}
 .foot-in{display:flex;justify-content:space-between;align-items:center;gap:var(--s3);flex-wrap:wrap;font-size:.8125rem;color:var(--ink-muted)}
 .foot-links{display:flex;gap:var(--s3);flex-wrap:wrap}
 .foot-links a:hover{color:var(--ink)}
@@ -507,7 +511,6 @@ nav.mainnav.scrolled{border-bottom-color:var(--line)}
       <a href="#arbeid">Arbeid</a>
       <a href="#tjenester">Tjenester</a>
       <a href="#vestlandet">Vestlandet</a>
-      <a href="#om">Om</a>
       <a href="#faq">Spørsmål</a>
     </div>
     <a href="#kontakt" class="btn btn-primary btn-sm">Book gratis kartlegging</a>
@@ -623,43 +626,52 @@ nav.mainnav.scrolled{border-bottom-color:var(--line)}
     <span class="eyebrow reveal">Arbeid</span>
     <h2 class="reveal d1">Ting som er bygget<br>og i bruk</h2>
 
-    <div class="work-grid">
-      <article class="work reveal">
-        <div class="work-img" id="work-img-1">
-          <img loading="lazy" decoding="async" src="images/case-02-telegram.png" alt="Telegram-bot — skjermbilde av chat-grensesnitt"
-               onerror="document.getElementById('work-img-1').classList.add('no-image')">
-          <span class="ph">Skjermbilde</span>
-        </div>
-        <div class="work-body">
-          <h3>Chatbot for henvendelser</h3>
-          <p>AI-bot som kategoriserer henvendelser i Telegram og videresender med prioritet og foreslått handling. Passer klinikker, eiendomsforvaltning og annen virksomhet med høyt henvendelsesvolum.</p>
-          <div class="work-meta">Eiendom · kundeservice</div>
-        </div>
-      </article>
-
-      <article class="work reveal d1">
-        <div class="work-img" id="work-img-2">
-          <img loading="lazy" decoding="async" src="images/case-03-presentation.png" alt="Presentasjonsverktøy — eksempel på generert slide-deck"
-               onerror="document.getElementById('work-img-2').classList.add('no-image')">
-          <span class="ph">Skjermbilde</span>
-        </div>
-        <div class="work-body">
-          <h3>Presentasjoner på minutter</h3>
-          <p>Skill-basert system som genererer kundetilpassede presentasjoner fra en kort brief til ferdig fil, på flere språk. Det som tok en time tar nå under et kvarter.</p>
-          <div class="work-meta">Helse · rådgivning</div>
+    <div class="work-list">
+      <article class="work-row reveal">
+        <img class="work-thumb" loading="lazy" decoding="async" src="images/case-02-telegram.png"
+             alt="Chatbot for henvendelser" onerror="this.style.display='none'">
+        <div class="work-row-body">
+          <div class="work-row-head">
+            <h3>Chatbot for henvendelser</h3>
+            <span class="work-tag">Eiendom · kundeservice</span>
+          </div>
+          <p class="work-teaser">Kategoriserer henvendelser i Telegram og videresender automatisk med riktig prioritet.</p>
+          <details class="work-more">
+            <summary>Les mer</summary>
+            <p>AI-bot som kategoriserer henvendelser og videresender med prioritet og foreslått handling. Passer klinikker, eiendomsforvaltning og annen virksomhet med høyt henvendelsesvolum.</p>
+          </details>
         </div>
       </article>
 
-      <article class="work reveal d2">
-        <div class="work-img" id="work-img-3">
-          <img loading="lazy" decoding="async" src="images/case-04-crm.png" alt="CRM-dashboard — skjermbilde av prospect-tracker"
-               onerror="document.getElementById('work-img-3').classList.add('no-image')">
-          <span class="ph">Skjermbilde</span>
+      <article class="work-row reveal d1">
+        <img class="work-thumb" loading="lazy" decoding="async" src="images/case-03-presentation.png"
+             alt="Presentasjoner på minutter" onerror="this.style.display='none'">
+        <div class="work-row-body">
+          <div class="work-row-head">
+            <h3>Presentasjoner på minutter</h3>
+            <span class="work-tag">Helse · rådgivning</span>
+          </div>
+          <p class="work-teaser">Kundetilpassede presentasjoner fra brief til ferdig fil — på minutter, ikke timer.</p>
+          <details class="work-more">
+            <summary>Les mer</summary>
+            <p>Skill-basert system som genererer kundetilpassede presentasjoner fra en kort brief til ferdig fil, på flere språk. Det som tok en time tar nå under et kvarter.</p>
+          </details>
         </div>
-        <div class="work-body">
-          <h3>Oppfølging som ikke glipper</h3>
-          <p>Eget dashboard for B2B-outreach med automatisk kategorisering og oppfølgingspåminnelser. Over 200 kontakter fulgt opp uten at noe falt mellom stolene.</p>
-          <div class="work-meta">Salg og rådgivning</div>
+      </article>
+
+      <article class="work-row reveal d2">
+        <img class="work-thumb" loading="lazy" decoding="async" src="images/case-04-crm.png"
+             alt="Oppfølging som ikke glipper" onerror="this.style.display='none'">
+        <div class="work-row-body">
+          <div class="work-row-head">
+            <h3>Oppfølging som ikke glipper</h3>
+            <span class="work-tag">Salg og rådgivning</span>
+          </div>
+          <p class="work-teaser">Eget dashboard for oppfølging — over 200 kontakter fulgt opp uten at noe falt mellom stolene.</p>
+          <details class="work-more">
+            <summary>Les mer</summary>
+            <p>Eget dashboard for B2B-outreach med automatisk kategorisering og oppfølgingspåminnelser. Bygget for å holde oversikt når volumet av henvendelser blir for stort til å styre manuelt.</p>
+          </details>
         </div>
       </article>
     </div>
@@ -733,8 +745,13 @@ nav.mainnav.scrolled{border-bottom-color:var(--line)}
         <ul>
           <li>Nettside som konverterer, ikke bare eksisterer</li>
           <li>Google-oppføring og lokal synlighet satt opp riktig</li>
+          <li>Markedsføring og innhold som faktisk når fram til kundene deres</li>
           <li>Skjema og booking som sender henvendelsen rett inn</li>
         </ul>
+        <div class="track-proof">
+          <span class="track-proof-label">Eksempel</span>
+          <p><strong>Endalsbygg.no</strong> — nettside bygget for Isak Endal, snekker.</p>
+        </div>
         <div class="track-foot">
           <a href="#kontakt" class="textlink">Book kartlegging →</a>
         </div>
@@ -834,6 +851,12 @@ nav.mainnav.scrolled{border-bottom-color:var(--line)}
   </div>
 </section>
 
+<!-- ================= BILDEPAUSE ================= -->
+<figure class="photobreak">
+  <img loading="lazy" decoding="async" src="images/vestlandet-preikestolen.jpg" alt="Stien opp mot Preikestolen i Rogaland">
+  <figcaption class="photobreak-cap">Preikestolen, Rogaland</figcaption>
+</figure>
+
 <!-- ================= VESTLANDET ================= -->
 <section class="vest" id="vestlandet">
   <div class="vest-bg" aria-hidden="true">
@@ -882,57 +905,6 @@ nav.mainnav.scrolled{border-bottom-color:var(--line)}
       <span class="term">Fast pris, avtalt før vi starter</span>
       <span class="term">Bygget på deres egne kontoer</span>
       <span class="term">Ingen lock-in eller bindingstid</span>
-    </div>
-  </div>
-</section>
-
-<!-- ================= OM ================= -->
-<section class="subtle" id="om">
-  <div class="wrap">
-    <span class="eyebrow reveal">Om oss</span>
-    <h2 class="reveal d1">Vi bygger AI<br>som brukes</h2>
-
-    <div class="about-grid">
-      <div class="reveal d2">
-        <div class="profile-photo" id="profile-photo">
-          <img src="images/anders-portrait.jpg"
-               alt="Anders Parr — AI-rådgiver, Bergen"
-               width="150" height="150"
-               loading="lazy" decoding="async"
-               onerror="this.style.display='none'; document.getElementById('profile-photo').classList.add('fallback');">
-          <span class="fallback-text">AP</span>
-        </div>
-        <span class="profile-caption">Anders Parr, Bergen</span>
-      </div>
-
-      <div class="reveal d3">
-        <div class="about-text">
-          <p>
-            Vi er et AI-konsulentselskap basert i Bergen, med bakgrunn fra SINTEF
-            (sommerinternship) og sertifisering gjennom Anthropic Academy. Vi bygger daglig
-            løsninger for klienter på Vestlandet — fra chatboter til komplette executive assistants.
-          </p>
-          <p>
-            Verktøyene vi bruker: Claude (Anthropic), n8n Cloud, OpenAI, Telegram Bot API,
-            og egenutviklet kode der det trengs. Vi jobber med solopreneurs, helseaktører og
-            småbedrifter som vil ha mer tid uten å miste kontroll over hvordan ting fungerer.
-          </p>
-          <p>
-            <strong>Vi leverer ikke teorier om fremtiden — vi bygger ting som brukes i dag.</strong>
-          </p>
-        </div>
-
-        <div class="about-badges">
-          <span class="badge">SINTEF-bakgrunn</span>
-          <span class="badge">Bergen</span>
-          <span class="badge">AI-konsulent</span>
-        </div>
-
-        <div class="cert-block">
-          <span class="cert-label">Sertifisert av</span>
-          <img loading="lazy" decoding="async" src="images/logos/Anthropic-academy.png" alt="Anthropic Academy" class="cert-logo">
-        </div>
-      </div>
     </div>
   </div>
 </section>
@@ -995,6 +967,10 @@ nav.mainnav.scrolled{border-bottom-color:var(--line)}
         <span class="eyebrow">La oss se om vi er en god match</span>
         <h2>Klar til å vinne<br>tilbake tiden?</h2>
         <p class="contact-sub">Fyll ut skjemaet — vi leser alle henvendelser personlig og svarer innen 24 timer på hverdager.</p>
+        <div class="contact-photo">
+          <img loading="lazy" decoding="async" src="images/vestlandet-bergen-gate.jpg" alt="Bryggen i Bergen">
+        </div>
+        <span class="contact-photo-cap">Bryggen, Bergen — der vi holder til</span>
       </div>
 
       <div class="reveal d1">
@@ -1067,6 +1043,10 @@ nav.mainnav.scrolled{border-bottom-color:var(--line)}
 <!-- ================= FOOTER ================= -->
 <footer class="foot">
   <div class="wrap">
+    <div class="cert-block">
+      <span class="cert-label">Sertifisert av</span>
+      <img loading="lazy" decoding="async" src="images/logos/Anthropic-academy.png" alt="Anthropic Academy" class="cert-logo">
+    </div>
     <div class="foot-in">
       <span>Anders Parr Consulting · Bergen</span>
       <div class="foot-links">
@@ -1078,7 +1058,7 @@ nav.mainnav.scrolled{border-bottom-color:var(--line)}
       <span>© 2026</span>
     </div>
     <p class="credits">
-      Foto: Ålesund panorama av Frode Inge Helland,
+      Foto: Ålesund panorama av Frode Inge Helland, Preikestolen av Andreas Rümpel, Bergen (Bryggen) av Concierge.2C,
       <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="noopener">CC BY-SA 3.0</a>, via Wikimedia Commons.
     </p>
   </div>
