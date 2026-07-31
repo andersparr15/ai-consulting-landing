@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FFFFFF">
+  <title>Gratis AI-audit — AP Consulting</title>
+  <meta name="description" content="5 spørsmål. Gratis. Få en personlig e-postrapport med de 2–3 AI-automatiseringsmulighetene som vil frigjøre mest tid i din virksomhet.">
+
+  <link rel="canonical" href="https://anderspconsulting.no/audit">
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://anderspconsulting.no/audit">
+  <meta property="og:site_name"   content="AP Consulting">
+  <meta property="og:locale"      content="nb_NO">
+  <meta property="og:title"       content="Gratis AI-audit — AP Consulting">
+  <meta property="og:description" content="5 spørsmål. Gratis. Få en personlig e-postrapport med de 2–3 automatiseringene som vil frigjøre mest tid i din virksomhet.">
+  <meta property="og:image"       content="https://anderspconsulting.no/og-image.jpg">
+  <meta property="og:image:width"  content="1200">
+  <meta property="og:image:height" content="630">
+
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="Gratis AI-audit — AP Consulting">
+  <meta name="twitter:description" content="5 spørsmål. Gratis. Få en personlig e-postrapport med de 2–3 automatiseringene som vil frigjøre mest tid.">
+  <meta name="twitter:image"       content="https://anderspconsulting.no/og-image.jpg">
+
+  <!-- GA4 — bytt ut placeholderen samme sted som i index.html -->
+  <script>
+    window.AP_GA_ID = 'G-XXXXXXXXXX';
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    (function () {
+      var id = window.AP_GA_ID;
+      if (!id || id.indexOf('XXXX') !== -1) return;
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=' + id;
+      document.head.appendChild(s);
+      gtag('js', new Date());
+      gtag('config', id, { anonymize_ip: true });
+    })();
+    window.apTrack = function (navn, params) {
+      try {
+        var id = window.AP_GA_ID;
+        if (id && id.indexOf('XXXX') === -1) gtag('event', navn, params || {});
+      } catch (e) {}
+    };
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+/* ============================================================
+   DESIGNSYSTEM — delt med index.html
+   ============================================================ */
+:root{
+  --bg:#FFFFFF; --bg-subtle:#FAFAFA; --bg-sunken:#F4F4F5;
+  --ink:#0A0A0A; --ink-body:#3F3F46; --ink-muted:#71717A;
+  --line:#E4E4E7; --line-strong:#D4D4D8;
+  --accent:#0A5CFF; --accent-hover:#0847CC;
+  --cta-bg:#0A0A0A; --cta-text:#FFFFFF;
+
+  --ff:'Geist','Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;
+  --s1:8px; --s2:16px; --s3:24px; --s4:32px; --s5:48px; --s6:64px; --s7:96px;
+  --wrap:1200px;
+  --ease:cubic-bezier(.22,1,.36,1);
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:var(--ff);background:var(--bg);color:var(--ink-body);
+  font-size:1.0625rem;line-height:1.65;letter-spacing:-.005em;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+h1,h2,h3,h4{color:var(--ink);font-weight:600;letter-spacing:-.03em;line-height:1.05}
+h1{font-size:clamp(2.5rem,5.4vw,4.25rem);letter-spacing:-.036em;line-height:1.04}
+h2{font-size:clamp(1.5rem,2.6vw,2rem);letter-spacing:-.024em;line-height:1.2}
+a{color:inherit;text-decoration:none}
+
+.wrap{max-width:var(--wrap);margin:0 auto;padding-inline:clamp(20px,5vw,40px)}
+.eyebrow{font-size:.75rem;font-weight:500;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-muted);display:block;margin-bottom:var(--s3)}
+
+/* ---- Knapper ---- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.5rem;
+  font-family:var(--ff);font-size:.9375rem;font-weight:500;letter-spacing:-.01em;
+  padding:.875rem 1.75rem;border-radius:8px;border:1px solid transparent;cursor:pointer;
+  transition:background .18s var(--ease),transform .18s var(--ease),border-color .18s var(--ease);
+  white-space:nowrap;
+}
+.btn-primary{background:var(--cta-bg);color:var(--cta-text)}
+.btn-primary:hover:not(:disabled){background:#262626;transform:translateY(-1px)}
+.btn-primary:disabled{opacity:.5;cursor:not-allowed}
+.btn-secondary{background:transparent;color:var(--ink);border-color:var(--line-strong)}
+.btn-secondary:hover{border-color:var(--ink);transform:translateY(-1px)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+
+/* ============================================================
+   NAV
+   ============================================================ */
+nav.mainnav{position:fixed;inset:0 0 auto 0;z-index:100;background:rgba(255,255,255,.86);
+  backdrop-filter:saturate(180%) blur(14px);-webkit-backdrop-filter:saturate(180%) blur(14px);
+  border-bottom:1px solid var(--line)}
+.nav-in{max-width:var(--wrap);margin:0 auto;padding:0 clamp(20px,5vw,40px);height:64px;display:flex;align-items:center;justify-content:space-between;gap:var(--s4)}
+.brand{font-weight:600;font-size:.9375rem;letter-spacing:-.02em;color:var(--ink);white-space:nowrap}
+.brand span{color:var(--ink-muted);font-weight:400}
+.nav-back{font-size:.875rem;color:var(--ink-body);font-weight:450;transition:color .18s}
+.nav-back:hover{color:var(--ink)}
+@media(max-width:480px){.brand span{display:none}}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.a-hero{padding:clamp(120px,18vh,168px) 0 clamp(48px,7vw,72px);border-bottom:1px solid var(--line)}
+.a-hero-inner{max-width:640px}
+.a-hero h1{margin-top:var(--s2)}
+.a-hero .lede{margin-top:var(--s3);font-size:clamp(1.0625rem,1.4vw,1.1875rem);color:var(--ink-body);max-width:52ch;line-height:1.6}
+.a-hero-note{margin-top:var(--s2);font-size:.8125rem;color:var(--ink-muted);font-style:italic}
+.a-hero-pills{margin-top:var(--s5);display:flex;gap:var(--s2);flex-wrap:wrap}
+.a-pill{font-size:.8125rem;color:var(--ink-body);border:1px solid var(--line);border-radius:999px;padding:.4rem 1rem;background:var(--bg-subtle)}
+
+/* ============================================================
+   FORM-SEKSJON
+   ============================================================ */
+.a-form-section{padding:clamp(56px,8vw,96px) 0 clamp(72px,10vw,120px)}
+.a-form-layout{display:grid;grid-template-columns:340px 1fr;gap:clamp(40px,6vw,88px);align-items:start}
+@media(max-width:900px){.a-form-layout{grid-template-columns:1fr;gap:var(--s5)}}
+.a-sidebar{position:sticky;top:calc(64px + var(--s5))}
+@media(max-width:900px){.a-sidebar{position:static}}
+.a-sidebar h2{margin-top:var(--s2);font-size:1.375rem}
+.a-sidebar-items{margin-top:var(--s5);display:flex;flex-direction:column;gap:var(--s4)}
+.a-sidebar-item{padding-left:var(--s3);border-left:2px solid var(--line)}
+.a-sidebar-item-title{font-weight:600;color:var(--ink);font-size:.9375rem}
+.a-sidebar-item-desc{margin-top:.3rem;font-size:.8125rem;color:var(--ink-muted);line-height:1.55}
+
+.a-form-step{padding:var(--s4) 0;border-bottom:1px solid var(--line)}
+.a-form-step:first-child{padding-top:0}
+.a-form-step:last-of-type{border-bottom:none}
+.a-step-label{font-size:.75rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:.5rem}
+.a-step-question{font-size:1.0625rem;font-weight:600;color:var(--ink);letter-spacing:-.015em;margin-bottom:var(--s3)}
+.a-step-question em{font-style:normal;font-size:.8125rem;font-weight:400;color:var(--ink-muted)}
+
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:var(--s3)}
+@media(max-width:560px){.form-row{grid-template-columns:1fr}}
+.form-group{margin-top:var(--s3)}
+.form-group:first-child{margin-top:0}
+.form-label{display:block;font-size:.8125rem;font-weight:500;color:var(--ink-body);margin-bottom:.4rem}
+.form-input,.form-textarea{
+  width:100%;background:var(--bg);border:1px solid var(--line-strong);border-radius:8px;
+  padding:.75rem .875rem;font-family:var(--ff);font-size:.9375rem;color:var(--ink);
+  outline:none;transition:border-color .18s;
+}
+.form-input:focus,.form-textarea:focus{border-color:var(--ink)}
+.form-input::placeholder,.form-textarea::placeholder{color:var(--ink-muted)}
+.form-textarea{resize:vertical;min-height:88px}
+
+.radio-group,.check-group{display:flex;flex-direction:column;gap:.5rem}
+.radio-opt,.check-opt{display:flex;align-items:center;gap:.625rem;font-size:.9375rem;color:var(--ink-body);cursor:pointer;
+  padding:.625rem .75rem;border:1px solid var(--line);border-radius:8px;transition:border-color .15s,background .15s}
+.radio-opt:hover,.check-opt:hover{border-color:var(--line-strong);background:var(--bg-subtle)}
+.radio-opt input[type=radio],.check-opt input[type=checkbox]{
+  appearance:none;-webkit-appearance:none;width:16px;height:16px;border:1px solid var(--line-strong);
+  flex:none;cursor:pointer;transition:border-color .18s,background .18s}
+.radio-opt input[type=radio]{border-radius:50%}
+.check-opt input[type=checkbox]{border-radius:4px}
+.radio-opt input[type=radio]:checked,.check-opt input[type=checkbox]:checked{border-color:var(--ink);background:var(--ink);box-shadow:inset 0 0 0 3px #fff}
+
+.a-submit-area{padding-top:var(--s4)}
+.a-error-msg{display:none;font-size:.875rem;color:#C0362C;margin-top:var(--s2)}
+.a-submit-note{margin-top:var(--s3);font-size:.8125rem;color:var(--ink-muted);line-height:1.55}
+
+/* ---- States ---- */
+.a-loading-state,.a-success-state{display:none}
+.a-loading-state{padding:var(--s6) 0;text-align:center}
+.a-loading-spinner{width:28px;height:28px;border:2px solid var(--line);border-top-color:var(--accent);
+  border-radius:50%;margin:0 auto var(--s3);animation:aspin .8s linear infinite}
+@keyframes aspin{to{transform:rotate(360deg)}}
+.a-loading-text{font-size:.9375rem;color:var(--ink-muted)}
+
+.a-success-state{padding:var(--s5) 0}
+.a-success-icon{display:block;width:40px;height:40px;border-radius:50%;background:var(--accent);color:#fff;
+  font-size:1.125rem;line-height:40px;text-align:center;margin-bottom:var(--s4)}
+.a-success-title{font-size:clamp(1.5rem,2.6vw,2rem)}
+.a-success-body{margin-top:var(--s3);font-size:.9375rem;color:var(--ink-body);max-width:48ch;line-height:1.7}
+.a-success-body p + p{margin-top:.6rem}
+.a-success-actions{margin-top:var(--s5);display:flex;gap:var(--s3);flex-wrap:wrap;align-items:center}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.a-foot{border-top:1px solid var(--line);padding-block:var(--s5)}
+.a-foot-in{display:flex;justify-content:space-between;align-items:center;gap:var(--s3);flex-wrap:wrap;font-size:.8125rem;color:var(--ink-muted)}
+  </style>
+</head>
+<body>
+
+  <nav class="mainnav">
+    <div class="nav-in">
+      <a href="/" class="brand">AP <span>Consulting</span></a>
+      <a href="/" class="nav-back">← Tilbake til forsiden</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="a-hero">
+    <div class="wrap">
+      <div class="a-hero-inner">
+        <span class="eyebrow">Gratis · Personlig · Levert på e-post</span>
+        <h1>Finn din AI-flaskehals<br>på 5 minutter</h1>
+        <p class="lede">
+          Svar på 5 spørsmål om virksomheten din og få en personlig rapport
+          med de 2–3 AI-automatiseringsmulighetene som vil frigjøre mest tid for akkurat deg.
+        </p>
+        <p class="a-hero-note">Rapporten lages av AI basert på dine svar og leveres direkte på e-post — vanligvis innen 30 sekunder.</p>
+        <div class="a-hero-pills">
+          <span class="a-pill">Gratis — ingen forpliktelse</span>
+          <span class="a-pill">5 spørsmål</span>
+          <span class="a-pill">Rapport på e-post</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Form -->
+  <section class="a-form-section">
+    <div class="wrap">
+      <div class="a-form-layout">
+
+        <!-- Sidebar -->
+        <aside class="a-sidebar">
+          <span class="eyebrow" style="margin-bottom:0">Hva du får</span>
+          <h2>En personlig rapport<br>basert på dine svar</h2>
+          <div class="a-sidebar-items">
+            <div class="a-sidebar-item">
+              <div class="a-sidebar-item-title">De 2–3 beste mulighetene for deg</div>
+              <div class="a-sidebar-item-desc">Ikke generiske tips — konkrete forslag basert på hva du faktisk driver med og hva som tar tid.</div>
+            </div>
+            <div class="a-sidebar-item">
+              <div class="a-sidebar-item-title">Estimert tidsbesparelse per løsning</div>
+              <div class="a-sidebar-item-desc">Hva kan faktisk frigjøres, og hvor mye tid tilsvarer det i kroner per år.</div>
+            </div>
+            <div class="a-sidebar-item">
+              <div class="a-sidebar-item-title">Hvilke verktøy og tilnærming</div>
+              <div class="a-sidebar-item-desc">Hvilke automatiseringstyper som passer din situasjon — Speed to Lead, oppfølging, dokumentprosessering eller andre.</div>
+            </div>
+            <div class="a-sidebar-item">
+              <div class="a-sidebar-item-title">Levert direkte på e-post</div>
+              <div class="a-sidebar-item-desc">Ingen salgssamtale med mindre du vil. Du bruker rapporten som du vil.</div>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Main form -->
+        <div>
+          <div id="form-wrap">
+            <form id="audit-form" novalidate>
+
+              <!-- Q1: Kontaktinfo -->
+              <div class="a-form-step">
+                <span class="a-step-label">Spørsmål 1 av 5</span>
+                <p class="a-step-question">Hvem sender jeg rapporten til?</p>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label class="form-label" for="name">Navn *</label>
+                    <input class="form-input" type="text" id="name" name="name" placeholder="Ola Nordmann" required autocomplete="name">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="email">E-post *</label>
+                    <input class="form-input" type="email" id="email" name="email" placeholder="ola@eksempel.no" required autocomplete="email">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="company">Bedrift / bransje</label>
+                  <input class="form-input" type="text" id="company" name="company" placeholder="Nordmann AS — konsulent / tannklinikk / eiendom…">
+                </div>
+              </div>
+
+              <!-- Q2: Størrelse -->
+              <div class="a-form-step">
+                <span class="a-step-label">Spørsmål 2 av 5</span>
+                <p class="a-step-question">Hva slags virksomhet driver du?</p>
+                <div class="radio-group">
+                  <label class="radio-opt"><input type="radio" name="size" value="Solopreneur / selvstendig næringsdrivende">Solopreneur / selvstendig næringsdrivende</label>
+                  <label class="radio-opt"><input type="radio" name="size" value="Liten bedrift (2–10 ansatte)">Liten bedrift (2–10 ansatte)</label>
+                  <label class="radio-opt"><input type="radio" name="size" value="Mellomstor bedrift (10+ ansatte)">Mellomstor bedrift (10+ ansatte)</label>
+                  <label class="radio-opt"><input type="radio" name="size" value="Annet">Annet</label>
+                </div>
+              </div>
+
+              <!-- Q3: Responstid -->
+              <div class="a-form-step">
+                <span class="a-step-label">Spørsmål 3 av 5</span>
+                <p class="a-step-question">Hvor lang tid bruker du vanligvis på å svare en ny lead eller henvendelse?</p>
+                <div class="radio-group">
+                  <label class="radio-opt"><input type="radio" name="response_time" value="Under 1 time">Under 1 time</label>
+                  <label class="radio-opt"><input type="radio" name="response_time" value="1–8 timer (samme dag)">1–8 timer (samme dag)</label>
+                  <label class="radio-opt"><input type="radio" name="response_time" value="1–3 dager">1–3 dager</label>
+                  <label class="radio-opt"><input type="radio" name="response_time" value="Over 3 dager — eller jeg mister dem ofte">Over 3 dager — eller jeg mister dem ofte</label>
+                </div>
+              </div>
+
+              <!-- Q4: Tidstyver -->
+              <div class="a-form-step">
+                <span class="a-step-label">Spørsmål 4 av 5</span>
+                <p class="a-step-question">Hvilke oppgaver tar mest tid per uke? <em>(velg gjerne flere)</em></p>
+                <div class="check-group">
+                  <label class="check-opt"><input type="checkbox" name="tasks" value="Svare på nye leads og henvendelser">Svare på nye leads og henvendelser</label>
+                  <label class="check-opt"><input type="checkbox" name="tasks" value="Oppfølging av potensielle kunder over tid">Oppfølging av potensielle kunder over tid</label>
+                  <label class="check-opt"><input type="checkbox" name="tasks" value="Lage rapporter, statusoppdateringer og oversikter">Lage rapporter, statusoppdateringer og oversikter</label>
+                  <label class="check-opt"><input type="checkbox" name="tasks" value="Flytte data mellom systemer — fakturaer, skjemaer, dokumenter">Flytte data mellom systemer — fakturaer, skjemaer, dokumenter</label>
+                  <label class="check-opt"><input type="checkbox" name="tasks" value="Holde kontakt med eksisterende kunder">Holde kontakt med eksisterende kunder</label>
+                  <label class="check-opt"><input type="checkbox" name="tasks" value="Lage presentasjoner og dokumenter">Lage presentasjoner og dokumenter</label>
+                </div>
+              </div>
+
+              <!-- Q5: Drøm -->
+              <div class="a-form-step">
+                <span class="a-step-label">Spørsmål 5 av 5</span>
+                <p class="a-step-question">Beskriv én ting du ønsker skjedde automatisk i virksomheten din</p>
+                <div class="form-group">
+                  <label class="form-label" for="dream">Fri tekst</label>
+                  <textarea class="form-textarea" id="dream" name="dream" rows="4"
+                    placeholder="F.eks. &quot;Alle nye leads burde få svar innen 5 minutter, men jeg klarer det ikke manuelt&quot;…"></textarea>
+                </div>
+              </div>
+
+              <div class="a-submit-area">
+                <button type="submit" class="btn btn-primary" id="submit-btn" style="width:100%">Send meg rapporten på e-post</button>
+                <p id="error-msg" class="a-error-msg"></p>
+                <p class="a-submit-note">Rapporten genereres med AI basert på dine svar og sendes til e-posten du oppgav. Ingen spam — ingen forpliktelse.</p>
+              </div>
+
+            </form>
+          </div>
+
+          <!-- Loading -->
+          <div class="a-loading-state" id="loading-state">
+            <div class="a-loading-spinner"></div>
+            <p class="a-loading-text">Analyserer svarene dine…</p>
+          </div>
+
+          <!-- Success -->
+          <div class="a-success-state" id="success-state">
+            <span class="a-success-icon">✓</span>
+            <h2 class="a-success-title">Rapporten er på vei, <span id="success-name"></span></h2>
+            <div class="a-success-body">
+              <p>Sjekk e-posten din — rapporten med dine 2–3 beste automatiseringsmuligheter er sendt.</p>
+              <p>Sjekk også søppelpost hvis den ikke dukker opp innen et par minutter.</p>
+              <p>Hvis du vil at vi skal gå gjennom rapporten sammen — eller bare vil stille spørsmål — kan du booke en gratis 30-minutters kartleggingssamtale direkte.</p>
+            </div>
+            <div class="a-success-actions">
+              <a href="https://calendly.com/anders-parr02/30min" target="_blank" rel="noopener" class="btn btn-primary">Book gratis 30-min samtale</a>
+              <a href="/" class="btn btn-secondary">← Tilbake til forsiden</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="a-foot">
+    <div class="wrap a-foot-in">
+      <span>AP Consulting · Bergen</span>
+      <span>© 2026</span>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const form     = document.getElementById('audit-form');
+      const formWrap = document.getElementById('form-wrap');
+      const loading  = document.getElementById('loading-state');
+      const success  = document.getElementById('success-state');
+      const errorMsg = document.getElementById('error-msg');
+      const submitBtn = document.getElementById('submit-btn');
+
+      form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+
+        const name  = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+
+        if (!name) {
+          document.getElementById('name').focus();
+          showError('Fyll inn navn.');
+          return;
+        }
+        if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+          document.getElementById('email').focus();
+          showError('Fyll inn en gyldig e-postadresse.');
+          return;
+        }
+
+        // Collect checkboxes
+        const tasks = Array.from(
+          form.querySelectorAll('input[name="tasks"]:checked')
+        ).map(el => el.value);
+
+        const size = (form.querySelector('input[name="size"]:checked') || {}).value || '';
+        const response_time = (form.querySelector('input[name="response_time"]:checked') || {}).value || '';
+        const company = document.getElementById('company').value.trim();
+        const dream   = document.getElementById('dream').value.trim();
+
+        // Show loading
+        formWrap.style.display = 'none';
+        loading.style.display = 'block';
+        errorMsg.style.display = 'none';
+
+        try {
+          const res = await fetch('/.netlify/functions/send-audit', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ name, email, company, size, response_time, tasks, dream })
+          });
+
+          if (!res.ok) {
+            let msg = 'Noe gikk galt. Prøv igjen.';
+            try { const d = await res.json(); msg = d.error || msg; } catch {}
+            loading.style.display = 'none';
+            formWrap.style.display = 'block';
+            showError(msg);
+            return;
+          }
+
+          // Success
+          loading.style.display = 'none';
+          document.getElementById('success-name').textContent = name;
+          success.style.display = 'block';
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+
+        } catch (err) {
+          loading.style.display = 'none';
+          formWrap.style.display = 'block';
+          showError('Nettverksfeil — sjekk tilkoblingen og prøv igjen.');
+        }
+      });
+
+      function showError(msg) {
+        errorMsg.textContent = msg;
+        errorMsg.style.display = 'block';
+      }
+    })();
+  </script>
+</body>
+</html>

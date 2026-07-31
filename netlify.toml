@@ -1,0 +1,66 @@
+[build]
+  publish = "."
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
+# ---------------------------------------------------------------
+# BLOKKERING AV INTERNE FILER
+# publish = "." betyr at ALT i mappa publiseres. Uten reglene under
+# ville strategi- og prisdokumentene ligget åpent tilgjengelig på
+# anderspconsulting.no/STRATEGI-2026.md
+# ---------------------------------------------------------------
+[[redirects]]
+  from = "/*.md"
+  to = "/"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/mockup/*"
+  to = "/"
+  status = 404
+  force = true
+
+# Pen URL for audit-siden
+[[redirects]]
+  from = "/audit"
+  to = "/audit.html"
+  status = 200
+
+# ---------------------------------------------------------------
+# HEADERE
+# ---------------------------------------------------------------
+[[headers]]
+  for = "/.netlify/functions/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Headers = "Content-Type"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/og-image.jpg"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/sitemap.xml"
+  [headers.values]
+    Content-Type = "application/xml; charset=utf-8"
+
+[[headers]]
+  for = "/robots.txt"
+  [headers.values]
+    Content-Type = "text/plain; charset=utf-8"
