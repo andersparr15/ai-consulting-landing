@@ -270,38 +270,21 @@ nav.mainnav.scrolled{border-bottom-color:var(--line)}
 .stat-lbl{margin-top:var(--s2);font-size:.875rem;color:var(--ink-muted);line-height:1.45;max-width:24ch}
 @media(max-width:720px){.proof-grid{grid-template-columns:1fr;gap:var(--s4)}}
 
-.logos{padding-block:var(--s5)}
+.proof .logos-cap{margin-top:var(--s6);padding-top:var(--s5);border-top:1px solid var(--line)}
 .logos-row{display:flex;align-items:center;justify-content:center;gap:clamp(28px,6vw,72px);flex-wrap:wrap}
 .logos-row img{height:22px;width:auto;opacity:.38;filter:grayscale(1);transition:opacity .2s}
 .logos-row img:hover{opacity:.65}
 .logos-cap{text-align:center;font-size:.75rem;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:var(--s4)}
 
 /* ============================================================
-   CASE (mørk)
+   CASE (mørk, kompakt)
    ============================================================ */
 .case{background:var(--dark-bg);color:var(--dark-muted)}
+.case-compact{padding-block:clamp(56px,7vw,96px)}
 .case h2,.case h3{color:var(--dark-ink)}
 .case .eyebrow{color:var(--dark-muted)}
 .case-head{max-width:70ch}
 .case-head p{margin-top:var(--s3);color:var(--dark-muted);font-size:clamp(1rem,1.4vw,1.125rem);max-width:58ch}
-.case-body{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,72px);align-items:center;margin-top:var(--s7)}
-@media(max-width:900px){.case-body{grid-template-columns:1fr;gap:var(--s5)}}
-
-.frame{border:1px solid var(--dark-line);border-radius:12px;overflow:hidden;background:#141416;box-shadow:0 40px 80px -40px rgba(0,0,0,.9)}
-.frame-bar{height:34px;display:flex;align-items:center;gap:6px;padding:0 12px;background:#18181B;border-bottom:1px solid var(--dark-line)}
-.dot{width:9px;height:9px;border-radius:50%;background:#3F3F46}
-.frame-url{margin-left:10px;font-size:.6875rem;color:#52525B}
-.frame img{display:block;width:100%;height:auto}
-.frame.no-img img{display:none}
-.frame-fallback{display:none;padding:56px 24px;text-align:center;font-size:.8125rem;color:#52525B}
-.frame.no-img .frame-fallback{display:block}
-
-.ba{width:100%;border-collapse:collapse;margin-top:var(--s2)}
-.ba th,.ba td{text-align:left;padding:.875rem 0;border-bottom:1px solid var(--dark-line);font-size:.9375rem}
-.ba th{font-size:.75rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:#52525B}
-.ba td:first-child{color:var(--dark-muted)}
-.ba td.after{color:var(--dark-ink);font-weight:600;text-align:right}
-.ba td.before{text-align:right;color:#52525B;text-decoration:line-through}
 
 .quote{margin-top:var(--s5);padding-left:var(--s3);border-left:2px solid var(--dark-line)}
 .quote p{font-size:1.0625rem;color:var(--dark-ink);line-height:1.55}
@@ -326,21 +309,6 @@ nav.mainnav.scrolled{border-bottom-color:var(--line)}
 .work-more summary::after{content:'→';transition:transform .18s var(--ease)}
 .work-more[open] summary::after{content:'→';transform:rotate(90deg)}
 .work-more p{margin-top:.6rem;font-size:.9375rem;color:var(--ink-body);line-height:1.6;max-width:64ch}
-
-/* ============================================================
-   DIAGNOSTIKK
-   ============================================================ */
-.diag-wrap{max-width:840px}
-.diag-q{font-size:clamp(1.5rem,3vw,2.25rem);font-weight:600;letter-spacing:-.025em;line-height:1.3;margin-top:var(--s3)}
-.diag-q b{color:var(--accent)}
-.diag-note{margin-top:var(--s3);font-size:.9375rem;color:var(--ink-muted)}
-.diag-list{list-style:none;margin-top:var(--s5);display:grid;gap:var(--s2)}
-.diag-item{display:flex;gap:var(--s3);align-items:flex-start;padding:var(--s3);border:1px solid var(--line);border-radius:10px;background:var(--bg);transition:border-color .2s}
-.diag-item:hover{border-color:var(--line-strong)}
-.diag-arrow{color:var(--accent);font-weight:600;flex:none;line-height:1.5}
-.diag-label{font-weight:600;color:var(--ink);font-size:.9375rem}
-.diag-sub{font-size:.875rem;color:var(--ink-muted);margin-top:.2rem;line-height:1.5}
-.diag-cta{margin-top:var(--s5)}
 
 /* ============================================================
    TO SPOR
@@ -530,13 +498,7 @@ nav.mainnav.scrolled{border-bottom-color:var(--line)}
   </div>
 </header>
 
-<!-- ================= BILDEPAUSE: HODDEVIKA ================= -->
-<figure class="photobreak">
-  <img loading="lazy" decoding="async" src="images/vestlandet-hoddevika.jpg" alt="Veien ned mot Hoddevika, Stad">
-  <figcaption class="photobreak-cap">Hoddevika, Stad</figcaption>
-</figure>
-
-<!-- ================= BEVISSTRIPE ================= -->
+<!-- ================= BEVIS + LOGOER ================= -->
 <div class="proof">
   <div class="wrap">
     <div class="proof-grid">
@@ -553,14 +515,8 @@ nav.mainnav.scrolled{border-bottom-color:var(--line)}
         <p class="stat-lbl">fra første samtale til noe som faktisk er i bruk</p>
       </div>
     </div>
-  </div>
-</div>
-
-<!-- ================= LOGOSTRIPE ================= -->
-<div class="logos">
-  <div class="wrap">
-    <p class="logos-cap reveal">Bygget på</p>
-    <div class="logos-row reveal d1">
+    <p class="logos-cap reveal d2">Bygget på</p>
+    <div class="logos-row reveal d2">
       <img loading="lazy" decoding="async" src="images/logos/Anthropic.png" alt="Anthropic">
       <img loading="lazy" decoding="async" src="images/logos/OpenAI.png" alt="OpenAI">
       <img loading="lazy" decoding="async" src="images/logos/N8n.png" alt="n8n">
@@ -575,169 +531,6 @@ nav.mainnav.scrolled{border-bottom-color:var(--line)}
   <img loading="lazy" decoding="async" src="images/vestlandet-alesund-aksla.jpg" alt="Ålesund sett fra Fjellstua på Aksla">
   <figcaption class="photobreak-cap">Ålesund, sett fra Fjellstua</figcaption>
 </figure>
-
-<!-- ================= ARBEID ================= -->
-<section id="arbeid">
-  <div class="wrap">
-    <span class="eyebrow reveal">Arbeid</span>
-    <h2 class="reveal d1">Ting som er bygget<br>og i bruk</h2>
-
-    <div class="work-list">
-      <article class="work-row reveal">
-        <img class="work-thumb" loading="lazy" decoding="async" src="images/case-02-telegram.png"
-             alt="Chatbot for henvendelser" onerror="this.style.display='none'">
-        <div class="work-row-body">
-          <div class="work-row-head">
-            <h3>Chatbot for henvendelser</h3>
-            <span class="work-tag">Eiendom · kundeservice</span>
-          </div>
-          <p class="work-teaser">Kategoriserer henvendelser i Telegram og videresender automatisk med riktig prioritet.</p>
-          <details class="work-more">
-            <summary>Les mer</summary>
-            <p>AI-bot som kategoriserer henvendelser og videresender med prioritet og foreslått handling. Passer klinikker, eiendomsforvaltning og annen virksomhet med høyt henvendelsesvolum.</p>
-          </details>
-        </div>
-      </article>
-
-      <article class="work-row reveal d1">
-        <img class="work-thumb" loading="lazy" decoding="async" src="images/case-03-presentation.png"
-             alt="Presentasjoner på minutter" onerror="this.style.display='none'">
-        <div class="work-row-body">
-          <div class="work-row-head">
-            <h3>Presentasjoner på minutter</h3>
-            <span class="work-tag">Helse · rådgivning</span>
-          </div>
-          <p class="work-teaser">Kundetilpassede presentasjoner fra brief til ferdig fil — på minutter, ikke timer.</p>
-          <details class="work-more">
-            <summary>Les mer</summary>
-            <p>Skill-basert system som genererer kundetilpassede presentasjoner fra en kort brief til ferdig fil, på flere språk. Det som tok en time tar nå under et kvarter.</p>
-          </details>
-        </div>
-      </article>
-
-      <article class="work-row reveal d2">
-        <img class="work-thumb" loading="lazy" decoding="async" src="images/case-04-crm.png"
-             alt="Oppfølging som ikke glipper" onerror="this.style.display='none'">
-        <div class="work-row-body">
-          <div class="work-row-head">
-            <h3>Oppfølging som ikke glipper</h3>
-            <span class="work-tag">Salg og rådgivning</span>
-          </div>
-          <p class="work-teaser">Eget dashboard for oppfølging — over 200 kontakter fulgt opp uten at noe falt mellom stolene.</p>
-          <details class="work-more">
-            <summary>Les mer</summary>
-            <p>Eget dashboard for B2B-outreach med automatisk kategorisering og oppfølgingspåminnelser. Bygget for å holde oversikt når volumet av henvendelser blir for stort til å styre manuelt.</p>
-          </details>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ================= CASE (mørk) ================= -->
-<section class="case" id="case">
-  <div class="wrap">
-    <div class="case-head">
-      <span class="eyebrow reveal">Utvalgt prosjekt</span>
-      <h2 class="reveal d1">En assistent som<br>aldri tar helg</h2>
-      <p class="reveal d2">
-        En toppleder i helsebransjen brukte opptil en time på å lage én presentasjon til én kunde.
-        Oppfølgingen ble gjort når det passet, og regnskapet ble ført i bulk på slutten av måneden.
-        Assistenten vi bygde håndterer alle tre — hele døgnet, hver dag.
-      </p>
-    </div>
-
-    <div class="case-body">
-      <div class="reveal">
-        <div class="frame" id="caseframe">
-          <div class="frame-bar">
-            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-            <span class="frame-url">assistent · i drift</span>
-          </div>
-          <img loading="lazy" decoding="async" src="images/case-01-assistant.png" alt="Skjermbilde fra assistenten i drift"
-               onerror="document.getElementById('caseframe').classList.add('no-img')">
-          <div class="frame-fallback">Skjermbilde fra assistenten</div>
-        </div>
-      </div>
-
-      <div class="reveal d1">
-        <table class="ba">
-          <thead>
-            <tr><th>Oppgave</th><th style="text-align:right">Før</th><th style="text-align:right">Etter</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>Presentasjon per kunde</td><td class="before">30–60 min</td><td class="after">5–10 min</td></tr>
-            <tr><td>Oppfølging</td><td class="before">Sporadisk</td><td class="after">Automatisk</td></tr>
-            <tr><td>Regnskapsføring</td><td class="before">Manuell bulk</td><td class="after">Løpende</td></tr>
-            <tr><td>Frigjort tid</td><td class="before">—</td><td class="after">8 t/uke</td></tr>
-          </tbody>
-        </table>
-
-        <blockquote class="quote">
-          <p>«Jeg er så glad jeg skaffet en assistent, jeg sparer så mye tid og har det mye gøyere med arbeidet mitt.»</p>
-          <cite>— Toppleder i helsebransjen</cite>
-        </blockquote>
-      </div>
-    </div>
-
-    <div class="case-cta reveal">
-      <a href="#kontakt" class="btn btn-onDark">Book gratis kartlegging</a>
-    </div>
-  </div>
-</section>
-
-<!-- ================= DIAGNOSTIKK ================= -->
-<section class="subtle">
-  <div class="wrap">
-    <div class="diag-wrap">
-      <span class="eyebrow reveal">Finn flaskehalsen</span>
-      <p class="diag-q reveal d1">«Hva ville knekket hos dere hvis <b>500 nye kunder</b> dukket opp i morgen?»</p>
-      <p class="diag-note reveal d1">Der det knekker — der er startpunktet. Disse fem går igjen på tvers av bransjer:</p>
-
-      <ul class="diag-list reveal d2">
-        <li class="diag-item">
-          <span class="diag-arrow">→</span>
-          <div>
-            <div class="diag-label">Svarer for sent på nye henvendelser</div>
-            <div class="diag-sub">Jo lenger en henvendelse blir liggende, jo større sjanse for at den går til en konkurrent i stedet.</div>
-          </div>
-        </li>
-        <li class="diag-item">
-          <span class="diag-arrow">→</span>
-          <div>
-            <div class="diag-label">Oppfølgingen stopper for tidlig</div>
-            <div class="diag-sub">De fleste salg krever flere kontaktpunkter enn de fleste selgere orker å ta.</div>
-          </div>
-        </li>
-        <li class="diag-item">
-          <span class="diag-arrow">→</span>
-          <div>
-            <div class="diag-label">Gamle kontakter ligger ubrukt</div>
-            <div class="diag-sub">Omsetningen ligger ofte allerede i kunderegisteret — den bare mangler noen som følger opp.</div>
-          </div>
-        </li>
-        <li class="diag-item">
-          <span class="diag-arrow">→</span>
-          <div>
-            <div class="diag-label">Manuell dataflytting spiser kapasitet</div>
-            <div class="diag-sub">Fakturaer, skjemaer og bilag som tastes inn på nytt i stedet for å flyte automatisk.</div>
-          </div>
-        </li>
-        <li class="diag-item">
-          <span class="diag-arrow">→</span>
-          <div>
-            <div class="diag-label">Ingen oversikt uten å sjekke manuelt</div>
-            <div class="diag-sub">Tid brukt på å kompilere rapporter er tid tatt fra det som faktisk vokser virksomheten.</div>
-          </div>
-        </li>
-      </ul>
-
-      <div class="diag-cta reveal d3">
-        <a href="#kontakt" class="btn btn-primary">Book gratis kartlegging — finn deres flaskehals</a>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- ================= TO SPOR ================= -->
 <section id="losninger">
@@ -802,7 +595,7 @@ nav.mainnav.scrolled{border-bottom-color:var(--line)}
         <div class="sol-n">02</div>
         <h3>Oppfølging som ikke glipper</h3>
         <p>De fleste salg krever fem kontaktpunkter. De fleste gir seg etter ett. Sekvensen kjører av seg selv, i deres eget språk.</p>
-        <div class="sol-for">Rådgivning · coach · treningssenter</div>
+        <div class="sol-for">Rådgivning · coach · nettverksmarkedsfører</div>
       </article>
       <article class="sol reveal d2">
         <div class="sol-n">03</div>
@@ -831,6 +624,107 @@ nav.mainnav.scrolled{border-bottom-color:var(--line)}
     </div>
   </div>
 </section>
+
+<!-- ================= ARBEID ================= -->
+<section id="arbeid">
+  <div class="wrap">
+    <span class="eyebrow reveal">Arbeid</span>
+    <h2 class="reveal d1">Ting som er bygget<br>og i bruk</h2>
+
+    <div class="work-list">
+      <article class="work-row reveal">
+        <img class="work-thumb" loading="lazy" decoding="async" src="images/case-02-telegram.png"
+             alt="Chatbot for henvendelser" onerror="this.style.display='none'">
+        <div class="work-row-body">
+          <div class="work-row-head">
+            <h3>Chatbot for henvendelser</h3>
+            <span class="work-tag">Eiendom · kundeservice</span>
+          </div>
+          <p class="work-teaser">Kategoriserer henvendelser i Telegram og videresender automatisk med riktig prioritet.</p>
+          <details class="work-more">
+            <summary>Les mer</summary>
+            <p>AI-bot som kategoriserer henvendelser og videresender med prioritet og foreslått handling. Passer klinikker, eiendomsforvaltning og annen virksomhet med høyt henvendelsesvolum.</p>
+          </details>
+        </div>
+      </article>
+
+      <article class="work-row reveal d1">
+        <img class="work-thumb" loading="lazy" decoding="async" src="images/case-05-handverk.png"
+             alt="Synlighet for håndverksbedrift" onerror="this.style.display='none'">
+        <div class="work-row-body">
+          <div class="work-row-head">
+            <h3>Synlighet for håndverksbedrift</h3>
+            <span class="work-tag">Bygg · håndverk · fagarbeid</span>
+          </div>
+          <p class="work-teaser">Ny nettside og lokal synlighet for et snekkerfirma — henvendelser kommer nå digitalt, ikke bare via bekjente.</p>
+          <details class="work-more">
+            <summary>Les mer</summary>
+            <p>Bygget for et håndverksfirma som tidligere fikk så godt som alle oppdrag gjennom bekjente. Nettsiden er satt opp for lokal synlighet og gjør det enkelt for nye kunder å ta kontakt digitalt, ikke bare via jungeltelegrafen.</p>
+          </details>
+        </div>
+      </article>
+
+      <article class="work-row reveal d2">
+        <img class="work-thumb" loading="lazy" decoding="async" src="images/case-03-presentation.png"
+             alt="Presentasjoner på minutter" onerror="this.style.display='none'">
+        <div class="work-row-body">
+          <div class="work-row-head">
+            <h3>Presentasjoner på minutter</h3>
+            <span class="work-tag">Helse · rådgivning</span>
+          </div>
+          <p class="work-teaser">Kundetilpassede presentasjoner fra brief til ferdig fil — på minutter, ikke timer.</p>
+          <details class="work-more">
+            <summary>Les mer</summary>
+            <p>Skill-basert system som genererer kundetilpassede presentasjoner fra en kort brief til ferdig fil, på flere språk. Det som tok en time tar nå under et kvarter.</p>
+          </details>
+        </div>
+      </article>
+
+      <article class="work-row reveal">
+        <img class="work-thumb" loading="lazy" decoding="async" src="images/case-04-crm.png"
+             alt="Oppfølging som ikke glipper" onerror="this.style.display='none'">
+        <div class="work-row-body">
+          <div class="work-row-head">
+            <h3>Oppfølging som ikke glipper</h3>
+            <span class="work-tag">Salg · rådgivning · coaching</span>
+          </div>
+          <p class="work-teaser">Eget dashboard for oppfølging — over 200 kontakter fulgt opp uten at noe falt mellom stolene.</p>
+          <details class="work-more">
+            <summary>Les mer</summary>
+            <p>Eget dashboard for B2B-outreach med automatisk kategorisering og oppfølgingspåminnelser. Passer selgere, konsulenter og coacher som har for mange kontakter til å følge opp manuelt.</p>
+          </details>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CASE (mørk, kompakt) ================= -->
+<section class="case case-compact" id="case">
+  <div class="wrap">
+    <div class="case-head">
+      <span class="eyebrow reveal">Utvalgt prosjekt</span>
+      <h2 class="reveal d1">En assistent som aldri tar helg</h2>
+      <p class="reveal d2">
+        En toppleder i helsebransjen brukte 8–10 timer i uka på presentasjoner, oppfølging og
+        regnskapsføring. Assistenten vi bygde håndterer alle tre — hele døgnet, hver dag.
+      </p>
+      <blockquote class="quote reveal d2">
+        <p>«Jeg er så glad jeg skaffet en assistent, jeg sparer så mye tid og har det mye gøyere med arbeidet mitt.»</p>
+        <cite>— Toppleder i helsebransjen</cite>
+      </blockquote>
+    </div>
+    <div class="case-cta reveal">
+      <a href="#kontakt" class="btn btn-onDark">Book gratis kartlegging</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BILDEPAUSE: HODDEVIKA ================= -->
+<figure class="photobreak">
+  <img loading="lazy" decoding="async" src="images/vestlandet-hoddevika.jpg" alt="Veien ned mot Hoddevika, Stad">
+  <figcaption class="photobreak-cap">Hoddevika, Stad</figcaption>
+</figure>
 
 <!-- ================= VESTLANDET ================= -->
 <section class="vest" id="vestlandet">
