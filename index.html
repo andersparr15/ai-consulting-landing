@@ -257,7 +257,15 @@ nav.mainnav.scrolled{border-bottom-color:var(--line)}
 /* ============================================================
    HERO
    ============================================================ */
-.hero{padding-top:clamp(120px,16vh,180px);padding-bottom:clamp(56px,8vw,96px)}
+.hero{position:relative;isolation:isolate;overflow:hidden;
+  padding-top:clamp(120px,16vh,180px);padding-bottom:clamp(56px,8vw,96px)}
+.hero-bg{position:absolute;inset:0;z-index:-2;display:flex;align-items:center;justify-content:flex-end;
+  padding-right:clamp(8px,3vw,32px)}
+.hero-bg img{width:auto;height:auto;max-width:58%;max-height:86%;object-fit:contain;display:block;
+  border-radius:18px;box-shadow:0 50px 90px -40px rgba(10,10,10,.3)}
+.hero::after{content:'';position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(90deg,#fff 0%,#fff 34%,rgba(255,255,255,.6) 50%,rgba(255,255,255,0) 68%)}
+@media(max-width:900px){.hero-bg{display:none}.hero::after{display:none}}
 .hero h1{max-width:16ch}
 .hero .lede{margin-top:var(--s3);font-size:clamp(1.0625rem,1.6vw,1.25rem)}
 .hero-actions{margin-top:var(--s5);display:flex;align-items:center;gap:var(--s3);flex-wrap:wrap}
@@ -572,6 +580,12 @@ nav.mainnav.scrolled{border-bottom-color:var(--line)}
   </div>
 </section>
 
+<!-- ================= BILDEPAUSE: HODDEVIKA ================= -->
+<figure class="photobreak">
+  <img loading="lazy" decoding="async" src="images/vestlandet-hoddevika.jpg" alt="Veien ned mot Hoddevika, Stad">
+  <figcaption class="photobreak-cap">Hoddevika, Stad</figcaption>
+</figure>
+
 <!-- ================= LØSNINGER ================= -->
 <section class="subtle" id="tjenester">
   <div class="wrap">
@@ -716,12 +730,6 @@ nav.mainnav.scrolled{border-bottom-color:var(--line)}
     </div>
   </div>
 </section>
-
-<!-- ================= BILDEPAUSE: HODDEVIKA ================= -->
-<figure class="photobreak">
-  <img loading="lazy" decoding="async" src="images/vestlandet-hoddevika.jpg" alt="Veien ned mot Hoddevika, Stad">
-  <figcaption class="photobreak-cap">Hoddevika, Stad</figcaption>
-</figure>
 
 <!-- ================= VESTLANDET ================= -->
 <section class="vest" id="vestlandet">
