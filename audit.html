@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#1A1614">
+  <meta name="theme-color" content="#FFFFFF">
   <title>Gratis AI-audit — AP Consulting</title>
   <meta name="description" content="5 spørsmål. Gratis. Få en personlig e-postrapport med de 2–3 AI-automatiseringsmulighetene som vil frigjøre mest tid i din virksomhet.">
 
@@ -50,424 +50,206 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
-    :root {
-      --bg-primary:    #1A1614;
-      --bg-secondary:  #221D1A;
-      --bg-tertiary:   #2A2421;
-      --text-primary:  #F4EDE0;
-      --text-secondary:#D4C9B8;
-      --text-muted:    #9A8E80;
-      --border:        #3A3128;
-      --border-soft:   #2D2622;
-      --accent:        #D97A3D;
-      --accent-soft:   #E8A574;
-      --accent-dark:   #B85A1F;
-      --ink-on-accent: #1A1614;
-      --ff-display: 'Cormorant Garamond', 'Times New Roman', serif;
-      --ff-body:    'Source Serif 4', Georgia, serif;
-      --ease:       cubic-bezier(0.16, 1, 0.3, 1);
-    }
+/* ============================================================
+   DESIGNSYSTEM — delt med index.html
+   ============================================================ */
+:root{
+  --bg:#FFFFFF; --bg-subtle:#FAFAFA; --bg-sunken:#F4F4F5;
+  --ink:#0A0A0A; --ink-body:#3F3F46; --ink-muted:#71717A;
+  --line:#E4E4E7; --line-strong:#D4D4D8;
+  --accent:#0A5CFF; --accent-hover:#0847CC;
+  --cta-bg:#0A0A0A; --cta-text:#FFFFFF;
 
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
+  --ff:'Geist','Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;
+  --s1:8px; --s2:16px; --s3:24px; --s4:32px; --s5:48px; --s6:64px; --s7:96px;
+  --wrap:1200px;
+  --ease:cubic-bezier(.22,1,.36,1);
+}
 
-    body {
-      font-family: var(--ff-body);
-      background: var(--bg-primary);
-      color: var(--text-primary);
-      line-height: 1.65;
-      overflow-x: hidden;
-    }
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:var(--ff);background:var(--bg);color:var(--ink-body);
+  font-size:1.0625rem;line-height:1.65;letter-spacing:-.005em;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+h1,h2,h3,h4{color:var(--ink);font-weight:600;letter-spacing:-.03em;line-height:1.05}
+h1{font-size:clamp(2.5rem,5.4vw,4.25rem);letter-spacing:-.036em;line-height:1.04}
+h2{font-size:clamp(1.5rem,2.6vw,2rem);letter-spacing:-.024em;line-height:1.2}
+a{color:inherit;text-decoration:none}
 
-    body::before {
-      content: '';
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      z-index: 9998;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='250'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");
-      background-size: 200px 200px;
-      mix-blend-mode: overlay;
-    }
+.wrap{max-width:var(--wrap);margin:0 auto;padding-inline:clamp(20px,5vw,40px)}
+.eyebrow{font-size:.75rem;font-weight:500;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-muted);display:block;margin-bottom:var(--s3)}
 
-    .wrap { max-width: 1380px; margin: 0 auto; padding: 0 2.5rem; }
+/* ---- Knapper ---- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.5rem;
+  font-family:var(--ff);font-size:.9375rem;font-weight:500;letter-spacing:-.01em;
+  padding:.875rem 1.75rem;border-radius:8px;border:1px solid transparent;cursor:pointer;
+  transition:background .18s var(--ease),transform .18s var(--ease),border-color .18s var(--ease);
+  white-space:nowrap;
+}
+.btn-primary{background:var(--cta-bg);color:var(--cta-text)}
+.btn-primary:hover:not(:disabled){background:#262626;transform:translateY(-1px)}
+.btn-primary:disabled{opacity:.5;cursor:not-allowed}
+.btn-secondary{background:transparent;color:var(--ink);border-color:var(--line-strong)}
+.btn-secondary:hover{border-color:var(--ink);transform:translateY(-1px)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
 
-    .label {
-      font-family: var(--ff-body);
-      font-size: 0.68rem;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      display: block;
-    }
+/* ============================================================
+   NAV
+   ============================================================ */
+nav.mainnav{position:fixed;inset:0 0 auto 0;z-index:100;background:rgba(255,255,255,.86);
+  backdrop-filter:saturate(180%) blur(14px);-webkit-backdrop-filter:saturate(180%) blur(14px);
+  border-bottom:1px solid var(--line)}
+.nav-in{max-width:var(--wrap);margin:0 auto;padding:0 clamp(20px,5vw,40px);height:64px;display:flex;align-items:center;justify-content:space-between;gap:var(--s4)}
+.brand{font-weight:600;font-size:.9375rem;letter-spacing:-.02em;color:var(--ink);white-space:nowrap}
+.brand span{color:var(--ink-muted);font-weight:400}
+.nav-back{font-size:.875rem;color:var(--ink-body);font-weight:450;transition:color .18s}
+.nav-back:hover{color:var(--ink)}
+@media(max-width:480px){.brand span{display:none}}
 
-    /* Nav */
-    nav {
-      position: fixed;
-      inset-block-start: 0;
-      inset-inline: 0;
-      z-index: 200;
-      padding: 1.1rem 2.5rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: rgba(26, 22, 20, 0.92);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      border-bottom: 1px solid var(--border);
-    }
-    .nav-logo {
-      font-family: var(--ff-display);
-      font-size: 1.1rem;
-      font-weight: 500;
-      letter-spacing: 0.03em;
-      color: var(--text-primary);
-      text-decoration: none;
-    }
-    .nav-back {
-      font-size: 0.72rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-    .nav-back:hover { color: var(--text-primary); }
+/* ============================================================
+   HERO
+   ============================================================ */
+.a-hero{padding:clamp(120px,18vh,168px) 0 clamp(48px,7vw,72px);border-bottom:1px solid var(--line)}
+.a-hero-inner{max-width:640px}
+.a-hero h1{margin-top:var(--s2)}
+.a-hero .lede{margin-top:var(--s3);font-size:clamp(1.0625rem,1.4vw,1.1875rem);color:var(--ink-body);max-width:52ch;line-height:1.6}
+.a-hero-note{margin-top:var(--s2);font-size:.8125rem;color:var(--ink-muted);font-style:italic}
+.a-hero-pills{margin-top:var(--s5);display:flex;gap:var(--s2);flex-wrap:wrap}
+.a-pill{font-size:.8125rem;color:var(--ink-body);border:1px solid var(--line);border-radius:999px;padding:.4rem 1rem;background:var(--bg-subtle)}
 
-    /* Hero */
-    .hero {
-      padding: 10rem 0 5rem;
-      background: var(--bg-secondary);
-      border-bottom: 1px solid var(--border-soft);
-    }
-    .hero-inner { max-width: 760px; }
-    .hero-eyebrow {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      margin-bottom: 2.5rem;
-    }
-    .hero-eyebrow::before {
-      content: '';
-      display: block;
-      width: 2.5rem;
-      height: 1px;
-      background: var(--accent);
-      flex-shrink: 0;
-    }
-    h1 {
-      font-family: var(--ff-display);
-      font-size: clamp(2.8rem, 5vw, 5.5rem);
-      font-weight: 300;
-      line-height: 1.05;
-      letter-spacing: -0.02em;
-      color: var(--text-primary);
-      margin-bottom: 1.75rem;
-    }
-    h1 em { font-style: italic; }
-    .hero-sub {
-      font-size: clamp(0.95rem, 1.3vw, 1.1rem);
-      line-height: 1.78;
-      color: var(--text-secondary);
-      max-width: 52ch;
-      margin-bottom: 1rem;
-    }
-    .hero-pills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.55rem;
-      margin-top: 2rem;
-    }
-    .hero-pill {
-      font-size: 0.78rem;
-      color: var(--text-muted);
-      background: var(--bg-tertiary);
-      border: 1px solid var(--border);
-      padding: 0.35rem 0.85rem;
-      letter-spacing: 0.04em;
-    }
+/* ============================================================
+   FORM-SEKSJON
+   ============================================================ */
+.a-form-section{padding:clamp(56px,8vw,96px) 0 clamp(72px,10vw,120px)}
+.a-form-layout{display:grid;grid-template-columns:340px 1fr;gap:clamp(40px,6vw,88px);align-items:start}
+@media(max-width:900px){.a-form-layout{grid-template-columns:1fr;gap:var(--s5)}}
+.a-sidebar{position:sticky;top:calc(64px + var(--s5))}
+@media(max-width:900px){.a-sidebar{position:static}}
+.a-sidebar h2{margin-top:var(--s2);font-size:1.375rem}
+.a-sidebar-items{margin-top:var(--s5);display:flex;flex-direction:column;gap:var(--s4)}
+.a-sidebar-item{padding-left:var(--s3);border-left:2px solid var(--line)}
+.a-sidebar-item-title{font-weight:600;color:var(--ink);font-size:.9375rem}
+.a-sidebar-item-desc{margin-top:.3rem;font-size:.8125rem;color:var(--ink-muted);line-height:1.55}
 
-    /* Form section */
-    .form-section {
-      padding: 6rem 0 8rem;
-      background: var(--bg-primary);
-    }
-    .form-layout {
-      display: grid;
-      grid-template-columns: 1fr 400px;
-      gap: 8rem;
-      align-items: start;
-    }
-    .form-sidebar { position: sticky; top: 6rem; }
-    .sidebar-title {
-      font-family: var(--ff-display);
-      font-size: 1.8rem;
-      font-weight: 300;
-      line-height: 1.25;
-      color: var(--text-primary);
-      margin: 1rem 0 1.5rem;
-    }
-    .sidebar-items { display: flex; flex-direction: column; gap: 1.25rem; }
-    .sidebar-item {
-      padding-left: 1.5rem;
-      border-left: 1px solid rgba(217, 122, 61, 0.3);
-    }
-    .sidebar-item-title {
-      font-family: var(--ff-display);
-      font-size: 1.05rem;
-      font-weight: 400;
-      color: var(--text-primary);
-      margin-bottom: 0.25rem;
-    }
-    .sidebar-item-desc { font-size: 0.82rem; color: var(--text-muted); line-height: 1.65; }
+.a-form-step{padding:var(--s4) 0;border-bottom:1px solid var(--line)}
+.a-form-step:first-child{padding-top:0}
+.a-form-step:last-of-type{border-bottom:none}
+.a-step-label{font-size:.75rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:.5rem}
+.a-step-question{font-size:1.0625rem;font-weight:600;color:var(--ink);letter-spacing:-.015em;margin-bottom:var(--s3)}
+.a-step-question em{font-style:normal;font-size:.8125rem;font-weight:400;color:var(--ink-muted)}
 
-    /* Form */
-    .audit-form { display: flex; flex-direction: column; gap: 0; }
-    .form-step {
-      padding: 2.5rem 0;
-      border-bottom: 1px solid var(--border-soft);
-    }
-    .form-step:first-child { padding-top: 0; }
-    .step-label {
-      font-size: 0.62rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--accent);
-      display: block;
-      margin-bottom: 0.6rem;
-    }
-    .step-question {
-      font-family: var(--ff-display);
-      font-size: 1.35rem;
-      font-weight: 400;
-      color: var(--text-primary);
-      line-height: 1.3;
-      margin-bottom: 1.25rem;
-    }
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
-    .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
-    .form-label-small {
-      font-size: 0.62rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-    }
-    .form-input,
-    .form-textarea {
-      width: 100%;
-      background: transparent;
-      border: none;
-      border-bottom: 1px solid var(--border);
-      padding: 0.65rem 0;
-      font-family: var(--ff-body);
-      font-size: 0.92rem;
-      color: var(--text-primary);
-      outline: none;
-      transition: border-color 0.2s;
-      -webkit-appearance: none;
-      appearance: none;
-    }
-    .form-input:focus,
-    .form-textarea:focus { border-bottom-color: var(--accent); }
-    .form-input::placeholder,
-    .form-textarea::placeholder { color: rgba(154, 142, 128, 0.4); }
-    .form-textarea { resize: vertical; min-height: 80px; }
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:var(--s3)}
+@media(max-width:560px){.form-row{grid-template-columns:1fr}}
+.form-group{margin-top:var(--s3)}
+.form-group:first-child{margin-top:0}
+.form-label{display:block;font-size:.8125rem;font-weight:500;color:var(--ink-body);margin-bottom:.4rem}
+.form-input,.form-textarea{
+  width:100%;background:var(--bg);border:1px solid var(--line-strong);border-radius:8px;
+  padding:.75rem .875rem;font-family:var(--ff);font-size:.9375rem;color:var(--ink);
+  outline:none;transition:border-color .18s;
+}
+.form-input:focus,.form-textarea:focus{border-color:var(--ink)}
+.form-input::placeholder,.form-textarea::placeholder{color:var(--ink-muted)}
+.form-textarea{resize:vertical;min-height:88px}
 
-    .radio-group,
-    .check-group { display: flex; flex-direction: column; gap: 0.55rem; }
-    .radio-opt,
-    .check-opt {
-      display: flex;
-      align-items: center;
-      gap: 0.85rem;
-      font-size: 0.9rem;
-      color: var(--text-secondary);
-      cursor: pointer;
-      line-height: 1.4;
-      padding: 0.6rem 0.85rem;
-      border: 1px solid transparent;
-      transition: border-color 0.15s, background 0.15s;
-    }
-    .radio-opt:hover,
-    .check-opt:hover { background: var(--bg-secondary); border-color: var(--border-soft); }
-    .radio-opt input[type="radio"],
-    .check-opt input[type="checkbox"] {
-      appearance: none;
-      -webkit-appearance: none;
-      width: 14px;
-      height: 14px;
-      border: 1px solid var(--text-muted);
-      flex-shrink: 0;
-      cursor: pointer;
-      transition: border-color 0.2s, background 0.2s;
-    }
-    .radio-opt input[type="radio"] { border-radius: 50%; }
-    .radio-opt input[type="radio"]:checked,
-    .check-opt input[type="checkbox"]:checked {
-      border-color: var(--accent);
-      background: var(--accent);
-    }
+.radio-group,.check-group{display:flex;flex-direction:column;gap:.5rem}
+.radio-opt,.check-opt{display:flex;align-items:center;gap:.625rem;font-size:.9375rem;color:var(--ink-body);cursor:pointer;
+  padding:.625rem .75rem;border:1px solid var(--line);border-radius:8px;transition:border-color .15s,background .15s}
+.radio-opt:hover,.check-opt:hover{border-color:var(--line-strong);background:var(--bg-subtle)}
+.radio-opt input[type=radio],.check-opt input[type=checkbox]{
+  appearance:none;-webkit-appearance:none;width:16px;height:16px;border:1px solid var(--line-strong);
+  flex:none;cursor:pointer;transition:border-color .18s,background .18s}
+.radio-opt input[type=radio]{border-radius:50%}
+.check-opt input[type=checkbox]{border-radius:4px}
+.radio-opt input[type=radio]:checked,.check-opt input[type=checkbox]:checked{border-color:var(--ink);background:var(--ink);box-shadow:inset 0 0 0 3px #fff}
 
-    /* Submit area */
-    .submit-area { padding: 2.5rem 0 0; }
-    .btn-submit {
-      background: var(--accent);
-      color: var(--ink-on-accent);
-      padding: 1.1rem 3rem;
-      font-family: var(--ff-body);
-      font-size: 0.76rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      border: none;
-      cursor: pointer;
-      transition: background 0.22s, transform 0.22s;
-      display: inline-block;
-    }
-    .btn-submit:hover:not(:disabled) { background: var(--accent-dark); transform: translateY(-2px); }
-    .btn-submit:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
-    .submit-note { font-size: 0.78rem; color: var(--text-muted); font-style: italic; margin-top: 1rem; line-height: 1.6; }
+.a-submit-area{padding-top:var(--s4)}
+.a-error-msg{display:none;font-size:.875rem;color:#C0362C;margin-top:var(--s2)}
+.a-submit-note{margin-top:var(--s3);font-size:.8125rem;color:var(--ink-muted);line-height:1.55}
 
-    /* States */
-    .loading-state,
-    .success-state,
-    .error-state { display: none; }
+/* ---- States ---- */
+.a-loading-state,.a-success-state{display:none}
+.a-loading-state{padding:var(--s6) 0;text-align:center}
+.a-loading-spinner{width:28px;height:28px;border:2px solid var(--line);border-top-color:var(--accent);
+  border-radius:50%;margin:0 auto var(--s3);animation:aspin .8s linear infinite}
+@keyframes aspin{to{transform:rotate(360deg)}}
+.a-loading-text{font-size:.9375rem;color:var(--ink-muted)}
 
-    .loading-state {
-      padding: 3rem 0;
-      text-align: center;
-    }
-    .loading-spinner {
-      width: 32px;
-      height: 32px;
-      border: 1px solid var(--border);
-      border-top-color: var(--accent);
-      border-radius: 50%;
-      animation: spin 0.8s linear infinite;
-      margin: 0 auto 1.5rem;
-    }
-    @keyframes spin { to { transform: rotate(360deg); } }
-    .loading-text { font-family: var(--ff-display); font-size: 1.2rem; font-weight: 300; color: var(--text-secondary); font-style: italic; }
+.a-success-state{padding:var(--s5) 0}
+.a-success-icon{display:block;width:40px;height:40px;border-radius:50%;background:var(--accent);color:#fff;
+  font-size:1.125rem;line-height:40px;text-align:center;margin-bottom:var(--s4)}
+.a-success-title{font-size:clamp(1.5rem,2.6vw,2rem)}
+.a-success-body{margin-top:var(--s3);font-size:.9375rem;color:var(--ink-body);max-width:48ch;line-height:1.7}
+.a-success-body p + p{margin-top:.6rem}
+.a-success-actions{margin-top:var(--s5);display:flex;gap:var(--s3);flex-wrap:wrap;align-items:center}
 
-    .success-state {
-      padding: 4rem 0;
-    }
-    .success-icon { font-size: 2rem; color: var(--accent); display: block; margin-bottom: 1.5rem; }
-    .success-title { font-family: var(--ff-display); font-size: clamp(2rem, 3.5vw, 3.2rem); font-weight: 300; color: var(--text-primary); margin-bottom: 1.25rem; }
-    .success-body { font-size: 0.95rem; line-height: 1.82; color: var(--text-muted); max-width: 46ch; }
-    .success-body p + p { margin-top: 0.85rem; }
-    .btn-ghost {
-      display: inline-block;
-      margin-top: 2rem;
-      padding: 0.9rem 2.4rem;
-      font-family: var(--ff-body);
-      font-size: 0.74rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      text-decoration: none;
-      border: 1px solid var(--text-muted);
-      color: var(--text-muted);
-      transition: border-color 0.2s, color 0.2s, transform 0.2s;
-    }
-    .btn-ghost:hover { border-color: var(--text-primary); color: var(--text-primary); transform: translateY(-2px); }
-
-    .error-msg {
-      font-size: 0.85rem;
-      color: #e07070;
-      font-style: italic;
-      margin-top: 1rem;
-      display: none;
-    }
-
-    /* Footer */
-    footer {
-      padding: 1.75rem 2.5rem;
-      border-top: 1px solid var(--border);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: var(--bg-primary);
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-    .footer-brand { font-family: var(--ff-display); font-size: 0.95rem; color: var(--text-secondary); }
-    .footer-copy { font-size: 0.72rem; color: var(--text-muted); }
-
-    /* Responsive */
-    @media (max-width: 900px) {
-      .form-layout { grid-template-columns: 1fr; gap: 3rem; }
-      .form-sidebar { position: static; }
-    }
-    @media (max-width: 600px) {
-      .wrap { padding: 0 1.25rem; }
-      nav { padding: 1rem 1.25rem; }
-      .form-row { grid-template-columns: 1fr; }
-      footer { padding: 1.5rem 1.25rem; }
-    }
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.a-foot{border-top:1px solid var(--line);padding-block:var(--s5)}
+.a-foot-in{display:flex;justify-content:space-between;align-items:center;gap:var(--s3);flex-wrap:wrap;font-size:.8125rem;color:var(--ink-muted)}
   </style>
 </head>
 <body>
 
-  <nav>
-    <a href="/" class="nav-logo">AP Consulting</a>
-    <a href="/" class="nav-back">← Tilbake</a>
+  <nav class="mainnav">
+    <div class="nav-in">
+      <a href="/" class="brand">AP <span>Consulting</span></a>
+      <a href="/" class="nav-back">← Tilbake til forsiden</a>
+    </div>
   </nav>
 
   <!-- Hero -->
-  <header class="hero">
+  <header class="a-hero">
     <div class="wrap">
-      <div class="hero-inner">
-        <div class="hero-eyebrow">
-          <span class="label">Gratis · Personlig · Levert på e-post</span>
-        </div>
-        <h1>
-          Finn din<br>
-          AI-flaskehals —<br>
-          <em>på 5 minutter</em>
-        </h1>
-        <p class="hero-sub">
+      <div class="a-hero-inner">
+        <span class="eyebrow">Gratis · Personlig · Levert på e-post</span>
+        <h1>Finn din AI-flaskehals<br>på 5 minutter</h1>
+        <p class="lede">
           Svar på 5 spørsmål om virksomheten din og få en personlig rapport
           med de 2–3 AI-automatiseringsmulighetene som vil frigjøre mest tid for akkurat deg.
         </p>
-        <p class="hero-sub" style="font-size:0.85rem;color:var(--text-muted);font-style:italic;margin-top:0.5rem">
-          Rapporten lages av AI basert på dine svar og leveres direkte på e-post — vanligvis innen 30 sekunder.
-        </p>
-        <div class="hero-pills">
-          <span class="hero-pill">Gratis — ingen forpliktelse</span>
-          <span class="hero-pill">5 spørsmål</span>
-          <span class="hero-pill">Rapport på e-post</span>
+        <p class="a-hero-note">Rapporten lages av AI basert på dine svar og leveres direkte på e-post — vanligvis innen 30 sekunder.</p>
+        <div class="a-hero-pills">
+          <span class="a-pill">Gratis — ingen forpliktelse</span>
+          <span class="a-pill">5 spørsmål</span>
+          <span class="a-pill">Rapport på e-post</span>
         </div>
       </div>
     </div>
   </header>
 
   <!-- Form -->
-  <section class="form-section">
+  <section class="a-form-section">
     <div class="wrap">
-      <div class="form-layout">
+      <div class="a-form-layout">
 
         <!-- Sidebar -->
-        <aside class="form-sidebar">
-          <span class="label">— Hva du får</span>
-          <h2 class="sidebar-title">En personlig rapport<br>basert på dine svar</h2>
-          <div class="sidebar-items">
-            <div class="sidebar-item">
-              <div class="sidebar-item-title">De 2–3 beste mulighetene for deg</div>
-              <div class="sidebar-item-desc">Ikke generiske tips — konkrete forslag basert på hva du faktisk driver med og hva som tar tid.</div>
+        <aside class="a-sidebar">
+          <span class="eyebrow" style="margin-bottom:0">Hva du får</span>
+          <h2>En personlig rapport<br>basert på dine svar</h2>
+          <div class="a-sidebar-items">
+            <div class="a-sidebar-item">
+              <div class="a-sidebar-item-title">De 2–3 beste mulighetene for deg</div>
+              <div class="a-sidebar-item-desc">Ikke generiske tips — konkrete forslag basert på hva du faktisk driver med og hva som tar tid.</div>
             </div>
-            <div class="sidebar-item">
-              <div class="sidebar-item-title">Estimert tidsbesparelse per løsning</div>
-              <div class="sidebar-item-desc">Hva kan faktisk frigjøres, og hvor mye tid tilsvarer det i kroner per år.</div>
+            <div class="a-sidebar-item">
+              <div class="a-sidebar-item-title">Estimert tidsbesparelse per løsning</div>
+              <div class="a-sidebar-item-desc">Hva kan faktisk frigjøres, og hvor mye tid tilsvarer det i kroner per år.</div>
             </div>
-            <div class="sidebar-item">
-              <div class="sidebar-item-title">Hvilke verktøy og tilnærming</div>
-              <div class="sidebar-item-desc">Hvilke automatiseringstyper som passer din situasjon — Speed to Lead, oppfølging, dokumentprosessering eller andre.</div>
+            <div class="a-sidebar-item">
+              <div class="a-sidebar-item-title">Hvilke verktøy og tilnærming</div>
+              <div class="a-sidebar-item-desc">Hvilke automatiseringstyper som passer din situasjon — Speed to Lead, oppfølging, dokumentprosessering eller andre.</div>
             </div>
-            <div class="sidebar-item">
-              <div class="sidebar-item-title">Levert direkte på e-post</div>
-              <div class="sidebar-item-desc">Ingen salgssamtale med mindre du vil. Du bruker rapporten som du vil.</div>
+            <div class="a-sidebar-item">
+              <div class="a-sidebar-item-title">Levert direkte på e-post</div>
+              <div class="a-sidebar-item-desc">Ingen salgssamtale med mindre du vil. Du bruker rapporten som du vil.</div>
             </div>
           </div>
         </aside>
@@ -475,153 +257,105 @@
         <!-- Main form -->
         <div>
           <div id="form-wrap">
-            <form class="audit-form" id="audit-form" novalidate>
+            <form id="audit-form" novalidate>
 
               <!-- Q1: Kontaktinfo -->
-              <div class="form-step">
-                <span class="step-label">Spørsmål 1 av 5</span>
-                <p class="step-question">Hvem sender jeg rapporten til?</p>
+              <div class="a-form-step">
+                <span class="a-step-label">Spørsmål 1 av 5</span>
+                <p class="a-step-question">Hvem sender jeg rapporten til?</p>
                 <div class="form-row">
                   <div class="form-group">
-                    <label class="form-label-small" for="name">Navn *</label>
+                    <label class="form-label" for="name">Navn *</label>
                     <input class="form-input" type="text" id="name" name="name" placeholder="Ola Nordmann" required autocomplete="name">
                   </div>
                   <div class="form-group">
-                    <label class="form-label-small" for="email">E-post *</label>
+                    <label class="form-label" for="email">E-post *</label>
                     <input class="form-input" type="email" id="email" name="email" placeholder="ola@eksempel.no" required autocomplete="email">
                   </div>
                 </div>
-                <div class="form-group" style="margin-top:1.25rem">
-                  <label class="form-label-small" for="company">Bedrift / bransje</label>
+                <div class="form-group">
+                  <label class="form-label" for="company">Bedrift / bransje</label>
                   <input class="form-input" type="text" id="company" name="company" placeholder="Nordmann AS — konsulent / tannklinikk / eiendom…">
                 </div>
               </div>
 
               <!-- Q2: Størrelse -->
-              <div class="form-step">
-                <span class="step-label">Spørsmål 2 av 5</span>
-                <p class="step-question">Hva slags virksomhet driver du?</p>
+              <div class="a-form-step">
+                <span class="a-step-label">Spørsmål 2 av 5</span>
+                <p class="a-step-question">Hva slags virksomhet driver du?</p>
                 <div class="radio-group">
-                  <label class="radio-opt">
-                    <input type="radio" name="size" value="Solopreneur / selvstendig næringsdrivende">
-                    Solopreneur / selvstendig næringsdrivende
-                  </label>
-                  <label class="radio-opt">
-                    <input type="radio" name="size" value="Liten bedrift (2–10 ansatte)">
-                    Liten bedrift (2–10 ansatte)
-                  </label>
-                  <label class="radio-opt">
-                    <input type="radio" name="size" value="Mellomstor bedrift (10+ ansatte)">
-                    Mellomstor bedrift (10+ ansatte)
-                  </label>
-                  <label class="radio-opt">
-                    <input type="radio" name="size" value="Annet">
-                    Annet
-                  </label>
+                  <label class="radio-opt"><input type="radio" name="size" value="Solopreneur / selvstendig næringsdrivende">Solopreneur / selvstendig næringsdrivende</label>
+                  <label class="radio-opt"><input type="radio" name="size" value="Liten bedrift (2–10 ansatte)">Liten bedrift (2–10 ansatte)</label>
+                  <label class="radio-opt"><input type="radio" name="size" value="Mellomstor bedrift (10+ ansatte)">Mellomstor bedrift (10+ ansatte)</label>
+                  <label class="radio-opt"><input type="radio" name="size" value="Annet">Annet</label>
                 </div>
               </div>
 
               <!-- Q3: Responstid -->
-              <div class="form-step">
-                <span class="step-label">Spørsmål 3 av 5</span>
-                <p class="step-question">Hvor lang tid bruker du vanligvis på å svare en ny lead eller henvendelse?</p>
+              <div class="a-form-step">
+                <span class="a-step-label">Spørsmål 3 av 5</span>
+                <p class="a-step-question">Hvor lang tid bruker du vanligvis på å svare en ny lead eller henvendelse?</p>
                 <div class="radio-group">
-                  <label class="radio-opt">
-                    <input type="radio" name="response_time" value="Under 1 time">
-                    Under 1 time
-                  </label>
-                  <label class="radio-opt">
-                    <input type="radio" name="response_time" value="1–8 timer (samme dag)">
-                    1–8 timer (samme dag)
-                  </label>
-                  <label class="radio-opt">
-                    <input type="radio" name="response_time" value="1–3 dager">
-                    1–3 dager
-                  </label>
-                  <label class="radio-opt">
-                    <input type="radio" name="response_time" value="Over 3 dager — eller jeg mister dem ofte">
-                    Over 3 dager — eller jeg mister dem ofte
-                  </label>
+                  <label class="radio-opt"><input type="radio" name="response_time" value="Under 1 time">Under 1 time</label>
+                  <label class="radio-opt"><input type="radio" name="response_time" value="1–8 timer (samme dag)">1–8 timer (samme dag)</label>
+                  <label class="radio-opt"><input type="radio" name="response_time" value="1–3 dager">1–3 dager</label>
+                  <label class="radio-opt"><input type="radio" name="response_time" value="Over 3 dager — eller jeg mister dem ofte">Over 3 dager — eller jeg mister dem ofte</label>
                 </div>
               </div>
 
               <!-- Q4: Tidstyver -->
-              <div class="form-step">
-                <span class="step-label">Spørsmål 4 av 5</span>
-                <p class="step-question">Hvilke oppgaver tar mest tid per uke? <em style="font-size:0.85rem;color:var(--text-muted)">(velg gjerne flere)</em></p>
+              <div class="a-form-step">
+                <span class="a-step-label">Spørsmål 4 av 5</span>
+                <p class="a-step-question">Hvilke oppgaver tar mest tid per uke? <em>(velg gjerne flere)</em></p>
                 <div class="check-group">
-                  <label class="check-opt">
-                    <input type="checkbox" name="tasks" value="Svare på nye leads og henvendelser">
-                    Svare på nye leads og henvendelser
-                  </label>
-                  <label class="check-opt">
-                    <input type="checkbox" name="tasks" value="Oppfølging av potensielle kunder over tid">
-                    Oppfølging av potensielle kunder over tid
-                  </label>
-                  <label class="check-opt">
-                    <input type="checkbox" name="tasks" value="Lage rapporter, statusoppdateringer og oversikter">
-                    Lage rapporter, statusoppdateringer og oversikter
-                  </label>
-                  <label class="check-opt">
-                    <input type="checkbox" name="tasks" value="Flytte data mellom systemer — fakturaer, skjemaer, dokumenter">
-                    Flytte data mellom systemer — fakturaer, skjemaer, dokumenter
-                  </label>
-                  <label class="check-opt">
-                    <input type="checkbox" name="tasks" value="Holde kontakt med eksisterende kunder">
-                    Holde kontakt med eksisterende kunder
-                  </label>
-                  <label class="check-opt">
-                    <input type="checkbox" name="tasks" value="Lage presentasjoner og dokumenter">
-                    Lage presentasjoner og dokumenter
-                  </label>
+                  <label class="check-opt"><input type="checkbox" name="tasks" value="Svare på nye leads og henvendelser">Svare på nye leads og henvendelser</label>
+                  <label class="check-opt"><input type="checkbox" name="tasks" value="Oppfølging av potensielle kunder over tid">Oppfølging av potensielle kunder over tid</label>
+                  <label class="check-opt"><input type="checkbox" name="tasks" value="Lage rapporter, statusoppdateringer og oversikter">Lage rapporter, statusoppdateringer og oversikter</label>
+                  <label class="check-opt"><input type="checkbox" name="tasks" value="Flytte data mellom systemer — fakturaer, skjemaer, dokumenter">Flytte data mellom systemer — fakturaer, skjemaer, dokumenter</label>
+                  <label class="check-opt"><input type="checkbox" name="tasks" value="Holde kontakt med eksisterende kunder">Holde kontakt med eksisterende kunder</label>
+                  <label class="check-opt"><input type="checkbox" name="tasks" value="Lage presentasjoner og dokumenter">Lage presentasjoner og dokumenter</label>
                 </div>
               </div>
 
               <!-- Q5: Drøm -->
-              <div class="form-step" style="border-bottom:none">
-                <span class="step-label">Spørsmål 5 av 5</span>
-                <p class="step-question">Beskriv én ting du ønsker skjedde automatisk i virksomheten din</p>
+              <div class="a-form-step">
+                <span class="a-step-label">Spørsmål 5 av 5</span>
+                <p class="a-step-question">Beskriv én ting du ønsker skjedde automatisk i virksomheten din</p>
                 <div class="form-group">
-                  <label class="form-label-small" for="dream">Fri tekst</label>
+                  <label class="form-label" for="dream">Fri tekst</label>
                   <textarea class="form-textarea" id="dream" name="dream" rows="4"
                     placeholder="F.eks. &quot;Alle nye leads burde få svar innen 5 minutter, men jeg klarer det ikke manuelt&quot;…"></textarea>
                 </div>
               </div>
 
-              <div class="submit-area">
-                <button type="submit" class="btn-submit" id="submit-btn">
-                  Send meg rapporten på e-post
-                </button>
-                <p id="error-msg" class="error-msg"></p>
-                <p class="submit-note">
-                  Rapporten genereres med AI basert på dine svar og sendes til e-posten du oppgav.
-                  Ingen spam — ingen forpliktelse.
-                </p>
+              <div class="a-submit-area">
+                <button type="submit" class="btn btn-primary" id="submit-btn" style="width:100%">Send meg rapporten på e-post</button>
+                <p id="error-msg" class="a-error-msg"></p>
+                <p class="a-submit-note">Rapporten genereres med AI basert på dine svar og sendes til e-posten du oppgav. Ingen spam — ingen forpliktelse.</p>
               </div>
 
             </form>
           </div>
 
           <!-- Loading -->
-          <div class="loading-state" id="loading-state">
-            <div class="loading-spinner"></div>
-            <p class="loading-text">Analyserer svarene dine…</p>
+          <div class="a-loading-state" id="loading-state">
+            <div class="a-loading-spinner"></div>
+            <p class="a-loading-text">Analyserer svarene dine…</p>
           </div>
 
           <!-- Success -->
-          <div class="success-state" id="success-state">
-            <span class="success-icon">✓</span>
-            <h2 class="success-title" id="success-title">Rapporten er på vei, <span id="success-name"></span></h2>
-            <div class="success-body">
+          <div class="a-success-state" id="success-state">
+            <span class="a-success-icon">✓</span>
+            <h2 class="a-success-title">Rapporten er på vei, <span id="success-name"></span></h2>
+            <div class="a-success-body">
               <p>Sjekk e-posten din — rapporten med dine 2–3 beste automatiseringsmuligheter er sendt.</p>
               <p>Sjekk også søppelpost hvis den ikke dukker opp innen et par minutter.</p>
               <p>Hvis du vil at vi skal gå gjennom rapporten sammen — eller bare vil stille spørsmål — kan du booke en gratis 30-minutters kartleggingssamtale direkte.</p>
             </div>
-            <a href="https://calendly.com/anders-parr02/30min" target="_blank" rel="noopener" class="btn-submit" style="display:inline-block;text-decoration:none;margin-top:2rem">
-              Book gratis 30-min samtale
-            </a>
-            <br>
-            <a href="/" class="btn-ghost" style="margin-top:1rem">← Tilbake til forsiden</a>
+            <div class="a-success-actions">
+              <a href="https://calendly.com/anders-parr02/30min" target="_blank" rel="noopener" class="btn btn-primary">Book gratis 30-min samtale</a>
+              <a href="/" class="btn btn-secondary">← Tilbake til forsiden</a>
+            </div>
           </div>
         </div>
 
@@ -629,9 +363,11 @@
     </div>
   </section>
 
-  <footer>
-    <span class="footer-brand">AP Consulting</span>
-    <span class="footer-copy">Bergen, Norge · © 2026</span>
+  <footer class="a-foot">
+    <div class="wrap a-foot-in">
+      <span>AP Consulting · Bergen</span>
+      <span>© 2026</span>
+    </div>
   </footer>
 
   <script>

@@ -257,15 +257,7 @@ nav.mainnav.scrolled{border-bottom-color:var(--line)}
 /* ============================================================
    HERO
    ============================================================ */
-.hero{position:relative;isolation:isolate;overflow:hidden;
-  padding-top:clamp(120px,16vh,180px);padding-bottom:clamp(56px,8vw,96px)}
-.hero-bg{position:absolute;inset:0;z-index:-2;display:flex;align-items:center;justify-content:flex-end;
-  padding-right:clamp(8px,3vw,32px)}
-.hero-bg img{width:auto;height:auto;max-width:58%;max-height:86%;object-fit:contain;display:block;
-  border-radius:18px;box-shadow:0 50px 90px -40px rgba(10,10,10,.3)}
-.hero::after{content:'';position:absolute;inset:0;z-index:-1;
-  background:linear-gradient(90deg,#fff 0%,#fff 34%,rgba(255,255,255,.6) 50%,rgba(255,255,255,0) 68%)}
-@media(max-width:900px){.hero-bg{display:none}.hero::after{display:none}}
+.hero{padding-top:clamp(120px,16vh,180px);padding-bottom:clamp(56px,8vw,96px)}
 .hero h1{max-width:16ch}
 .hero .lede{margin-top:var(--s3);font-size:clamp(1.0625rem,1.6vw,1.25rem)}
 .hero-actions{margin-top:var(--s5);display:flex;align-items:center;gap:var(--s3);flex-wrap:wrap}
@@ -734,26 +726,6 @@ nav.mainnav.scrolled{border-bottom-color:var(--line)}
   </div>
 </section>
 
-<!-- ================= VESTLANDET ================= -->
-<section class="vest" id="vestlandet">
-  <div class="vest-bg" aria-hidden="true">
-    <img loading="lazy" decoding="async" alt="" src="images/vestlandet-alnes.jpg">
-  </div>
-  <div class="wrap">
-    <span class="eyebrow reveal">På Vestlandet</span>
-    <h2 class="reveal d1">Bygget her.<br>For bedrifter her.</h2>
-    <p class="reveal d2">
-      Prosjekter levert i Bergen, Ålesund og Stavanger. Vi kommer innom kontoret,
-      og løsningene vi bygger for én bedrift gjør veien kortere for den neste i samme bransje.
-    </p>
-    <div class="vest-cities reveal d3">
-      <span class="vest-city">Bergen</span>
-      <span class="vest-city">Ålesund</span>
-      <span class="vest-city">Stavanger</span>
-    </div>
-  </div>
-</section>
-
 <!-- ================= PROSESS ================= -->
 <section>
   <div class="wrap">
@@ -782,6 +754,26 @@ nav.mainnav.scrolled{border-bottom-color:var(--line)}
       <span class="term">Fast pris, avtalt før vi starter</span>
       <span class="term">Bygget på deres egne kontoer</span>
       <span class="term">Ingen lock-in eller bindingstid</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VESTLANDET ================= -->
+<section class="vest" id="vestlandet">
+  <div class="vest-bg" aria-hidden="true">
+    <img loading="lazy" decoding="async" alt="" src="images/vestlandet-alnes.jpg">
+  </div>
+  <div class="wrap">
+    <span class="eyebrow reveal">På Vestlandet</span>
+    <h2 class="reveal d1">Bygget her.<br>For bedrifter her.</h2>
+    <p class="reveal d2">
+      Prosjekter levert i Bergen, Ålesund og Stavanger. Vi kommer innom kontoret,
+      og løsningene vi bygger for én bedrift gjør veien kortere for den neste i samme bransje.
+    </p>
+    <div class="vest-cities reveal d3">
+      <span class="vest-city">Bergen</span>
+      <span class="vest-city">Ålesund</span>
+      <span class="vest-city">Stavanger</span>
     </div>
   </div>
 </section>
@@ -935,9 +927,8 @@ nav.mainnav.scrolled{border-bottom-color:var(--line)}
       <span>© 2026</span>
     </div>
     <p class="credits">
-      Foto: Alnes fyr av Henny Stokseth, Hoddevika av Frode Inge Helland,
-      <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="noopener">CC BY-SA 3.0</a>;
-      Ålesund/Aksla av Diego Delso, <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="noopener">CC BY-SA 4.0</a>, via Wikimedia Commons.
+      Foto: Alnes fyr av Henny Stokseth, Hoddevika av Frode Inge Helland, Brosundet av GangerRolf,
+      <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="noopener">CC BY-SA 3.0</a>, via Wikimedia Commons.
       Kontorbilde: Crew, <a href="https://creativecommons.org/publicdomain/zero/1.0/" rel="noopener">CC0</a>.
     </p>
   </div>
