@@ -376,11 +376,6 @@ nav.mainnav.scrolled{border-bottom-color:var(--line)}
 .sol p{margin-top:.625rem;font-size:.9375rem;color:var(--ink-muted);line-height:1.55}
 .sol-for{margin-top:var(--s3);font-size:.8125rem;color:var(--ink-muted);padding-top:var(--s2);border-top:1px solid var(--line)}
 
-/* Arkitektur-diagram */
-.arch{margin-top:var(--s6);border:1px solid var(--line);border-radius:14px;padding:clamp(24px,3vw,36px);background:var(--bg-subtle)}
-.arch-cap{font-size:.75rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:var(--s3);display:block}
-.arch-svg{width:100%;height:auto;display:block;overflow:visible}
-
 /* ============================================================
    BILDEPAUSE
    ============================================================ */
@@ -447,11 +442,12 @@ nav.mainnav.scrolled{border-bottom-color:var(--line)}
 /* ============================================================
    KONTAKT
    ============================================================ */
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,88px);align-items:start}
+.contact-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:clamp(32px,6vw,88px);align-items:start}
 @media(max-width:880px){.contact-grid{grid-template-columns:1fr;gap:var(--s5)}}
 .contact-sub{margin-top:var(--s3);font-size:.9375rem;color:var(--ink-muted);max-width:44ch}
-.contact-photo{margin-top:var(--s6);border-radius:12px;overflow:hidden;max-width:320px;border:1px solid var(--line)}
-.contact-photo img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.contact-photo{margin-top:var(--s6);border-radius:14px;overflow:hidden;border:1px solid var(--line);
+  position:sticky;top:calc(64px + var(--s5))}
+.contact-photo img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block}
 .contact-photo-cap{display:block;margin-top:var(--s2);font-size:.75rem;color:var(--ink-muted)}
 @media(max-width:880px){.contact-photo{display:none}}
 
@@ -534,6 +530,12 @@ nav.mainnav.scrolled{border-bottom-color:var(--line)}
   </div>
 </header>
 
+<!-- ================= BILDEPAUSE: HODDEVIKA ================= -->
+<figure class="photobreak">
+  <img loading="lazy" decoding="async" src="images/vestlandet-hoddevika.jpg" alt="Veien ned mot Hoddevika, Stad">
+  <figcaption class="photobreak-cap">Hoddevika, Stad</figcaption>
+</figure>
+
 <!-- ================= BEVISSTRIPE ================= -->
 <div class="proof">
   <div class="wrap">
@@ -568,57 +570,11 @@ nav.mainnav.scrolled{border-bottom-color:var(--line)}
   </div>
 </div>
 
-<!-- ================= CASE (mørk) ================= -->
-<section class="case" id="case">
-  <div class="wrap">
-    <div class="case-head">
-      <span class="eyebrow reveal">Utvalgt prosjekt</span>
-      <h2 class="reveal d1">En assistent som<br>aldri tar helg</h2>
-      <p class="reveal d2">
-        En toppleder i helsebransjen brukte opptil en time på å lage én presentasjon til én kunde.
-        Oppfølgingen ble gjort når det passet, og regnskapet ble ført i bulk på slutten av måneden.
-        Assistenten vi bygde håndterer alle tre — hele døgnet, hver dag.
-      </p>
-    </div>
-
-    <div class="case-body">
-      <div class="reveal">
-        <div class="frame" id="caseframe">
-          <div class="frame-bar">
-            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-            <span class="frame-url">assistent · i drift</span>
-          </div>
-          <img loading="lazy" decoding="async" src="images/case-01-assistant.png" alt="Skjermbilde fra assistenten i drift"
-               onerror="document.getElementById('caseframe').classList.add('no-img')">
-          <div class="frame-fallback">Skjermbilde fra assistenten</div>
-        </div>
-      </div>
-
-      <div class="reveal d1">
-        <table class="ba">
-          <thead>
-            <tr><th>Oppgave</th><th style="text-align:right">Før</th><th style="text-align:right">Etter</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>Presentasjon per kunde</td><td class="before">30–60 min</td><td class="after">5–10 min</td></tr>
-            <tr><td>Oppfølging</td><td class="before">Sporadisk</td><td class="after">Automatisk</td></tr>
-            <tr><td>Regnskapsføring</td><td class="before">Manuell bulk</td><td class="after">Løpende</td></tr>
-            <tr><td>Frigjort tid</td><td class="before">—</td><td class="after">8 t/uke</td></tr>
-          </tbody>
-        </table>
-
-        <blockquote class="quote">
-          <p>«Jeg er så glad jeg skaffet en assistent, jeg sparer så mye tid og har det mye gøyere med arbeidet mitt.»</p>
-          <cite>— Toppleder i helsebransjen</cite>
-        </blockquote>
-      </div>
-    </div>
-
-    <div class="case-cta reveal">
-      <a href="#kontakt" class="btn btn-onDark">Book gratis kartlegging</a>
-    </div>
-  </div>
-</section>
+<!-- ================= BILDEPAUSE: ÅLESUND ================= -->
+<figure class="photobreak">
+  <img loading="lazy" decoding="async" src="images/vestlandet-alesund-aksla.jpg" alt="Ålesund sett fra Fjellstua på Aksla">
+  <figcaption class="photobreak-cap">Ålesund, sett fra Fjellstua</figcaption>
+</figure>
 
 <!-- ================= ARBEID ================= -->
 <section id="arbeid">
@@ -674,6 +630,58 @@ nav.mainnav.scrolled{border-bottom-color:var(--line)}
           </details>
         </div>
       </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CASE (mørk) ================= -->
+<section class="case" id="case">
+  <div class="wrap">
+    <div class="case-head">
+      <span class="eyebrow reveal">Utvalgt prosjekt</span>
+      <h2 class="reveal d1">En assistent som<br>aldri tar helg</h2>
+      <p class="reveal d2">
+        En toppleder i helsebransjen brukte opptil en time på å lage én presentasjon til én kunde.
+        Oppfølgingen ble gjort når det passet, og regnskapet ble ført i bulk på slutten av måneden.
+        Assistenten vi bygde håndterer alle tre — hele døgnet, hver dag.
+      </p>
+    </div>
+
+    <div class="case-body">
+      <div class="reveal">
+        <div class="frame" id="caseframe">
+          <div class="frame-bar">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+            <span class="frame-url">assistent · i drift</span>
+          </div>
+          <img loading="lazy" decoding="async" src="images/case-01-assistant.png" alt="Skjermbilde fra assistenten i drift"
+               onerror="document.getElementById('caseframe').classList.add('no-img')">
+          <div class="frame-fallback">Skjermbilde fra assistenten</div>
+        </div>
+      </div>
+
+      <div class="reveal d1">
+        <table class="ba">
+          <thead>
+            <tr><th>Oppgave</th><th style="text-align:right">Før</th><th style="text-align:right">Etter</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Presentasjon per kunde</td><td class="before">30–60 min</td><td class="after">5–10 min</td></tr>
+            <tr><td>Oppfølging</td><td class="before">Sporadisk</td><td class="after">Automatisk</td></tr>
+            <tr><td>Regnskapsføring</td><td class="before">Manuell bulk</td><td class="after">Løpende</td></tr>
+            <tr><td>Frigjort tid</td><td class="before">—</td><td class="after">8 t/uke</td></tr>
+          </tbody>
+        </table>
+
+        <blockquote class="quote">
+          <p>«Jeg er så glad jeg skaffet en assistent, jeg sparer så mye tid og har det mye gøyere med arbeidet mitt.»</p>
+          <cite>— Toppleder i helsebransjen</cite>
+        </blockquote>
+      </div>
+    </div>
+
+    <div class="case-cta reveal">
+      <a href="#kontakt" class="btn btn-onDark">Book gratis kartlegging</a>
     </div>
   </div>
 </section>
@@ -750,7 +758,7 @@ nav.mainnav.scrolled{border-bottom-color:var(--line)}
         </ul>
         <div class="track-proof">
           <span class="track-proof-label">Eksempel</span>
-          <p><strong>Endalsbygg.no</strong> — nettside bygget for Isak Endal, snekker.</p>
+          <p><strong>Endalsbygg.no</strong> — nettside bygget for Endals Management, snekkerfirma.</p>
         </div>
         <div class="track-foot">
           <a href="#kontakt" class="textlink">Book kartlegging →</a>
@@ -821,41 +829,8 @@ nav.mainnav.scrolled{border-bottom-color:var(--line)}
         <div class="sol-for"><a href="#kontakt" class="textlink">Book kartlegging →</a></div>
       </article>
     </div>
-
-    <!-- Arkitektur-diagram -->
-    <div class="arch reveal">
-      <span class="arch-cap">— Slik fungerer det, teknisk</span>
-      <svg class="arch-svg" viewBox="0 0 900 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Dataflyt: Trigger til n8n-arbeidsflyt til Claude API til Handling">
-        <defs>
-          <marker id="arr" markerWidth="7" markerHeight="7" refX="5.5" refY="3.5" orient="auto">
-            <polygon points="0 0, 7 3.5, 0 7" fill="#0A5CFF" opacity="0.55"/>
-          </marker>
-        </defs>
-        <rect x="2" y="22" width="168" height="56" rx="6" fill="#FFFFFF" stroke="#D4D4D8" stroke-width="1"/>
-        <text x="86" y="47" text-anchor="middle" fill="#0A0A0A" font-family="'Geist',sans-serif" font-size="14" font-weight="600">Trigger</text>
-        <text x="86" y="65" text-anchor="middle" fill="#71717A" font-family="'Geist',sans-serif" font-size="10">E-post / Chat / Tid</text>
-        <line x1="170" y1="50" x2="208" y2="50" stroke="#0A5CFF" stroke-width="1" opacity="0.5" marker-end="url(#arr)"/>
-        <rect x="210" y="22" width="186" height="56" rx="6" fill="#FFFFFF" stroke="#D4D4D8" stroke-width="1"/>
-        <text x="303" y="47" text-anchor="middle" fill="#0A0A0A" font-family="'Geist',sans-serif" font-size="14" font-weight="600">n8n-arbeidsflyt</text>
-        <text x="303" y="65" text-anchor="middle" fill="#71717A" font-family="'Geist',sans-serif" font-size="10">Orkestrering</text>
-        <line x1="396" y1="50" x2="434" y2="50" stroke="#0A5CFF" stroke-width="1" opacity="0.5" marker-end="url(#arr)"/>
-        <rect x="436" y="15" width="192" height="70" rx="6" fill="#FFFFFF" stroke="#0A5CFF" stroke-width="1.25"/>
-        <text x="532" y="47" text-anchor="middle" fill="#0A0A0A" font-family="'Geist',sans-serif" font-size="14" font-weight="600">Claude API</text>
-        <text x="532" y="65" text-anchor="middle" fill="#0A5CFF" font-family="'Geist',sans-serif" font-size="10">AI-prosessering</text>
-        <line x1="628" y1="50" x2="666" y2="50" stroke="#0A5CFF" stroke-width="1" opacity="0.5" marker-end="url(#arr)"/>
-        <rect x="668" y="22" width="230" height="56" rx="6" fill="#FFFFFF" stroke="#D4D4D8" stroke-width="1"/>
-        <text x="783" y="47" text-anchor="middle" fill="#0A0A0A" font-family="'Geist',sans-serif" font-size="14" font-weight="600">Handling</text>
-        <text x="783" y="65" text-anchor="middle" fill="#71717A" font-family="'Geist',sans-serif" font-size="10">Svar / Rapport / Varsling</text>
-      </svg>
-    </div>
   </div>
 </section>
-
-<!-- ================= BILDEPAUSE ================= -->
-<figure class="photobreak">
-  <img loading="lazy" decoding="async" src="images/vestlandet-hoddevika.jpg" alt="Veien ned mot Hoddevika, Stad">
-  <figcaption class="photobreak-cap">Hoddevika, Stad</figcaption>
-</figure>
 
 <!-- ================= VESTLANDET ================= -->
 <section class="vest" id="vestlandet">
@@ -1059,7 +1034,8 @@ nav.mainnav.scrolled{border-bottom-color:var(--line)}
     </div>
     <p class="credits">
       Foto: Alnes fyr av Henny Stokseth, Hoddevika av Frode Inge Helland,
-      <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="noopener">CC BY-SA 3.0</a>, via Wikimedia Commons.
+      <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="noopener">CC BY-SA 3.0</a>;
+      Ålesund/Aksla av Diego Delso, <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="noopener">CC BY-SA 4.0</a>, via Wikimedia Commons.
       Kontorbilde: Crew, <a href="https://creativecommons.org/publicdomain/zero/1.0/" rel="noopener">CC0</a>.
     </p>
   </div>
